@@ -1,0 +1,229 @@
+.project-count-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .count-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    min-width: 180px;
+
+    &:hover {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .count-icon {
+      width: 40px;
+      height: 40px;
+      background: #006aca;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      [nz-icon] {
+        font-size: 18px;
+        color: white;
+      }
+    }
+
+    .count-content {
+      flex: 1;
+      min-width: 0;
+
+      .count-numbers {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        margin-bottom: 2px;
+
+        .filtered-count {
+          font-size: 24px;
+          font-weight: 700;
+          color: #1e293b;
+          line-height: 1;
+        }
+
+        .count-separator {
+          font-size: 14px;
+          color: #64748b;
+          font-weight: 500;
+        }
+
+        .total-count {
+          font-size: 18px;
+          font-weight: 600;
+          color: #64748b;
+          line-height: 1;
+        }
+      }
+
+      .count-label {
+        font-size: 12px;
+        color: #64748b;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  .filter-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-radius: 16px;
+    animation: pulse-glow 2s ease-in-out infinite;
+
+    .indicator-dot {
+      width: 8px;
+      height: 8px;
+      background: #f59e0b;
+      border-radius: 50%;
+      animation: pulse-dot 1.5s ease-in-out infinite;
+    }
+
+    .indicator-text {
+      font-size: 11px;
+      font-weight: 600;
+      color: #92400e;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+// Animations
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+  }
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark-theme) {
+  .project-count-container {
+    .count-card {
+      background: #1e293b;
+      border-color: #334155;
+
+      &:hover {
+        background: #0f172a;
+        border-color: #475569;
+      }
+
+      .count-content {
+        .count-numbers {
+          .filtered-count {
+            color: #e2e8f0;
+          }
+
+          .count-separator {
+            color: #94a3b8;
+          }
+
+          .total-count {
+            color: #94a3b8;
+          }
+        }
+
+        .count-label {
+          color: #94a3b8;
+        }
+      }
+    }
+
+    .filter-indicator {
+      background: #451a03;
+      border-color: #92400e;
+
+      .indicator-dot {
+        background: #f59e0b;
+      }
+
+      .indicator-text {
+        color: #fbbf24;
+      }
+    }
+  }
+}
+
+// Mobile adjustments
+@media (max-width: 768px) {
+  .project-count-container {
+    .count-card {
+      padding: 12px 16px;
+      min-width: 150px;
+      gap: 10px;
+
+      .count-icon {
+        width: 32px;
+        height: 32px;
+
+        [nz-icon] {
+          font-size: 16px;
+        }
+      }
+
+      .count-content {
+        .count-numbers {
+          .filtered-count {
+            font-size: 20px;
+          }
+
+          .count-separator {
+            font-size: 12px;
+          }
+
+          .total-count {
+            font-size: 16px;
+          }
+        }
+
+        .count-label {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .filter-indicator {
+      padding: 4px 8px;
+
+      .indicator-dot {
+        width: 6px;
+        height: 6px;
+      }
+
+      .indicator-text {
+        font-size: 10px;
+      }
+    }
+  }
+} 

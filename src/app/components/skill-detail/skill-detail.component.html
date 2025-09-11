@@ -1,0 +1,64 @@
+<div class="skill-detail skill-detail-dialog">
+  <!-- Watermark -->
+  <div class="dialog-watermark">
+    <app-watermark [customIcon]="'tool'"></app-watermark>
+  </div>
+
+  <!-- Header -->
+  <div class="dialog-header">
+    <div class="skill-logo-wrapper">
+      @if (info.logo) {
+        <img [src]="info.logo" [alt]="info.name" class="skill-logo">
+      }
+    </div>
+    <div class="skill-info">
+      <h2 class="title-text">{{ info.name }}</h2>
+      @if (projectCount > 0) {
+        <div class="meta-info">
+          <div class="project-count">
+            <span nz-icon nzType="project" nzTheme="outline"></span>
+            {{ 'SKILLS.DIALOG.USED_IN' | translate:{ count: projectCount } }}
+          </div>
+          <div class="meta-tags">
+            <nz-tag [nzColor]="'blue'">
+              {{ info.isCommonTool ? ('SKILLS.DIALOG.SKILL_TYPE.COMMON_TOOL' | translate) : ('SKILLS.DIALOG.SKILL_TYPE.TECHNOLOGY' | translate) }}
+            </nz-tag>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="description-content">
+    <!-- Description -->
+    <div class="dialog-section">
+      <h3>
+        <span nz-icon nzType="info-circle" nzTheme="outline"></span>
+        {{ 'SKILLS.DIALOG.OVERVIEW' | translate }}
+      </h3>
+      @if (isDescriptionArray) {
+        @for (paragraph of info.description; track $index) {
+          <p>{{ paragraph }}</p>
+        }
+      } @else {
+        <p>{{ info.description }}</p>
+      }
+    </div>
+  </div>
+
+  <!-- Links - Now fixed at the bottom -->
+  <div class="fixed-links-section">
+    <div class="skill-links">
+      <a [href]="info.url" target="_blank" rel="noopener noreferrer" class="link-button">
+        <span nz-icon nzType="link" nzTheme="outline"></span>
+        <span>{{ 'SKILLS.DIALOG.VISIT_WEBSITE' | translate }}</span>
+      </a>
+      @if (info.githubUrl) {
+        <a [href]="info.githubUrl" target="_blank" rel="noopener noreferrer" class="link-button github">
+          <span nz-icon nzType="github" nzTheme="outline"></span>
+          <span>{{ 'SKILLS.DIALOG.VISIT_GITHUB' | translate }}</span>
+        </a>
+      }
+    </div>
+  </div>
+</div>

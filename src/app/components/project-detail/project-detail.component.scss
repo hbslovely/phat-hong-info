@@ -1,0 +1,1048 @@
+.project-card {
+  background: white;
+  border-radius: 16px; // Increased border radius for a more modern look
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); // Softer shadow
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(237, 240, 242, 0.8);
+  position: relative;
+  display: flex;
+  flex-direction: column; // For equal height
+  height: 100%; // For equal height in grid view
+
+  .card-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(240, 247, 255, 0.5) 100%);
+    pointer-events: none;
+    opacity: 0.7;
+    z-index: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-color: rgba(24, 144, 255, 0.3);
+
+    .card-gradient-overlay {
+      opacity: 0.9;
+      background: linear-gradient(135deg, rgba(240, 247, 255, 0.8) 0%, rgba(209, 233, 255, 0.8) 100%);
+    }
+
+    .project-header {
+      background: rgba(24, 144, 255, 0.05);
+    }
+
+    .project-footer {
+      background: rgba(24, 144, 255, 0.02);
+
+      .card-action {
+        .view-details {
+          color: #1890ff;
+        }
+
+        [nz-icon] {
+          transform: translateX(3px);
+          color: #1890ff;
+        }
+      }
+    }
+
+    .card-watermark {
+      opacity: 0.12;
+      transform: scale(1.05);
+    }
+
+    .tech-preview {
+      .tech-tag {
+        border-color: rgba(24, 144, 255, 0.3);
+      }
+    }
+  }
+
+  .card-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.05;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ::ng-deep .watermark-container {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  .project-header {
+    padding: 1.5rem;
+    transition: background 0.3s ease;
+    position: relative;
+    z-index: 2;
+    flex: 1; // For equal height cards
+
+    .project-meta {
+      .project-title-row {
+        margin-bottom: 1rem;
+
+        .project-title {
+          h3 {
+            margin: 0 0 0.75rem;
+            font-size: 1.25rem;
+            color: #1890ff;
+            font-weight: 600;
+            line-height: 1.4;
+            display: inline-flex;
+            align-items: center;
+          }
+
+          // Status dot indicator style
+          .status-dot-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: relative;
+            display: inline-block;
+            margin-left: 8px;
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: -4px;
+              left: -4px;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              opacity: 0;
+              z-index: -1;
+            }
+
+            &.completed {
+              background-color: #10b981;
+
+              &::after {
+                background-color: rgba(16, 185, 129, 0.3);
+              }
+            }
+
+            &.in-progress {
+              background-color: #f59e0b;
+
+              &::after {
+                background-color: rgba(245, 158, 11, 0.3);
+                animation: pulse-ring 1.5s infinite;
+              }
+            }
+          }
+
+          .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+
+            // Keep existing status indicator styles for backwards compatibility
+            .status-indicator {
+              display: flex;
+              align-items: center;
+              padding: 0.4rem 0.75rem;
+              border-radius: 20px;
+              backdrop-filter: blur(4px);
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              font-size: 0.8rem;
+              font-weight: 500;
+
+              &.completed {
+                background-color: rgba(16, 185, 129, 0.15);
+                border: 1px solid rgba(16, 185, 129, 0.3);
+                color: #065f46;
+                .status-dot {
+                  background-color: #10b981;
+                  animation: pulse 2s infinite;
+                }
+              }
+
+              &.in-progress {
+                background-color: rgba(245, 158, 11, 0.15);
+                border: 1px solid rgba(245, 158, 11, 0.3);
+                color: #92400e;
+                .status-dot {
+                  background-color: #f59e0b;
+                  animation: blink 1.5s infinite;
+                }
+              }
+
+              .status-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                margin-right: 0.5rem;
+              }
+
+              .status-text {
+                letter-spacing: 0.02em;
+              }
+            }
+          }
+        }
+      }
+
+      .project-brief {
+        color: #4a5568;
+        line-height: 1.6;
+        margin: 0;
+        font-size: 0.95rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; // Limit to 3 lines for consistent height
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .project-footer {
+    padding: 1rem 1.5rem;
+    background: #f8f9fa;
+    border-top: 1px solid #edf0f2;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tech-preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+
+      .tech-tag {
+        transition: all 0.3s ease;
+        cursor: pointer;
+        font-size: 0.85rem;
+
+        &:hover {
+          transform: translateY(-1px);
+        }
+      }
+
+      .more-count {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        background: var(--hover-bg);
+        padding: 0 8px;
+        border-radius: 4px;
+        height: 24px;
+        line-height: 24px;
+        display: inline-block;
+        border: 1px solid var(--border-color);
+      }
+    }
+
+    .card-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #718096;
+      transition: all 0.3s ease;
+
+      [nz-icon] {
+        font-size: 1.25rem;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  &.list-view {
+    .project-header {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+
+      .project-meta {
+        flex: 1;
+
+        .project-brief {
+          -webkit-line-clamp: initial; // Remove line limit for list view
+        }
+      }
+    }
+
+    .project-footer {
+      border-top: none;
+      background: transparent;
+      margin-top: auto;
+    }
+  }
+}
+
+// Dialog Styles
+.project-detail-dialog {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  padding: 0;
+
+  .dialog-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(24, 144, 255, 0.05) 0%, rgba(24, 144, 255, 0.15) 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .dialog-watermark {
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    z-index: 0;
+    opacity: 0.03;
+    pointer-events: none;
+
+    ::ng-deep .watermark-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      animation: none !important;
+      transform: rotate(15deg);
+    }
+  }
+
+  .dialog-header {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1890ff 0%, #0c63e4 100%);
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      margin: 0 0 1rem;
+      font-size: 1.75rem;
+      color: white;
+      position: relative;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .dialog-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+
+      // New status badge with dot and text
+      .dialog-status-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.35rem 0.75rem;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(4px);
+
+        .status-dot-indicator {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          position: relative;
+
+          &.completed {
+            background-color: #10b981;
+          }
+
+          &.in-progress {
+            background-color: #f59e0b;
+            animation: blink 1.5s infinite;
+          }
+        }
+
+        span {
+          font-size: 0.9rem;
+          font-weight: 500;
+          color: white;
+        }
+      }
+
+      // Keep existing status display styles for backwards compatibility
+      .status-display {
+        display: flex;
+        align-items: center;
+        margin-left: 0.5rem;
+
+        .status-label {
+          font-weight: 500;
+          margin-right: 0.5rem;
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        .status-value {
+          display: flex;
+          align-items: center;
+          font-weight: 600;
+          padding: 0.25rem 0.75rem;
+          border-radius: 20px;
+
+          &.completed {
+            background-color: rgba(16, 185, 129, 0.3);
+            color: #ecfdf5;
+
+            .status-icon {
+              color: #34d399;
+            }
+          }
+
+          &.in-progress {
+            background-color: rgba(245, 158, 11, 0.3);
+            color: #fffbeb;
+
+            .status-icon {
+              color: #fbbf24;
+            }
+          }
+
+          .status-icon {
+            margin-right: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  .dialog-description {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+
+    p {
+      margin: 0;
+      line-height: 1.8;
+    }
+  }
+
+  .dialog-section {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #edf0f2;
+    position: relative;
+    z-index: 1;
+
+    &:nth-child(odd) {
+      background-color: rgba(248, 250, 252, 0.6);
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      color: #1890ff;
+      font-size: 1.1rem;
+
+      [nz-icon] {
+        font-size: 1.2rem;
+      }
+    }
+
+    .tech-tags, .environments-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.75rem;
+        padding-left: 1.5rem;
+        position: relative;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0.5rem;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #1890ff;
+        }
+      }
+    }
+
+    .link-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 8px; // Increased border radius
+        background: #f8f9fa;
+        color: #4a5568;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border: 1px solid #edf0f2;
+
+        &:hover {
+          background: #1890ff;
+          color: white;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(24, 144, 255, 0.2);
+
+          [nz-icon] {
+            color: white;
+          }
+        }
+
+        [nz-icon] {
+          color: #1890ff;
+          font-size: 1.1rem;
+          transition: color 0.2s ease;
+        }
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .project-card {
+    .project-header {
+      padding: 1rem;
+
+      .project-meta {
+        .project-title-row {
+          .project-title {
+            h3 {
+              font-size: 1.1rem;
+            }
+
+            .project-tags {
+              .status-dot-indicator {
+                width: 10px;
+                height: 10px;
+
+                &::after {
+                  top: -3px;
+                  left: -3px;
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+            }
+          }
+        }
+
+        .project-brief {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .project-footer {
+      padding: 1rem;
+      flex-direction: row; // Keep as row to prevent wrapping
+      justify-content: space-between;
+      align-items: center;
+
+      .card-action {
+        width: auto; // Reset width to auto
+        padding-top: 0;
+      }
+    }
+
+    &.list-view {
+      .project-header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .project-footer {
+        flex-direction: row;
+
+        .card-action {
+          width: auto;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
+  .project-detail-dialog {
+    .dialog-header {
+      padding: 1.5rem;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .dialog-tags {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+
+        .dialog-status-badge {
+          padding: 0.25rem 0.65rem;
+
+          .status-dot-indicator {
+            width: 8px;
+            height: 8px;
+          }
+
+          span {
+            font-size: 0.85rem;
+          }
+        }
+
+        // Existing status display
+        .status-display {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .dialog-description {
+      padding: 0 1.5rem;
+    }
+
+    .dialog-section {
+      padding: 1.5rem;
+
+      .link-list {
+        a {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark-theme) {
+  .project-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+
+    &:hover {
+      border-color: var(--primary-color);
+    }
+
+    .project-header .project-title h3 {
+      color: var(--heading-color);
+    }
+
+    .project-footer .tech-preview .tech-tag {
+      background: var(--hover-bg);
+      color: var(--text-color);
+      border-color: var(--border-color);
+
+      &:hover {
+        background: var(--primary-color);
+        color: white;
+      }
+    }
+  }
+
+  .project-detail-dialog {
+    background: var(--card-bg);
+    color: var(--text-color);
+
+    .dialog-header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+
+      h2 {
+        color: white;
+      }
+    }
+
+    .dialog-content .dialog-section {
+      h3 {
+        color: var(--heading-color);
+      }
+
+      p, li {
+        color: var(--text-light);
+      }
+    }
+  }
+
+  :host ::ng-deep .project-detail-modal .ant-modal-content {
+    background: var(--card-bg);
+  }
+}
+
+// Enhanced project card dark theme with dark blue background
+:host-context(.dark-theme) {
+  .project-card {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-color: var(--border-color);
+    color: var(--text-color);
+
+    &:hover {
+      border-color: var(--primary-color);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+      background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    }
+
+    .card-gradient-overlay {
+      background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.1) 0%, transparent 100%);
+    }
+
+    .project-header {
+      .project-meta {
+        .project-title h3 {
+          color: #e2e8f0;
+        }
+
+        .project-brief {
+          color: #cbd5e1;
+        }
+
+        .status-dot-indicator {
+          &.completed {
+            background: #10b981;
+          }
+
+          &.in-progress {
+            background: #f59e0b;
+          }
+        }
+      }
+    }
+
+    .project-footer {
+      background: rgba(var(--primary-color-rgb), 0.6);
+
+      &:hover {
+        background: rgba(var(--primary-color-rgb), 0.8);
+      }
+
+      .tech-preview {
+        .tech-tag {
+          background: rgba(255, 255, 255, 0.1);
+          color: #e2e8f0;
+          border-color: rgba(255, 255, 255, 0.2);
+
+          &:hover {
+            background: var(--primary-color);
+            color: white;
+          }
+        }
+
+        .more-count {
+          color: #cbd5e1;
+        }
+      }
+
+      .card-action [nz-icon] {
+        color: #e2e8f0;
+      }
+    }
+  }
+}
+
+// Enhanced project dialog dark theme
+:host-context(.dark-theme) {
+  .project-detail-dialog {
+    background: var(--card-bg);
+    color: var(--text-color);
+
+    .dialog-gradient-overlay {
+      background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.1) 0%, transparent 100%);
+    }
+
+    .dialog-header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+
+      h2 {
+        color: white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .dialog-tags {
+        .dialog-status-badge {
+          background: rgba(255, 255, 255, 0.2);
+          color: white;
+
+          .status-dot-indicator {
+            &.completed {
+              background: #10b981;
+            }
+
+            &.in-progress {
+              background: #f59e0b;
+            }
+          }
+        }
+      }
+    }
+
+    .dialog-content {
+      background: var(--card-bg);
+
+      .dialog-description p {
+        color: var(--text-light);
+      }
+
+      .dialog-section {
+        border-bottom-color: var(--border-color);
+
+        h3 {
+          color: var(--heading-color);
+
+          [nz-icon] {
+            color: var(--primary-color);
+          }
+        }
+
+        .tech-tags {
+          nz-tag {
+            background: var(--hover-bg);
+            color: var(--text-color);
+            border-color: var(--border-color);
+
+            &:hover {
+              background: var(--primary-color);
+              color: white;
+            }
+          }
+        }
+
+        .environments-list {
+          nz-tag {
+            background: var(--hover-bg);
+            color: var(--text-color);
+            border-color: var(--border-color);
+          }
+        }
+
+        ul li {
+          color: var(--text-light);
+
+          &::before {
+            color: var(--primary-color);
+          }
+        }
+
+        .link-list a {
+          background: var(--hover-bg);
+          color: var(--text-color);
+          border-color: var(--border-color);
+
+          &:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+          }
+
+          [nz-icon] {
+            color: var(--primary-color);
+          }
+
+          &:hover [nz-icon] {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  :host ::ng-deep {
+    .project-detail-modal {
+      .ant-modal-content {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+      }
+
+      .ant-modal-close {
+        .ant-modal-close-x {
+          background: var(--hover-bg) !important;
+          color: var(--text-color) !important;
+          border-radius: 6px;
+
+          &:hover {
+            background: var(--primary-color) !important;
+            color: white !important;
+          }
+        }
+      }
+
+      .ant-modal-body {
+        background: var(--card-bg) !important;
+      }
+    }
+  }
+}
+
+// Fix company detail and additional project dialog elements
+:host-context(.dark-theme) {
+  // Company section in project details
+  .company-section {
+    background: var(--hover-bg);
+    border-color: var(--border-color);
+
+    .company-logo {
+      background: var(--card-bg);
+      border-color: var(--border-color);
+    }
+
+    .company-name {
+      color: var(--heading-color);
+    }
+
+    .company-description {
+      color: var(--text-light);
+    }
+
+    .company-website {
+      color: var(--primary-color);
+
+      &:hover {
+        color: var(--primary-light);
+      }
+    }
+  }
+
+  // Project duration and status
+  .project-meta {
+    .project-duration {
+      background: var(--hover-bg);
+      color: var(--text-color);
+      border: 1px solid var(--border-color);
+    }
+
+    .project-status {
+      background: var(--hover-bg);
+      color: var(--text-color);
+      border: 1px solid var(--border-color);
+
+      &.completed {
+        background: rgba(16, 185, 129, 0.1);
+        color: #10b981;
+        border-color: rgba(16, 185, 129, 0.3);
+      }
+
+      &.in-progress {
+        background: rgba(245, 158, 11, 0.1);
+        color: #f59e0b;
+        border-color: rgba(245, 158, 11, 0.3);
+      }
+    }
+  }
+
+  // Project achievements and features
+  .achievement-list {
+    li {
+      color: var(--text-light);
+
+      &::before {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .feature-list {
+    .feature-item {
+      background: var(--hover-bg);
+      border-color: var(--border-color);
+      color: var(--text-color);
+
+      .feature-title {
+        color: var(--heading-color);
+      }
+
+      .feature-description {
+        color: var(--text-light);
+      }
+    }
+  }
+}
+
+.project-detail-dialog {
+  background: var(--card-bg) !important;
+  color: var(--text-color);
+
+  .dialog-section {
+    background: var(--card-bg) !important;
+  }
+}

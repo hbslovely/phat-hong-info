@@ -1,0 +1,403 @@
+.skill-detail {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .dialog-watermark {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    max-width: 100%;
+    overflow: hidden;
+
+    ::ng-deep .watermark-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      animation: none !important;
+      transform: rotate(15deg);
+    }
+  }
+
+  .dialog-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 0;
+    padding: 2rem;
+    background: #1890ff;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+
+    .skill-logo-wrapper {
+      width: 80px;
+      height: 80px;
+      padding: 0.75rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: visible; /* Ensure overflow is visible to prevent clipping */
+      position: relative; /* Needed for positioning context */
+
+      .skill-logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    .skill-info {
+      flex: 1;
+
+      h2 {
+        margin: 0 0 0.5rem;
+        font-size: 1.75rem;
+        color: white;
+      }
+
+      .meta-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1rem;
+
+        .project-count {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 0.9rem;
+
+          [nz-icon] {
+            color: rgba(255, 255, 255, 0.9);
+          }
+        }
+
+        .meta-tags {
+          display: flex;
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .dialog-section {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+
+    h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 0 0 1.25rem;
+      color: var(--heading-color);
+      font-size: 1.25rem;
+
+      [nz-icon] {
+        color: #1890ff;
+        font-size: 1.25rem;
+      }
+    }
+
+    p {
+      margin: 0 0 1rem;
+      line-height: 1.7;
+      color: var(--text-color);
+      font-size: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .description-content {
+    max-height: calc(100vh - 250px); /* Adjusted to account for fixed links section */
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    padding-bottom: 5rem; /* Increased padding to accommodate the links section */
+  }
+
+  /* New fixed links section */
+  .fixed-links-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f0f7ff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 2rem;
+    z-index: 10;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+
+    .skill-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+
+      .link-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: var(--component-background);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        color: var(--text-color);
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s;
+        cursor: pointer;
+
+        [nz-icon] {
+          font-size: 1rem;
+          color: var(--text-color-secondary);
+        }
+
+        &:hover {
+          background: var(--hover-bg);
+          border-color: var(--primary-color);
+          color: var(--primary-color);
+
+          [nz-icon] {
+            color: var(--primary-color);
+          }
+        }
+
+        &.github {
+          background: #24292e;
+          border-color: #24292e;
+          color: #fff;
+
+          [nz-icon] {
+            color: #fff;
+          }
+
+          &:hover {
+            background: #2f363d;
+            border-color: #2f363d;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Override nz-modal styling
+:host ::ng-deep {
+  .ant-modal-body {
+    padding: 0 !important;
+  }
+}
+
+// Global modal styles for skill-detail-modal
+::ng-deep .skill-detail-modal {
+  .ant-modal-content {
+    padding: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    border: 1px solid #f0f0f0;
+  }
+
+  .ant-modal-body {
+    padding: 0 !important;
+    height: auto;
+    max-height: calc(100vh - 80px); // Increased to account for navbar
+    overflow: visible; /* Changed from hidden to visible to allow content scrolling */
+  }
+
+  .ant-modal-close {
+    top: 12px;
+    right: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .ant-modal-content {
+      border-radius: 12px;
+    }
+
+    .ant-modal-body {
+      max-height: calc(100vh - 70px); // Adjusted for mobile navbar
+    }
+  }
+}
+
+// Mobile adjustments
+@media (max-width: 768px) {
+  .skill-detail {
+    .dialog-header {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.5rem;
+      align-items: center; /* Center items on mobile */
+
+      .skill-logo-wrapper {
+        width: 70px; /* Slightly smaller on mobile */
+        height: 70px;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem; /* Add some space at the top to prevent clipping */
+      }
+
+      .skill-info {
+        width: 100%;
+        text-align: center; /* Center text on mobile */
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        .meta-info {
+          align-items: center; /* Center meta info items */
+        }
+      }
+    }
+
+    .dialog-section {
+      padding: 1.25rem 1.5rem 4.25rem 1.5rem;
+
+      h3 {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+
+        [nz-icon] {
+          font-size: 1.15rem;
+        }
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* Adjust content container */
+    .description-content {
+      max-height: calc(100vh - 350px); /* Adjusted for mobile and fixed links */
+      padding-bottom: 1rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Mobile styling for fixed links */
+    .fixed-links-section {
+      padding: 0.75rem 1.5rem;
+      width: 100%; /* Ensure full width on mobile */
+      box-sizing: border-box; /* Include padding in width calculation */
+      justify-content: space-around;
+
+      .skill-links {
+        width: 100%;
+
+        .link-button {
+          flex: 1;
+          justify-content: center;
+          min-width: 0;
+        }
+      }
+    }
+  }
+}
+
+// Extra small devices
+@media (max-width: 480px) {
+  .skill-detail {
+    .dialog-header {
+      padding: 1.25rem 1rem;
+
+      .skill-logo-wrapper {
+        width: 60px; /* Even smaller on very small devices */
+        height: 60px;
+      }
+    }
+
+    .fixed-links-section {
+      padding: 0.75rem 1rem;
+
+      .skill-links {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.skill-detail-dialog {
+  .description-content {
+    background: var(--card-bg) !important;
+    color: var(--text-color);
+
+    .dialog-section {
+      h3 {
+        color: var(--heading-color);
+
+        [nz-icon] {
+          color: var(--primary-color);
+        }
+      }
+
+      p {
+        color: var(--text-light);
+      }
+    }
+  }
+
+  .fixed-links-section {
+    background: var(--hover-bg) !important;
+    border-top-color: var(--border-color) !important;
+
+    .skill-links {
+      .link-button {
+        background: var(--card-bg);
+        color: var(--text-color);
+        border: 1px solid var(--border-color);
+
+        &:hover {
+          background: var(--primary-color);
+          color: white;
+          border-color: var(--primary-color);
+        }
+
+        [nz-icon] {
+          color: var(--primary-color);
+        }
+
+        &:hover [nz-icon] {
+          color: white;
+        }
+
+        &.github {
+          background: var(--card-bg);
+          border-color: var(--border-color);
+
+          &:hover {
+            background: #333;
+            color: white;
+            border-color: #333;
+          }
+        }
+      }
+    }
+  }
+}
+

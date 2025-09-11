@@ -1,0 +1,26 @@
+{
+  "pages": [
+    {
+      "title": "Chuyện Tình Yêu",
+      "description": "Một trang web tương tác cá nhân ghi lại hành trình mối quan hệ giữa tôi và vợ. Dự án này có các hoạt ảnh timeline, bộ sưu tập hình ảnh và những khoảnh khắc đáng nhớ chúng tôi đã chia sẻ cùng nhau. Được xây dựng với Angular và các thành phần PrimeNG, trang web tích hợp các hiệu ứng chuyển tiếp mượt mà và thiết kế đáp ứng để tạo ra một cuốn sách kỷ niệm kỹ thuật số sống động, ghi lại mối liên kết đặc biệt của chúng tôi.",
+      "url": "https://hbslovely.vercel.app/#/chao-mung",
+      "image": "assets/images/pages/love-story.png",
+      "fallbackImage": "assets/images/gallery/projects.png",
+      "status": "completed",
+      "technologies": ["Angular", "PrimeNG", "SCSS"],
+      "creationDate": "2022",
+      "goals": "Tạo ra một kỷ niệm kỹ thuật số về mối quan hệ của chúng tôi mà chúng tôi có thể xem lại và chia sẻ với bạn bè và gia đình."
+    },
+    {
+      "title": "Hướng Dẫn Thành Phố Hồ Chí Minh",
+      "description": "Một hướng dẫn du lịch toàn diện cho khách tham quan Thành phố Hồ Chí Minh. Ứng dụng web này cung cấp bản đồ tương tác, danh sách các địa điểm tham quan được tuyển chọn, gợi ý ẩm thực địa phương và thông tin văn hóa. Với trọng tâm là trải nghiệm người dùng, hướng dẫn cung cấp khám phá khu vực lân cận, những lời khuyên du lịch thiết thực, và những địa điểm ẩn chỉ người địa phương mới biết. Thiết kế đáp ứng đảm bảo trải nghiệm liền mạch trên mọi thiết bị, khiến nó trở thành người bạn đồng hành hoàn hảo cho du khách.",
+      "url": "https://hello-hcmc.vercel.app/",
+      "image": "assets/images/pages/hcmc-guide.png",
+      "fallbackImage": "assets/images/gallery/projects.png",
+      "status": "in-progress",
+      "technologies": ["Angular", "PrimeNG", "Font Awesome"],
+      "creationDate": "2023",
+      "goals": "Giới thiệu vẻ đẹp và sự sôi động của Thành phố Hồ Chí Minh đồng thời cung cấp thông tin thiết thực cho du khách."
+    }
+  ]
+} 

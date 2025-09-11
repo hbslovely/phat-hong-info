@@ -1,0 +1,113 @@
+.page-header {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 2rem;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: 250px;
+    padding: 0;
+  }
+
+  @media (max-width: 480px) {
+    min-height: 220px;
+    padding: 1.5rem 0;
+  }
+
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.85));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      position: relative;
+      height: auto;
+      min-height: 250px;
+    }
+  }
+
+  .header-content {
+    width: 100%;
+    color: var(--text-color);
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (max-width: 480px) {
+      padding: 0 1rem;
+    }
+
+    .custom-content-wrapper {
+      width: 100%;
+    }
+
+    .default-header {
+      text-align: center;
+
+      .page-title {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        color: var(--primary-color);
+
+        @media (max-width: 768px) {
+          font-size: 2.25rem;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 1.75rem;
+        }
+      }
+
+      .page-subtitle {
+        font-size: 1.5rem;
+        font-weight: 400;
+        opacity: 0.9;
+        color: var(--text-light);
+
+        @media (max-width: 768px) {
+          font-size: 1.25rem;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark-theme) {
+  .page-header {
+    .header-overlay {
+      background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(30, 41, 59, 0.85));
+    }
+
+    .header-content {
+      color: var(--text-color);
+
+      .default-header {
+        .page-title {
+          color: var(--primary-color);
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-subtitle {
+          color: var(--text-light);
+        }
+      }
+    }
+  }
+}

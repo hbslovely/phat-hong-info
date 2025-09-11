@@ -1,0 +1,74 @@
+<div class="personal-info">
+  <!-- Profile Header - Simplified -->
+  <div class="profile-header">
+    <div class="avatar-container">
+      <div class="avatar" (click)="showFullscreenAvatar()">
+        <img src="assets/images/avatar.jpeg" [alt]="'PERSONAL_INFO.PROFILE_PICTURE' | translate">
+      </div>
+    </div>
+
+    <div class="profile-details">
+      <h1 class="name">{{ info?.prefix }} {{ info?.name }}</h1>
+      <h2 class="role">{{ info?.title }}</h2>
+      <div class="location">
+        <span nz-icon nzType="environment" nzTheme="outline"></span>
+        {{ info?.location?.city }}, {{ info?.location?.country }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Row - Simplified -->
+  <div class="contact-row">
+    <a class="contact-item" [href]="'mailto:' + info?.contact?.email">
+      <span nz-icon nzType="mail" nzTheme="outline"></span>
+      <span>{{ info?.contact?.email }}</span>
+    </a>
+
+    <a class="contact-item" [href]="'tel:' + info?.contact?.phone">
+      <span nz-icon nzType="phone" nzTheme="outline"></span>
+      <span>{{ info?.contact?.phone }}</span>
+    </a>
+
+    <a class="contact-item" [href]="info?.contact?.linkedin" target="_blank">
+      <span nz-icon nzType="linkedin" nzTheme="outline"></span>
+      <span>LinkedIn</span>
+    </a>
+
+    <a class="contact-item" [href]="info?.contact?.github" target="_blank">
+      <span nz-icon nzType="github" nzTheme="outline"></span>
+      <span>GitHub</span>
+    </a>
+  </div>
+
+  <!-- Professional Summary - Simplified -->
+  <div class="summary-section">
+    <p>{{ info?.summary }}</p>
+  </div>
+
+  <!-- Key Info - Simplified -->
+  <div class="key-info-row">
+    <div class="key-info-item" *ngIf="info?.languages?.length">
+      <span nz-icon nzType="global" nzTheme="outline"></span>
+      <div>
+        <strong>{{ 'PERSONAL_INFO.LANGUAGES' | translate }}:</strong>
+        <span *ngFor="let lang of info?.languages; let last = last">
+          {{ lang.name }} ({{ 'PERSONAL_INFO.LANGUAGE_LEVELS.' + lang.level | translate }}){{!last ? ', ' : ''}}
+        </span>
+      </div>
+    </div>
+
+    <div class="key-info-item" *ngIf="info?.availability?.workType || info?.availability?.workLocation">
+      <span nz-icon nzType="clock-circle" nzTheme="outline"></span>
+      <div>
+        <strong>{{ 'PERSONAL_INFO.WORK_PREFERENCES' | translate }}:</strong>
+        <span *ngIf="info?.availability?.workType">
+          {{ 'PERSONAL_INFO.WORK_TYPES.' + info?.availability?.workType | translate }}
+        </span>
+        <span *ngIf="info?.availability?.workType && info?.availability?.workLocation"> / </span>
+        <span *ngIf="info?.availability?.workLocation">
+          {{ 'PERSONAL_INFO.WORK_LOCATIONS.' + info?.availability?.workLocation | translate }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

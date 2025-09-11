@@ -1,0 +1,64 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- About Section -->
+      <div class="footer-section">
+        <h3>{{ 'FOOTER.ABOUT' | translate }}</h3>
+        <p class="footer-description">{{ 'FOOTER.DESCRIPTION' | translate }}</p>
+        <div class="social-links">
+          <a *ngFor="let link of socialLinks"
+             [href]="link.url"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-link"
+             [attr.aria-label]="link.label">
+            <span nz-icon [nzType]="link.icon" nzTheme="outline"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>{{ 'FOOTER.QUICK_LINKS' | translate }}</h3>
+        <ul class="footer-links">
+          <li><a routerLink="/about">{{ 'NAV.ABOUT' | translate }}</a></li>
+          <li><a routerLink="/experience">{{ 'NAV.EXPERIENCE' | translate }}</a></li>
+          <li><a routerLink="/skills">{{ 'NAV.SKILLS' | translate }}</a></li>
+          <li><a routerLink="/projects">{{ 'NAV.PROJECTS' | translate }}</a></li>
+          <li><a routerLink="/my-pages">{{ 'NAV.MY_PAGES' | translate }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h3>{{ 'FOOTER.CONTACT' | translate }}</h3>
+        <ul class="footer-links">
+          <li>
+            <span nz-icon nzType="mail" nzTheme="outline"></span>
+            <a href="mailto:hpphat1992@gmail.com">hpphat1992&#64;gmail.com</a>
+          </li>
+          <li>
+            <span nz-icon nzType="global" nzTheme="outline"></span>
+            <a href="https://hbslovely.vercel.app" target="_blank">hbslovely.vercel.app</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Technologies -->
+      <div class="footer-section">
+        <h3>{{ 'FOOTER.BUILT_WITH' | translate }}</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">SCSS</span>
+          <span class="tech-tag">Ng Zorro</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright-text">© {{ currentYear }} {{ 'FOOTER.COPYRIGHT' | translate }}</p>
+      <p>{{ 'FOOTER.MADE_WITH' | translate }}</p>
+    </div>
+  </div>
+</footer>

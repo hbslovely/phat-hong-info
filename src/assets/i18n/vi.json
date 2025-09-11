@@ -1,0 +1,215 @@
+{
+  "NAV": {
+    "ABOUT": "Giới thiệu",
+    "EXPERIENCE": "Kinh nghiệm",
+    "PROJECTS": "Dự án",
+    "SKILLS": "Kỹ năng",
+    "EXPORT_PDF": "Xuất PDF",
+    "MY_PAGES": "Trang của tôi",
+    "SETTINGS": "Cài đặt"
+  },
+  "COMMON": {
+    "CLOSE": "Đóng",
+    "COPY": "Sao chép vào clipboard",
+    "MORE": "nữa",
+    "VIEW_DETAILS": "Xem chi tiết",
+    "PRESENT": "Hiện tại"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Hong Phung Phat. Đã đăng ký bản quyền.",
+    "MADE_WITH": "Được tạo bằng Angular & AI️",
+    "ABOUT": "Về tôi",
+    "DESCRIPTION": "Lập trình viên Frontend cao cấp với hơn 10 năm kinh nghiệm chuyên về ứng dụng Angular và React.",
+    "QUICK_LINKS": "Liên kết nhanh",
+    "CONTACT": "Liên hệ",
+    "BUILT_WITH": "Được xây dựng với"
+  },
+  "ACTIONS": {
+    "EXPORT_PDF": "Xuất PDF"
+  },
+  "CTA": {
+    "READY_TO_COLLABORATE": "Sẵn sàng hợp tác?",
+    "LETS_DISCUSS": "Hãy thảo luận về việc chúng ta có thể cùng nhau làm việc trong dự án tiếp theo của bạn",
+    "CONNECT_WITH_ME": "Kết nối với tôi",
+    "INTERESTED_IN_WORKING_TOGETHER": "Quan tâm đến việc làm việc cùng nhau?",
+    "REACH_OUT": "Đừng ngại liên hệ để thảo luận về các cơ hội tiềm năng",
+    "CONTACT_ME": "Liên hệ với tôi",
+    "VIEW_ALL_PROJECTS": "Xem tất cả dự án",
+    "VIEW_ALL_SKILLS": "Xem tất cả kỹ năng",
+    "SETTINGS_FEEDBACK": "Có phản hồi về các cài đặt này?",
+    "SETTINGS_FEEDBACK_DESC": "Tôi rất muốn nghe ý kiến của bạn về cách cải thiện trải nghiệm người dùng"
+  },
+  "MY_PAGES": {
+    "SUBTITLE": "Khám phá các dự án cá nhân và sáng kiến kỹ thuật số của tôi",
+    "ABOUT_PROJECT": "Về Dự Án Này",
+    "VISIT_SITE": "Truy Cập Trang Web",
+    "ABOUT_SECTION": "Về Bộ Sưu Tập Cá Nhân",
+    "ABOUT_DESCRIPTION": "Những trang web và dự án cá nhân này thể hiện niềm đam mê của tôi đối với việc phát triển web ngoài công việc chuyên môn. Mỗi dự án đều được xây dựng với sự chú ý đến chi tiết, nguyên tắc thiết kế hiện đại và công nghệ tiên tiến. Chúng thể hiện sở thích, sự sáng tạo và khả năng phát triển các giải pháp hoàn chỉnh từ ý tưởng đến triển khai của tôi. Mời bạn khám phá để hiểu thêm về kỹ năng kỹ thuật, phương pháp thiết kế và sở thích cá nhân của tôi.",
+    "STATUS": "Trạng thái",
+    "TECH_STACK": "Công Nghệ Sử Dụng",
+    "CREATION_PROCESS": "Quy Trình Sáng Tạo",
+    "PROJECT_GOALS": "Mục Tiêu Dự Án"
+  },
+  "PERSONAL_INFO": {
+    "PROFILE_PICTURE": "Ảnh đại diện",
+    "EXPERIENCE": "Kinh nghiệm",
+    "YEARS_EXPERIENCE": "10+ Năm",
+    "PROJECTS": "Dự án",
+    "PROJECTS_COUNT": "20+",
+    "POSITION": "Vị trí",
+    "POSITION_LEVEL": "Chuyên viên cao cấp",
+    "EMAIL": "Email",
+    "PHONE": "Điện thoại",
+    "LINKEDIN": "LinkedIn",
+    "GITHUB": "GitHub",
+    "PROFESSIONAL_SUMMARY": "Tóm tắt chuyên môn",
+    "LANGUAGES": "Ngôn ngữ",
+    "LANGUAGE_LEVELS": {
+      "Native": "Bản ngữ",
+      "Working Proficiency": "khả năng sử dụng trong công việc"
+    },
+    "AREAS_OF_INTEREST": "Lĩnh vực quan tâm",
+    "INTERESTS": {
+      "WEB_DEVELOPMENT": "Phát triển Web",
+      "CLOUD_COMPUTING": "Điện toán đám mây",
+      "DEVOPS": "DevOps",
+      "FinTech": "Công nghệ tài chính",
+      "AI": "Trí tuệ nhân tạo",
+      "Performance": "Hiệu suất phần mềm",
+      "BLOCKCHAIN": "Blockchain"
+    },
+    "WORK_PREFERENCES": "Ưu tiên công việc",
+    "WORK_TYPES": {
+      "FULL_TIME": "Toàn thời gian",
+      "CONTRACT": "Hợp đồng",
+      "FREELANCE": "Tự do"
+    },
+    "WORK_LOCATIONS": {
+      "REMOTE": "Từ xa",
+      "HYBRID": "Kết hợp",
+      "ONSITE": "Tại văn phòng"
+    }
+  },
+  "SECTIONS": {
+    "WORK_EXPERIENCE": {
+      "TITLE": "Kinh nghiệm làm việc",
+      "NOTABLE_ACHIEVEMENTS": "Thành tựu & Tác động nổi bật",
+      "CORE_RESPONSIBILITIES": "Chuyên môn & Trách nhiệm chính",
+      "ABOUT_COMPANY": "Thông tin công ty"
+    },
+    "EDUCATION": {
+      "TITLE": "Học vấn",
+      "ACHIEVEMENTS": "Thành tích học tập",
+      "DESCRIPTION": "Mô tả chương trình",
+      "ABOUT_INSTITUTION": "Thông tin trường học"
+    },
+    "TECHNICAL_SKILLS": "Kỹ năng chuyên môn",
+    "FEATURED_PROJECTS": "Dự án nổi bật",
+    "KEY_SKILLS": "Kỹ năng chính",
+    "PROFESSIONAL_SUMMARY": "Tóm tắt chuyên môn",
+    "SUBTITLES": {
+      "WORK_EXPERIENCE": "Hơn một thập kỷ kinh nghiệm được chứng minh trong phát triển web và lãnh đạo kỹ thuật",
+      "EDUCATION": "Nền tảng học thuật vững chắc hỗ trợ sự xuất sắc trong kỹ thuật",
+      "TECHNICAL_SKILLS": "Tổng quan toàn diện về chuyên môn kỹ thuật của tôi",
+      "FEATURED_PROJECTS": "Chuyên về phát triển Angular với hơn 6 năm kinh nghiệm và thành thạo React với hơn 4 năm kinh nghiệm thực tế"
+    },
+    "TITLES": {
+      "PROFESSIONAL_JOURNEY": "Hành trình chuyên nghiệp"
+    },
+    "STATS": {
+      "YEARS_EXPERIENCE": "Năm kinh nghiệm",
+      "COMPANIES": "Công ty",
+      "PROJECTS": "Dự án"
+    }
+  },
+  "STATUS": {
+    "ACTIVE": "Đang hoạt động",
+    "COMPLETED": "Đã hoàn thành",
+    "PLANNED": "Dự kiến"
+  },
+  "PROJECTS": {
+    "SEARCH_PLACEHOLDER": "Tìm kiếm dự án...",
+    "COUNT": {
+      "TOTAL": "Dự án có sẵn",
+      "FILTERED": "Dự án phù hợp với tiêu chí"
+    },
+    "NO_RESULTS": {
+      "TITLE": "Không tìm thấy dự án",
+      "DESCRIPTION": "Thử điều chỉnh tìm kiếm hoặc bộ lọc để tìm thấy những gì bạn đang tìm kiếm."
+    },
+    "FILTERS": {
+      "TITLE": "Lọc dự án",
+      "CLEAR_ALL": "Xóa tất cả",
+      "TECHNOLOGIES": "Công nghệ",
+      "PROJECT_SCOPE": "Phạm vi dự án",
+      "PROJECT_STATUS": "Trạng thái dự án"
+    },
+    "VIEWS": {
+      "GRID": "Xem dạng lưới",
+      "LIST": "Xem dạng danh sách"
+    },
+    "FILTER_BUTTON": "Bộ lọc",
+    "VIEW_DETAILS": "Xem chi tiết"
+  },
+  "SKILLS": {
+    "FEATURED_SKILLS": "Kỹ năng nổi bật",
+    "ALL_SKILLS": "Tất cả kỹ năng theo danh mục",
+    "VIEW_DETAILS": "Xem chi tiết",
+    "SEE_IN_ACTION": "Xem kỹ năng của tôi qua thực tế",
+    "DESCRIPTION": "Tổng quan toàn diện về chuyên môn kỹ thuật và năng lực chuyên môn của tôi.",
+    "SEARCH_PLACEHOLDER": "Tìm kiếm kỹ năng...",
+    "SKILLS": "kỹ năng",
+    "VIEW_PROJECTS": "Xem các dự án",
+    "PROJECTS_HINT": "Hãy xem portfolio của tôi để thấy các kỹ năng này được áp dụng trong các dự án thực tế.",
+    "DIALOG": {
+      "USED_IN": "Đã sử dụng trong {{count}} dự án",
+      "OVERVIEW": "Tổng quan",
+      "RESOURCES": "Tài nguyên",
+      "VISIT_WEBSITE": "Trang chủ",
+      "VISIT_GITHUB": "GitHub",
+      "EXPERIENCE_LEVEL": {
+        "BEGINNER": "Người mới",
+        "INTERMEDIATE": "Trung cấp",
+        "ADVANCED": "Nâng cao",
+        "EXPERT": "Chuyên gia"
+      },
+      "SKILL_TYPE": {
+        "TECHNOLOGY": "Công nghệ",
+        "COMMON_TOOL": "Công cụ phổ biến"
+      }
+    }
+  },
+  "SETTINGS": {
+    "TITLE": "Cài đặt",
+    "SUBTITLE": "Tùy chỉnh trải nghiệm và sở thích của bạn",
+    "THEME": {
+      "TITLE": "Giao diện",
+      "DESCRIPTION": "Chọn chủ đề và cài đặt hiển thị ưa thích",
+      "LIGHT": "Chế độ sáng",
+      "LIGHT_DESC": "Giao diện sáng và rõ ràng cho việc sử dụng ban ngày",
+      "DARK": "Chế độ tối",
+      "DARK_DESC": "Dễ chịu cho mắt trong môi trường ánh sáng yếu",
+      "AUTO": "Chế độ tự động",
+      "AUTO_DESC": "Tự động chuyển đổi dựa trên cài đặt hệ thống",
+      "PREVIEW": "Xem trước",
+      "PREVIEW_TITLE": "Nội dung mẫu",
+      "PREVIEW_BUTTON": "Hành động",
+      "PREVIEW_TEXT": "Đây là cách nội dung của bạn sẽ hiển thị trong chủ đề đã chọn."
+    },
+    "LANGUAGE": {
+      "TITLE": "Ngôn ngữ & Khu vực",
+      "DESCRIPTION": "Chọn ngôn ngữ ưa thích cho giao diện",
+      "EN_DESC": "Hiển thị giao diện bằng tiếng Anh",
+      "VI_DESC": "Hiển thị giao diện bằng tiếng Việt",
+      "INFO": "Thay đổi ngôn ngữ sẽ được áp dụng ngay lập tức trên tất cả các trang"
+    },
+    "PREFERENCES": {
+      "TITLE": "Tùy chọn bổ sung",
+      "DESCRIPTION": "Cấu hình các cài đặt và hành vi bổ sung",
+      "AUTO_SAVE": "Tự động lưu tùy chọn",
+      "AUTO_SAVE_DESC": "Tự động lưu các thay đổi cài đặt của bạn",
+      "ANIMATIONS": "Bật hiệu ứng động",
+      "ANIMATIONS_DESC": "Hiển thị chuyển tiếp mượt mà và hiệu ứng động"
+    }
+  }
+}

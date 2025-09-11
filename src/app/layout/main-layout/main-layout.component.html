@@ -1,0 +1,11 @@
+<div class="main-layout">
+  <app-nav-bar></app-nav-bar>
+  <main class="container" appScrollToTop>
+    <div class="content-wrapper" id="cv-container" [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </main>
+  <app-footer></app-footer>
+  <app-contact-button></app-contact-button>
+</div>
+<app-watermark></app-watermark>

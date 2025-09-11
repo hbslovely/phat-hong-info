@@ -1,0 +1,962 @@
+.my-pages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+// Pages Grid
+.pages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark-theme) {
+  .my-pages-container {
+    color: var(--text-color);
+  }
+
+  .page-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+
+    &:hover {
+      background: var(--hover-bg);
+      border-color: var(--primary-color);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-content {
+      .page-title {
+        color: var(--heading-color);
+      }
+
+      .page-description {
+        color: var(--text-light);
+      }
+
+      .goals-section {
+        h4 {
+          color: var(--heading-color);
+        }
+
+        .goals-text {
+          color: var(--text-light);
+        }
+      }
+    }
+
+    .tech-section {
+      background: var(--hover-bg);
+      border-top-color: var(--border-color);
+
+      h4 {
+        color: var(--heading-color);
+      }
+
+      .tech-tags {
+        .tech-tag {
+          background: var(--card-bg);
+          color: var(--text-color);
+          border-color: var(--border-color);
+
+          &:hover {
+            background: var(--primary-color);
+            color: white;
+          }
+        }
+      }
+    }
+
+    .card-fixed-footer {
+      background: var(--primary-color);
+
+      .creation-year {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .visit-button {
+        background: white;
+        color: var(--primary-color);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.95);
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark-theme) {
+  .my-pages-container {
+    color: var(--text-color);
+  }
+
+  .page-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+
+    &:hover {
+      background: var(--hover-bg);
+      border-color: var(--primary-color);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-content {
+      .page-title {
+        color: var(--heading-color);
+      }
+
+      .page-description {
+        color: var(--text-light);
+      }
+
+      .goals-section {
+        h4 {
+          color: var(--heading-color);
+        }
+
+        .goals-text {
+          color: var(--text-light);
+        }
+      }
+    }
+
+    .tech-section {
+      background: var(--hover-bg);
+      border-top-color: var(--border-color);
+
+      h4 {
+        color: var(--heading-color);
+      }
+
+      .tech-tags {
+        .tech-tag {
+          background: var(--card-bg);
+          color: var(--text-color);
+          border-color: var(--border-color);
+
+          &:hover {
+            background: var(--primary-color);
+            color: white;
+          }
+        }
+      }
+    }
+
+    .card-fixed-footer {
+      background: var(--primary-color);
+
+      .creation-year {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .visit-button {
+        background: white;
+        color: var(--primary-color);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.95);
+        }
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark-theme) {
+  .my-pages-container {
+    color: var(--text-color);
+  }
+
+  .page-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+
+    &:hover {
+      background: var(--hover-bg);
+      border-color: var(--primary-color);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-content {
+      .page-title {
+        color: var(--heading-color);
+      }
+
+      .page-description {
+        color: var(--text-light);
+      }
+
+      .goals-section {
+        h4 {
+          color: var(--heading-color);
+        }
+
+        .goals-text {
+          color: var(--text-light);
+        }
+      }
+    }
+
+    .tech-section {
+      background: var(--hover-bg);
+      border-top-color: var(--border-color);
+
+      h4 {
+        color: var(--heading-color);
+      }
+
+      .tech-tags {
+        .tech-tag {
+          background: var(--card-bg);
+          color: var(--text-color);
+          border-color: var(--border-color);
+
+          &:hover {
+            background: var(--primary-color);
+            color: white;
+          }
+        }
+      }
+    }
+
+    .card-fixed-footer {
+      background: var(--primary-color);
+
+      .creation-year {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .visit-button {
+        background: white;
+        color: var(--primary-color);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.95);
+        }
+      }
+    }
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-card {
+  animation: slideUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+// New Page Card Design
+.page-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; // Required for absolute positioning of footer
+  padding-bottom: 110px; // Increased space for tech section + fixed footer (60px + ~50px)
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+
+    .page-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    // Status Dot Indicator - With tooltip
+    .status-dot {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 14px; // Slightly increased size for better visibility
+      height: 14px;
+      border-radius: 50%;
+      z-index: 2;
+      cursor: pointer; // Indicate it's interactive
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); // Subtle shadow
+
+      &.completed {
+        background-color: #10b981; // Success green
+        animation: pulse 2.5s infinite;
+      }
+
+      &.in-progress {
+        background-color: #f59e0b; // Warning amber
+        animation: blink 2s infinite;
+      }
+    }
+  }
+
+  .card-content {
+    padding: 1.8rem;
+    padding-bottom: 1rem; // Reduce bottom padding because of tech section below
+    margin-bottom: 4rem;
+
+    .page-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-color);
+      margin: 0 0 1rem;
+    }
+
+    .page-description {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    // Goals Section
+    .goals-section {
+      margin-bottom: 0; // Remove margin since tech section is now below
+
+      h4 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--text-color);
+        margin-bottom: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 4px;
+          height: 18px;
+          background-color: var(--primary-color);
+          opacity: 0.6;
+          border-radius: 2px;
+        }
+      }
+
+      .goals-text {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin: 0;
+      }
+    }
+
+    // Card Footer
+    .card-footer {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .metadata {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+
+        .metadata-item {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.85rem;
+          color: var(--text-light);
+
+          span[nz-icon] {
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      .visit-button {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.6rem 1.2rem;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 30px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--primary-dark);
+          transform: translateY(-3px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        span[nz-icon] {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  // Tech Section - Now positioned above the footer
+  .tech-section {
+    padding: 1rem 1.5rem;
+    margin-bottom: 0;
+    background-color: rgba(var(--primary-rgb), 0.05); // Lighter shade using RGB with opacity
+    position: absolute;
+    bottom: 60px; // Position right above the footer
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-color);
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 16px;
+        background-color: var(--primary-color);
+        opacity: 0.8; // Increased opacity for better visibility
+        border-radius: 2px;
+      }
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+
+      .tech-tag {
+        padding: 0.25rem 0.75rem;
+        background-color: white;
+        color: var(--primary-color);
+        border-radius: 20px;
+        font-size: 0.85rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(var(--primary-rgb), 0.1); // Added subtle border
+      }
+    }
+  }
+
+  // Fixed Footer with different background
+  .card-fixed-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+
+    .creation-year {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.9); // Slightly softer white
+      font-weight: 500;
+
+      span[nz-icon] {
+        font-size: 1rem;
+      }
+    }
+
+    .visit-button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: white;
+      color: var(--primary-color);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--primary-lightest);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); // Increased shadow opacity
+      }
+
+      span[nz-icon] {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark-theme) {
+  .my-pages-container {
+    color: var(--text-color);
+  }
+
+  .page-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+
+    &:hover {
+      background: var(--hover-bg);
+      border-color: var(--primary-color);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-content {
+      .page-title {
+        color: var(--heading-color);
+      }
+
+      .page-description {
+        color: var(--text-light);
+      }
+
+      .goals-section {
+        h4 {
+          color: var(--heading-color);
+        }
+
+        .goals-text {
+          color: var(--text-light);
+        }
+      }
+    }
+
+    .tech-section {
+      background: var(--hover-bg);
+      border-top-color: var(--border-color);
+
+      h4 {
+        color: var(--heading-color);
+      }
+
+      .tech-tags {
+        .tech-tag {
+          background: var(--card-bg);
+          color: var(--text-color);
+          border-color: var(--border-color);
+
+          &:hover {
+            background: var(--primary-color);
+            color: white;
+          }
+        }
+      }
+    }
+
+    .card-fixed-footer {
+      background: var(--primary-color);
+
+      .creation-year {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .visit-button {
+        background: white;
+        color: var(--primary-color);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.95);
+        }
+      }
+    }
+  }
+}
+
+// Info Section
+.info-section {
+  margin: 3rem 0;
+
+  .info-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    .info-icon {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary-lightest);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span[nz-icon] {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+      }
+    }
+
+    .info-content {
+      h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--text-color);
+        margin: 0 0 0.8rem;
+      }
+
+      p {
+        color: var(--text-light);
+        line-height: 1.6;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark-theme) {
+  .my-pages-container {
+    color: var(--text-color);
+  }
+
+  .page-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+
+    &:hover {
+      background: var(--hover-bg);
+      border-color: var(--primary-color);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-content {
+      .page-title {
+        color: var(--heading-color);
+      }
+
+      .page-description {
+        color: var(--text-light);
+      }
+
+      .goals-section {
+        h4 {
+          color: var(--heading-color);
+        }
+
+        .goals-text {
+          color: var(--text-light);
+        }
+      }
+    }
+
+    .tech-section {
+      background: var(--hover-bg);
+      border-top-color: var(--border-color);
+
+      h4 {
+        color: var(--heading-color);
+      }
+
+      .tech-tags {
+        .tech-tag {
+          background: var(--card-bg);
+          color: var(--text-color);
+          border-color: var(--border-color);
+
+          &:hover {
+            background: var(--primary-color);
+            color: white;
+          }
+        }
+      }
+    }
+
+    .card-fixed-footer {
+      background: var(--primary-color);
+
+      .creation-year {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .visit-button {
+        background: white;
+        color: var(--primary-color);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.95);
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .my-pages-container {
+    padding: 1.5rem;
+  }
+
+  .pages-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .page-card {
+    padding-bottom: 130px; // Increased for mobile to accommodate potential multi-line tech tags
+
+    .card-content {
+      padding: 1.5rem;
+      padding-bottom: 1rem;
+
+      .page-title {
+        font-size: 1.3rem;
+      }
+
+      .tech-section,
+      .goals-section {
+        h4 {
+          font-size: 1rem;
+        }
+      }
+
+      .card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+
+        .metadata {
+          width: 100%;
+          flex-wrap: wrap;
+          gap: 1rem;
+        }
+
+        .visit-button {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+
+    .tech-section {
+      padding: 1rem 1.2rem;
+
+      h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .tech-tags {
+        gap: 0.5rem;
+
+        .tech-tag {
+          padding: 0.2rem 0.6rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .card-fixed-footer {
+      padding: 0 1.2rem;
+
+      .creation-year {
+        font-size: 0.8rem;
+      }
+
+      .visit-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .info-section {
+    margin: 2rem 0;
+
+    .info-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.8rem;
+
+      .info-icon {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark-theme) {
+  .my-pages-container {
+    color: var(--text-color);
+  }
+
+  .page-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+
+    &:hover {
+      background: var(--hover-bg);
+      border-color: var(--primary-color);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-content {
+      .page-title {
+        color: var(--heading-color);
+      }
+
+      .page-description {
+        color: var(--text-light);
+      }
+
+      .goals-section {
+        h4 {
+          color: var(--heading-color);
+        }
+
+        .goals-text {
+          color: var(--text-light);
+        }
+      }
+    }
+
+    .tech-section {
+      background: var(--hover-bg);
+      border-top-color: var(--border-color);
+
+      h4 {
+        color: var(--heading-color);
+      }
+
+      .tech-tags {
+        .tech-tag {
+          background: var(--card-bg);
+          color: var(--text-color);
+          border-color: var(--border-color);
+
+          &:hover {
+            background: var(--primary-color);
+            color: white;
+          }
+        }
+      }
+    }
+
+    .card-fixed-footer {
+      background: var(--primary-color);
+
+      .creation-year {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .visit-button {
+        background: white;
+        color: var(--primary-color);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.95);
+        }
+      }
+    }
+  }
+}
+
+
+  // Fix info-section (About My Personal Portfolio) dark theme
+  .info-section {
+    .info-card {
+      background: var(--card-bg);
+      color: var(--text-color);
+      border: 1px solid var(--border-color);
+
+      .info-icon {
+        background: var(--hover-bg);
+
+        span[nz-icon] {
+          color: var(--primary-color);
+        }
+      }
+
+      .info-content {
+        h3 {
+          color: var(--heading-color);
+        }
+
+        p {
+          color: var(--text-light);
+        }
+      }
+    }
+  }

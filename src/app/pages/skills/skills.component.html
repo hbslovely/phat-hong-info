@@ -1,0 +1,96 @@
+<div [class]="config.className">
+  <!-- Page Header -->
+  <app-page-header title="{{ 'SECTIONS.TECHNICAL_SKILLS' | translate }}" subtitle="{{ 'SKILLS.DESCRIPTION' | translate }}"></app-page-header>
+  
+  <div class="container" [style.maxWidth.px]="config.maxWidth">
+    <div class="skills-content">
+      <!-- Featured Skills -->
+      <div class="featured-skills">
+        <div class="section-title">
+          <span nz-icon nzType="star" nzTheme="fill"></span>
+          <h2>{{ 'SKILLS.FEATURED_SKILLS' | translate }}</h2>
+        </div>
+        <div class="featured-grid">
+          @for (skill of getFeaturedSkills(); track skill) {
+            <div class="featured-skill" [style.borderTopColor]="getTagColor(skill)">
+              <div class="skill-header">
+                <h3>{{ skill }}</h3>
+                @if (getSkillExperience(skill)) {
+                  <div class="experience-badge" [class]="getExperienceClass(skill)">
+                    {{ getSkillExperience(skill) }}
+                  </div>
+                }
+              </div>
+              <div class="skill-bar">
+                <div class="bar-fill" [style.width.%]="getExperiencePercentage(skill)" [style.backgroundColor]="getTagColor(skill)"></div>
+              </div>
+              <div class="skill-description">
+                {{ getSkillDescription(skill) }}
+              </div>
+              <button class="skill-details-btn" (click)="showSkillInfo(skill)">
+                {{ 'SKILLS.VIEW_DETAILS' | translate }}
+                <span nz-icon nzType="arrow-right" nzTheme="outline"></span>
+              </button>
+            </div>
+          }
+        </div>
+      </div>
+      
+      <!-- All Skills by Category -->
+      <div class="all-skills">
+        <div class="section-title">
+          <span nz-icon nzType="appstore" nzTheme="outline"></span>
+          <h2>{{ 'SKILLS.ALL_SKILLS' | translate }}</h2>
+        </div>
+        
+        <div class="category-grid">
+          @for (category of Object.keys(cv()?.skills?.technicalSkills || {}); track category) {
+            <div class="skill-category">
+              <div class="category-header">
+                <span nz-icon [nzType]="getTechnologyIcon(category)" nzTheme="outline"></span>
+                <h3>{{ formatCategory(category) }}</h3>
+                <span class="skill-count">{{ cv()?.skills?.technicalSkills?.[category]?.length || 0 }}</span>
+              </div>
+              
+              <div class="skill-list">
+                @for (skill of cv()?.skills?.technicalSkills?.[category]; track skill) {
+                  <app-skill-item
+                    [name]="skill"
+                    [experience]="getSkillExperience(skill)"
+                    [color]="getTagColor(skill)"
+                    [experiencePercentage]="getExperiencePercentage(skill)"
+                    (onClick)="showSkillInfo(skill)"
+                  ></app-skill-item>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Portfolio CTA -->
+      <div class="portfolio-cta">
+        <div class="cta-content">
+          <h2>{{ 'SKILLS.SEE_IN_ACTION' | translate }}</h2>
+          <p>{{ 'SKILLS.PROJECTS_HINT' | translate }}</p>
+          <a routerLink="/projects" class="cta-button">
+            {{ 'SKILLS.VIEW_PROJECTS' | translate }}
+            <span nz-icon nzType="arrow-right" nzTheme="outline"></span>
+          </a>
+        </div>
+        <div class="cta-decoration">
+          <span nz-icon nzType="project" nzTheme="outline"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Skill Detail Dialog Template -->
+<ng-template #skillDetailDialog>
+  <app-skill-detail
+    [info]="selectedSkill!"
+    (close)="closeSkillDetailDialog()"
+    [projectCount]="selectedSkillProjectCount">
+  </app-skill-detail>
+</ng-template>

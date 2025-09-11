@@ -1,0 +1,26 @@
+{
+  "pages": [
+    {
+      "title": "Love Story",
+      "description": "A personal interactive website celebrating my relationship journey with my wife. This project features timeline animations, photo galleries, and memorable moments we've shared together. Built with Angular and PrimeNG components, it incorporates smooth transitions and responsive design to create an engaging digital memory book that captures our special connection.",
+      "url": "https://hbslovely.vercel.app/#/chao-mung",
+      "image": "assets/images/pages/love-story.png",
+      "fallbackImage": "assets/images/gallery/projects.png",
+      "status": "completed",
+      "technologies": ["Angular", "PrimeNG", "SCSS"],
+      "creationDate": "2022",
+      "goals": "To create a digital memento of our relationship that we can revisit and share with friends and family."
+    },
+    {
+      "title": "Ho Chi Minh City Guide",
+      "description": "A comprehensive travel guide for visitors exploring Ho Chi Minh City. This web application provides interactive maps, curated lists of attractions, local food recommendations, and cultural insights. With a focus on user experience, the guide offers neighborhood exploration, practical travel tips, and hidden gems only locals know about. The responsive design ensures a seamless experience across all devices, making it the perfect companion for travelers.",
+      "url": "https://hello-hcmc.vercel.app/",
+      "image": "assets/images/pages/hcmc-guide.png",
+      "fallbackImage": "assets/images/gallery/projects.png",
+      "status": "in-progress",
+      "technologies": ["Angular", "PrimeNG", "Font Awesome"],
+      "creationDate": "2023",
+      "goals": "To showcase the beauty and vibrancy of Ho Chi Minh City while providing practical information for visitors."
+    }
+  ]
+} 

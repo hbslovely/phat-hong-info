@@ -1,0 +1,26 @@
+<div class="project-count-container">
+  <div class="count-card">
+    <div class="count-icon">
+      <span nz-icon nzType="project" nzTheme="outline"></span>
+    </div>
+    <div class="count-content">
+      <div class="count-numbers">
+        <span class="filtered-count">{{ filteredCount }}</span>
+        @if (filteredCount !== totalCount) {
+          <span class="count-separator">of</span>
+          <span class="total-count">{{ totalCount }}</span>
+        }
+      </div>
+      <div class="count-label">
+        {{ (filteredCount !== totalCount ? 'PROJECTS.COUNT.FILTERED' : 'PROJECTS.COUNT.TOTAL') | translate }}
+      </div>
+    </div>
+  </div>
+  
+  @if (filteredCount !== totalCount) {
+    <div class="filter-indicator">
+      <div class="indicator-dot"></div>
+      <span class="indicator-text">Filtered</span>
+    </div>
+  }
+</div> 

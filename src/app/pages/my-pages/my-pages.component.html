@@ -1,0 +1,67 @@
+<div class="my-pages-container">
+  <!-- Page Header -->
+  <app-page-header 
+    title="{{ 'NAV.MY_PAGES' | translate }}" 
+    subtitle="{{ 'MY_PAGES.SUBTITLE' | translate }}"
+  ></app-page-header>
+
+  <div class="pages-grid">
+    <div class="page-card animate-card" *ngFor="let page of myPages; let i = index" [style.animation-delay]="i * 0.2 + 's'">
+      <div class="image-container">
+        <img [src]="page.image" [alt]="page.title" class="page-image" (error)="handleImageError(page)">
+        <!-- Status dot with tooltip -->
+        <div class="status-dot" 
+             [class.completed]="page.status === 'completed'" 
+             [class.in-progress]="page.status === 'in-progress'"
+             nz-tooltip
+             [nzTooltipTitle]="page.status === 'completed' ? ('STATUS.COMPLETED' | translate) : ('STATUS.ACTIVE' | translate)"
+             nzTooltipPlacement="top"
+        ></div>
+      </div>
+
+      <div class="card-content">
+        <h2 class="page-title">{{ page.title }}</h2>
+        <p class="page-description">{{ page.description | slice:0:150 }}{{ page.description.length > 150 ? '...' : '' }}</p>
+        
+        <!-- Project Goals section if available -->
+        <div class="goals-section" *ngIf="page.goals">
+          <h4>{{ 'MY_PAGES.PROJECT_GOALS' | translate }}</h4>
+          <p class="goals-text">{{ page.goals }}</p>
+        </div>
+      </div>
+      
+      <!-- Tech Stack section moved here, just above the fixed footer -->
+      <div class="tech-section">
+        <h4>{{ 'MY_PAGES.TECH_STACK' | translate }}</h4>
+        <div class="tech-tags">
+          <span class="tech-tag" *ngFor="let tech of page.technologies">{{ tech }}</span>
+        </div>
+      </div>
+      
+      <!-- Fixed footer with year and visit button -->
+      <div class="card-fixed-footer">
+        <div class="creation-year" *ngIf="page.creationDate">
+          <span nz-icon nzType="calendar" nzTheme="outline"></span>
+          {{ page.creationDate }}
+        </div>
+        <a [href]="page.url" target="_blank" rel="noopener noreferrer" class="visit-button">
+          <span nz-icon nzType="global" nzTheme="outline"></span>
+          {{ 'MY_PAGES.VISIT_SITE' | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info section -->
+  <div class="info-section">
+    <div class="info-card">
+      <div class="info-icon">
+        <span nz-icon nzType="info-circle" nzTheme="outline"></span>
+      </div>
+      <div class="info-content">
+        <h3>{{ 'MY_PAGES.ABOUT_SECTION' | translate }}</h3>
+        <p>{{ 'MY_PAGES.ABOUT_DESCRIPTION' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</div> 

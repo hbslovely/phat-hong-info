@@ -1,0 +1,563 @@
+.education-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--primary-color);
+
+    .education-logo {
+      transform: none;
+    }
+
+    .details-button {
+      color: var(--primary-dark);
+      text-decoration: underline;
+
+      span[nz-icon] {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  .card-header {
+    padding: 1.75rem 1.5rem 1rem;
+    display: flex;
+    gap: 1.25rem;
+
+    .education-logo {
+      width: 55px;
+      height: 55px;
+      background-color: var(--primary-lightest);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+
+      span[nz-icon] {
+        font-size: 28px;
+        color: var(--primary-color);
+      }
+    }
+
+    .position-institution {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      h3 {
+        margin: 0;
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--text-color);
+        line-height: 1.3;
+      }
+
+      .institution {
+        color: var(--text-light);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+
+        span[nz-icon] {
+          color: var(--primary-color);
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .card-content {
+    padding: 0.5rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    .field-specialty {
+      font-size: 0.95rem;
+      color: var(--text-color);
+    }
+
+    .duration, .grade {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-light);
+      font-size: 0.9rem;
+
+      span[nz-icon] {
+        color: var(--primary-color);
+        font-size: 0.9rem;
+      }
+    }
+
+    .description {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .card-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+
+    .details-button {
+      background: none;
+      border: none;
+      color: var(--primary-color);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &:hover {
+        color: var(--primary-dark);
+        text-decoration: underline;
+
+        span[nz-icon] {
+          transform: translateX(3px);
+        }
+      }
+
+      span[nz-icon] {
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+}
+
+// Dialog Styles
+.education-detail-dialog {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: white;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(90vh);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  .dialog-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1;
+  }
+
+  .dialog-watermark {
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+
+    ::ng-deep .watermark-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      animation: none !important;
+      transform: rotate(15deg);
+    }
+  }
+
+  .dialog-header {
+    padding: 2.5rem 2rem 2rem;
+    background: var(--primary-lightest);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+
+    .header-content {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      .institution-logo {
+        width: 70px;
+        height: 70px;
+        padding: 0.75rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+
+        span[nz-icon] {
+          font-size: 32px;
+          color: var(--primary-color);
+        }
+      }
+
+      .education-info {
+        h2 {
+          margin: 0 0 0.5rem;
+          font-size: 1.75rem;
+          font-weight: 600;
+          color: var(--text-color);
+        }
+
+        .field {
+          font-size: 1.25rem;
+          color: var(--primary-color);
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+    }
+
+    .meta-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .meta-tag {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: rgba(0, 102, 204, 0.08);
+        border-radius: 4px;
+        color: var(--text-color);
+        font-size: 0.9rem;
+
+        [nz-icon] {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .dialog-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    color: var(--text-color);
+
+    .scrollable-content {
+      flex: 1;
+      padding: 2rem 2rem 1rem;
+      overflow-y: auto;
+      scrollbar-width: thin;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    .institution-contact-footer {
+      flex-shrink: 0;
+      padding: 1rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      margin-top: 1rem;
+      background-color: white;
+
+      .institution-contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        background: var(--primary-lightest);
+        padding: 1.25rem;
+        border-radius: 4px;
+
+        .contact-item {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin-right: 1rem;
+          color: var(--text-light);
+
+          [nz-icon] {
+            color: var(--primary-color);
+          }
+
+          a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.2s ease;
+
+            &:hover {
+              text-decoration: underline;
+              color: var(--primary-light);
+            }
+          }
+        }
+      }
+    }
+
+    .dialog-section {
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.2rem;
+        margin: 0 0 1.25rem;
+        color: var(--text-color);
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+        [nz-icon] {
+          color: var(--primary-color);
+          font-size: 1.2rem;
+        }
+      }
+
+      .content-paragraph {
+        p {
+          margin: 0 0 0.75rem;
+          line-height: 1.6;
+          color: var(--text-light);
+          position: relative;
+          padding-left: 1.5rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &::before {
+            content: '•';
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      .institution-description {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+        color: var(--text-light);
+      }
+    }
+  }
+}
+
+// Global modal styles
+:host ::ng-deep {
+  .education-detail-modal {
+    .ant-modal-content {
+      padding: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      background: transparent;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .ant-modal-body {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      max-height: 90vh;
+    }
+
+    .ant-modal-close {
+      top: 1rem;
+      right: 1rem;
+      z-index: 10;
+
+      .ant-modal-close-x {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.03);
+        color: var(--text-color);
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: var(--primary-color);
+          color: white;
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .education-card {
+    .card-header {
+      padding: 1.5rem 1.25rem 0.75rem;
+
+      .education-logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .position-institution {
+        h3 {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .card-content {
+      padding: 0 1.25rem;
+      gap: 0.5rem;
+
+      // Make meta info more compact
+      .field-specialty {
+        font-size: 0.9rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .duration, .grade {
+        font-size: 0.8rem;
+        gap: 0.3rem;
+        padding: 0.25rem 0.5rem;
+        background-color: rgba(0, 0, 0, 0.03);
+        border-radius: 4px;
+        display: inline-flex;
+        margin-right: 0.5rem;
+        margin-bottom: 0.3rem;
+        flex-shrink: 0;
+
+        span[nz-icon] {
+          font-size: 0.8rem;
+        }
+      }
+
+      .description {
+        font-size: 0.85rem;
+        margin-top: 0.3rem;
+      }
+    }
+
+    .card-footer {
+      padding: 1rem 1.25rem;
+    }
+  }
+
+  .education-detail-dialog {
+    max-height: calc(100vh - 60px);
+
+    .dialog-header {
+      padding: 2rem 1.5rem 1.5rem;
+
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .meta-tags {
+        justify-content: center;
+      }
+    }
+
+    .dialog-content {
+      .scrollable-content {
+        padding: 1.5rem 1.5rem 1rem;
+        max-height: 40vh; // Limit height on mobile to ensure footer visibility
+      }
+
+      .institution-contact-footer {
+        padding: 0.75rem 1.5rem 1.5rem;
+
+        .institution-contact-info {
+          flex-direction: column;
+          gap: 0.75rem;
+
+          .contact-item {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .dialog-section {
+        margin-bottom: 1.5rem;
+
+        h3 {
+          font-size: 1.1rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.education-detail-dialog {
+  .dialog-content {
+    background: var(--card-bg);
+
+    .scrollable-content {
+      background: var(--card-bg) !important;
+      color: var(--text-color);
+    }
+  }
+
+  .institution-contact-footer {
+    background: var(--hover-bg) !important;
+    border-top-color: var(--border-color) !important;
+    color: var(--text-color);
+
+    .institution-contact-info {
+      .contact-item {
+        color: var(--text-light);
+
+        [nz-icon] {
+          color: var(--primary-color);
+        }
+
+        strong {
+          color: var(--heading-color);
+        }
+      }
+    }
+  }
+}

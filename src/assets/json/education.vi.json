@@ -1,0 +1,25 @@
+{
+  "education": [
+    {
+      "institution": "Đại học khoa học tự nhiên TP.HCM",
+      "degree": "Cử nhân khoa học máy tính",
+      "field": "Thị giác máy tính và khoa học rô-bốt",
+      "startDate": "2010",
+      "endDate": "2014",
+      "grade": "Xuất sắc",
+      "description": "Chuyên ngành Thị giác máy tính và khoa học rô-bốt, tập trung vào các thuật toán học máy cho hệ thống nhận dạng và phát hiện đối tượng.",
+      "achievements": [
+        "Tốt nghiệp với bằng khen, đạt thứ hạng top 5% lớp",
+        "Hoàn thành luận văn về 'Nhận dạng đối tượng thời gian thực cho robot tự hành'",
+        "Nhận học bổng đại học cho thành tích học tập xuất sắc (2012-2014)",
+        "Tham gia cuộc thi robot quốc gia, đạt giải nhì"
+      ],
+      "institutionInfo": {
+        "description": "Đại học Khoa học Tự nhiên Thành phố Hồ Chí Minh (HCMUS) là một trong những tổ chức hàng đầu về nghiên cứu và giáo dục khoa học tại Việt Nam. Được thành lập vào năm 1941, trường đã đào tạo nhiều nhà khoa học và công nghệ đã đóng góp đáng kể vào sự phát triển của Việt Nam.",
+        "address": "227 Đường Nguyễn Văn Cừ, Quận 5, Thành phố Hồ Chí Minh, Việt Nam",
+        "website": "https://www.hcmus.edu.vn",
+        "contact": "+84 28 3835 2020"
+      }
+    }
+  ]
+} 

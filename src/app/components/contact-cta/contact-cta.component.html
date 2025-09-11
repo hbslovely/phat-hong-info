@@ -1,0 +1,14 @@
+<div class="contact-cta">
+  <div class="cta-decoration">
+    <div class="decoration-circle"></div>
+    <div class="decoration-line"></div>
+  </div>
+  <div class="cta-content">
+    <h3>{{ title | translate }}</h3>
+    <p>{{ description | translate }}</p>
+  </div>
+  <a class="cta-button" (click)="openLinkedIn()" aria-label="Contact on LinkedIn">
+    <span nz-icon [nzType]="buttonIcon" nzTheme="outline"></span>
+    {{ buttonText | translate }}
+  </a>
+</div> 

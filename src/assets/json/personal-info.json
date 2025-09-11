@@ -1,0 +1,38 @@
+{
+  "prefix": "Mr.",
+  "name": "Hong Phung Phat",
+  "title": "Senior Software Developer",
+  "dateOfBirth": "30 Sep 1992",
+  "location": {
+    "address": "Binh Thoi",
+    "city": "Ho Chi Minh City",
+    "country": "Vietnam"
+  },
+  "contact": {
+    "phone": "+84 764 74 99 64",
+    "email": "hpphat1992@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/hpphat1992/",
+    "github": "https://github.com/hpphat92"
+  },
+  "languages": [
+    {
+      "name": "Vietnamese",
+      "level": "NATIVE"
+    },
+    {
+      "name": "English",
+      "level": "WORKING_PROFICIENCY"
+    }
+  ],
+  "summary": "As a Senior Web Developer with over 10 years of experience, I specialize in creating modern and efficient web applications. My expertise includes working with Angular and React to build user-friendly interfaces that solve real business problems. Throughout my career, I have successfully delivered projects for various industries, from social networks to data management systems. I take pride in writing clean, maintainable code and staying up-to-date with the latest web technologies.\n\nIn my current role, I focus on designing scalable applications and helping junior developers grow their skills. I am particularly interested in improving application performance and creating better user experiences. I am now seeking opportunities where I can use my technical skills and leadership experience to make a significant impact on challenging projects.",
+  "shortSummary": "Senior Web Developer with 10+ years of experience in Angular and React. Strong focus on clean code, performance optimization, and mentoring. Currently seeking opportunities to lead challenging projects and drive technical innovation.",
+  "interests": [
+    "AI",
+    "FinTech",
+    "Performance"
+  ],
+  "availability": {
+    "workType": "FULL_TIME",
+    "workLocation": "REMOTE"
+  }
+}

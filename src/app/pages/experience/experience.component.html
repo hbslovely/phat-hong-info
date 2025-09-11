@@ -1,0 +1,65 @@
+<div [class]="config.className">
+  <!-- Page Header -->
+  <app-page-header title="{{ 'SECTIONS.TITLES.PROFESSIONAL_JOURNEY' | translate }}" subtitle="{{ 'SECTIONS.SUBTITLES.WORK_EXPERIENCE' | translate }}">
+  </app-page-header>
+
+  <div class="container" [style.maxWidth.px]="config.maxWidth">
+    <!-- Hero Stats Section -->
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span nz-icon nzType="calendar" nzTheme="outline" class="stat-icon"></span>
+        <div class="stat-value">{{ getTotalYearsExperience() }}+</div>
+        <div class="stat-label">{{ 'SECTIONS.STATS.YEARS_EXPERIENCE' | translate }}</div>
+      </div>
+      <div class="stat-item">
+        <span nz-icon nzType="team" nzTheme="outline" class="stat-icon"></span>
+        <div class="stat-value">{{ cv()?.experience?.workExperience?.length || 0 }}</div>
+        <div class="stat-label">{{ 'SECTIONS.STATS.COMPANIES' | translate }}</div>
+      </div>
+      <div class="stat-item">
+        <span nz-icon nzType="project" nzTheme="outline" class="stat-icon"></span>
+        <div class="stat-value">{{ getTotalProjects() }}+</div>
+        <div class="stat-label">{{ 'SECTIONS.STATS.PROJECTS' | translate }}</div>
+      </div>
+    </div>
+
+    <!-- Work Experience Section -->
+    <section [id]="sections[1].id" class="section experience-section">
+      <div class="section-header">
+        <div class="header-icon">
+          <span nz-icon [nzType]="sections[1].icon" nzTheme="outline"></span>
+        </div>
+        <h2>{{ sections[1].title | translate }}</h2>
+      </div>
+
+      <div class="experience-grid">
+        @for (exp of cv()?.experience?.workExperience; track exp; let i = $index) {
+          <div class="experience-item" [style.--item-index]="i + 1">
+            <app-experience-card [experience]="exp"></app-experience-card>
+          </div>
+        }
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section [id]="sections[0].id" class="section education-section">
+      <div class="section-header">
+        <div class="header-icon">
+          <span nz-icon [nzType]="sections[0].icon" nzTheme="outline"></span>
+        </div>
+        <h2>{{ sections[0].title | translate }}</h2>
+      </div>
+
+      <div class="education-grid">
+        @for (edu of cv()?.education?.education; track edu; let i = $index) {
+          <div class="education-item" [style.--item-index]="i + 1">
+            <app-education-card [education]="edu"></app-education-card>
+          </div>
+        }
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <app-contact-cta></app-contact-cta>
+  </div>
+</div>

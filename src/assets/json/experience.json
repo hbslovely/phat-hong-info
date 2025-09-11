@@ -1,0 +1,131 @@
+{
+  "workExperience": [
+    {
+      "company": "Backbase",
+      "position": "Senior Software Engineer",
+      "department": "R&D AI Team",
+      "location": "District 3 - HCM",
+      "type": "Hybrid",
+      "startDate": "Nov 2024",
+      "endDate": "Present",
+      "companyInfo": {
+        "description": "Backbase is the leading Engagement Banking Platform provider that empowers financial institutions to accelerate their digital transformation. Founded in 2003, Backbase is on a mission to help banks and credit unions master their digital transformation with a state-of-the-art digital banking platform that unifies data and functionality from traditional core systems and new fintech players into a seamless digital customer experience. With operations across 4 continents and serving over 150 financial institutions worldwide, Backbase is a proven leader in omni-channel banking software that elevates customer experiences and drives digital innovation.",
+        "address": "Jacob Bontiusplaats 9, 1018 LL Amsterdam, Netherlands",
+        "website": "https://www.backbase.com",
+        "contact": "+31 20 465 88 88",
+        "employeeCount": "2,000+",
+        "officeCount": "25+",
+        "foundedYear": "2003"
+      },
+      "responsibilities": [
+        "Collaborate closely with project managers and the AI team to develop and implement AI-powered solutions for the banking sector",
+        "Implement ideas and ensure it is following the release schedule"
+      ],
+      "achievements": [
+        "Worked as part of an R&D team in a product-focused company, where the process and workflow emphasized innovation and idea development over traditional delivery timelines"
+      ]
+    },
+    {
+      "company": "HCL Technologies Limited",
+      "position": "Senior Software Engineer",
+      "location": "District 1 - HCM",
+      "type": "Remote",
+      "startDate": "Dec 2021",
+      "endDate": "Nov 2024",
+      "companyInfo": {
+        "description": "HCL Technologies is a next-generation global technology company that helps enterprises reimagine their businesses for the digital age. With a worldwide network of R&D facilities and co-innovation labs, global delivery capabilities, and over 211,000+ 'Ideapreneurs' across 52 countries, HCL delivers holistic services across industry verticals to leading enterprises. The company specializes in Digital, IoT, Cloud, Automation, Cybersecurity, Analytics, Infrastructure Management, and Engineering Services.",
+        "address": "Plot No. 3A, Sector 126, Noida - 201304, UP, India",
+        "website": "https://www.hcltech.com",
+        "contact": "+91-120-6125000",
+        "employeeCount": "211,000+",
+        "officeCount": "100+",
+        "foundedYear": "1976"
+      },
+      "responsibilities": [
+        "Work with a team from a multi-country company to develop a DMS for managing documents of whole aerospace company using technologies: Angular 11-14, GoJS",
+        "Joining meetings in the Agile/Scrum process to understand, report and contribute to the development process",
+        "Raising some new ideas to improve the current UI/UX of the application"
+      ],
+      "achievements": [
+        "Learn a new scope of business in managing the documents",
+        "Work with other team members from other countries with different countries and timezones"
+      ]
+    },
+    {
+      "company": "Saigon Technology Solution",
+      "position": "Senior Software Engineer",
+      "location": "Tan Binh - HCM",
+      "type": "Hybrid",
+      "startDate": "Oct 2020",
+      "endDate": "Dec 2021",
+      "companyInfo": {
+        "description": "Saigon Technology is a leading software development company in Vietnam, established in 2012. With a team of over 450+ experienced developers, the company specializes in providing high-quality software development services to clients worldwide. They excel in custom software development, web application development, mobile app development, and enterprise solutions. Recognized as one of Vietnam's top software development companies, Saigon Technology has successfully delivered over 800+ projects across various industries including Finance, Healthcare, Education, and E-commerce.",
+        "address": "15th Floor, Saigon Tower, 29 Le Duan Street, District 1, Ho Chi Minh City, Vietnam",
+        "website": "https://saigontechnology.com",
+        "contact": "+84 28 7108 1500",
+        "employeeCount": "450+",
+        "officeCount": "2",
+        "foundedYear": "2012"
+      },
+      "responsibilities": [
+        "Work in a team to develop a wealth management application using Angular, Ruby on Rails, SOLID principles",
+        "Joining meetings in the Agile/Scrum process",
+        "Contribution in the development process"
+      ],
+      "achievements": [
+        "Have some contribution in the working process and code quality improvement"
+      ]
+    },
+    {
+      "company": "Nashtech Vietnam",
+      "position": "Senior Software Engineer",
+      "location": "Tan Binh - HCM",
+      "type": "Onsite",
+      "startDate": "Dec 2018",
+      "endDate": "Oct 2020",
+      "companyInfo": {
+        "description": "NashTech is a global technology solutions provider with over 20 years of experience. Part of Nash Squared, a global leader in technology and talent solutions, NashTech has grown to over 2,500 employees across its development centers. The company specializes in software development, business process optimization, and digital transformation services. With a strong focus on quality and innovation, NashTech has established itself as a trusted partner for businesses worldwide, delivering technology solutions that drive growth and efficiency.",
+        "address": "364 Cong Hoa Street, Tan Binh District, Ho Chi Minh City, Vietnam",
+        "website": "https://www.nashtechglobal.com",
+        "contact": "+84 28 3810 6200",
+        "employeeCount": "2,500+",
+        "officeCount": "7",
+        "foundedYear": "2000"
+      },
+      "responsibilities": [
+        "Joined the team to develop a web application for the wealth management domain of a bank",
+        "Joined meetings and followed the Agile/Scrum process",
+        "Using modern technologies at the running time: Kendo UI, moment, lodash"
+      ],
+      "achievements": [
+        "Learned many new things from new business scope in wealth management and Agile/Scrum process"
+      ]
+    },
+    {
+      "company": "New Ocean Information System Co., Ltd",
+      "position": "Software Engineer",
+      "location": "Tan Binh - HCM",
+      "type": "Onsite",
+      "startDate": "Sep 2014",
+      "endDate": "Dec 2018",
+      "companyInfo": {
+        "description": "New Ocean IS is a leading IT company providing comprehensive software solutions since 2010. As a Microsoft Solutions Partner with multiple Gold certifications, they specialize in custom software development, Azure cloud services, and digital transformation solutions for manufacturing and industrial sectors. The company has grown from an IT department to a full-service technology provider, serving over 70+ clients worldwide. Their expertise includes AI Agent development, Industrial and Automation Applications, Data Analytics, and E-commerce solutions.",
+        "address": "4th Floor, 51 Hoang Viet, Tan Son Nhat Ward, Ho Chi Minh City, Vietnam",
+        "website": "https://nois.vn",
+        "contact": "(+84) 28 6681 0782",
+        "employeeCount": "100+",
+        "officeCount": "2",
+        "foundedYear": "2010"
+      },
+      "responsibilities": [
+        "Joined a team to develop an application based on Qt to send and receive data on a big network",
+        "Joined a team to develop applications using modern technologies at that time (AngularJS, Angular, Reactjs)",
+        "Helped to support other teams to review code",
+        "Helped companies train for new comers"
+      ],
+      "achievements": [
+        "Archived knowledge of web development and had some basic knowledge on Javascript"
+      ]
+    }
+  ]
+}

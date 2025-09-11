@@ -1,0 +1,18 @@
+<div class="language-switcher">
+  <div class="language-toggle" [ngClass]="{'switching': isSwitching}">
+    <div class="slider" [style.transform]="'translateX(' + getActivePosition() + 'px)'"></div>
+    @for (lang of languages; track lang.code) {
+      <button 
+        class="toggle-button" 
+        [class.active]="getCurrentLanguage() === lang.code"
+        (click)="switchLanguage(lang.code)"
+        #langButton
+      >
+        <div class="button-content">
+          <span class="flag">{{ lang.flag }}</span>
+          <span class="lang-code">{{ lang.code }}</span>
+        </div>
+      </button>
+    }
+  </div>
+</div>

@@ -1,0 +1,49 @@
+{
+  "technicalSkills": {
+    "programmingLanguages": [
+      "HTML5",
+      "JavaScript",
+      "CSS",
+      "TypeScript"
+    ],
+    "frameworks": [
+      "Angular",
+      "AngularJS",
+      "ReactJS"
+    ],
+    "libraries": [
+      "KendoUI",
+      "D3.js",
+      "jQuery",
+      "Chart.js",
+      "RxJS",
+      "NgRx"
+    ],
+    "testing": [
+      "Jest",
+      "Jasmine",
+      "Karma",
+      "Protractor",
+      "ChaiJS",
+      "Sinon"
+    ],
+    "methodologies": [
+      "SOLID principles",
+      "Agile/Scrum"
+    ],
+    "tools": [
+      "Git",
+      "SVN",
+      "Webpack",
+      "Grunt",
+      "Angular CLI"
+    ],
+    "environments": [
+      "Webstorm",
+      "Visual Studio Code",
+      "Chrome",
+      "Windows",
+      "MacOS"
+    ]
+  }
+}

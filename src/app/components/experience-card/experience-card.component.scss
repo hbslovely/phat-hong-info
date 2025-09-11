@@ -1,0 +1,769 @@
+.experience-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  // Decorative element
+  .card-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-color);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+
+  // Card watermark
+  .card-watermark {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(30%, 30%);
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+
+    ::ng-deep .watermark-container {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      animation: none !important;
+      transform: rotate(15deg);
+    }
+  }
+
+  &:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--primary-color);
+
+    .card-decoration {
+      opacity: 1;
+    }
+
+    .card-footer .details-button {
+      color: var(--primary-dark);
+      text-decoration: underline;
+
+      [nz-icon] {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  .card-header {
+    padding: 1.75rem 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    .company-logo {
+      width: 60px;
+      height: 60px;
+      padding: 0.5rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .position-company {
+      h3 {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-color);
+        line-height: 1.3;
+      }
+
+      .company {
+        color: var(--primary-color);
+        font-size: 1rem;
+        font-weight: 500;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+
+  .card-content {
+    padding: 0 1.5rem;
+    flex: 1;
+
+    .experience-description {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      // Limit to 3 lines
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .meta-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--text-light);
+        padding: 0.35rem 0.75rem;
+        background-color: rgba(0, 0, 0, 0.03);
+        border-radius: 4px;
+        white-space: nowrap;
+
+        [nz-icon] {
+          color: var(--primary-color);
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .key-points {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      .achievements, .responsibilities {
+        .key-points-header {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-bottom: 0.5rem;
+          font-size: 0.9rem;
+          font-weight: 500;
+          color: var(--text-color);
+
+          [nz-icon] {
+            color: var(--primary-color);
+          }
+        }
+
+        .key-points-text {
+          p {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--text-light);
+            padding-left: 1.5rem;
+            position: relative;
+
+            &::before {
+              content: '•';
+              position: absolute;
+              left: 0.5rem;
+              color: var(--primary-color);
+            }
+
+            .more-indicator {
+              display: inline-block;
+              margin-left: 0.5rem;
+              color: var(--primary-color);
+              font-size: 0.85rem;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .card-footer {
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+
+    .details-button {
+      background: none;
+      border: none;
+      color: var(--primary-color);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &:hover {
+        color: var(--primary-dark);
+        text-decoration: underline;
+
+        [nz-icon] {
+          transform: translateX(3px);
+        }
+      }
+
+      [nz-icon] {
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+}
+
+// Dialog Styles
+.company-detail-dialog {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: white;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(90vh);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  .dialog-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1;
+  }
+
+  .dialog-watermark {
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+
+    ::ng-deep .watermark-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      animation: none !important;
+      transform: rotate(15deg);
+    }
+  }
+
+  .dialog-header {
+    padding: 2.5rem 2rem 2rem;
+    background: var(--primary-lightest);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+
+    .header-content {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      .company-logo {
+        width: 70px;
+        height: 70px;
+        padding: 0.75rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .company-info {
+        h2 {
+          margin: 0 0 0.5rem;
+          font-size: 1.75rem;
+          font-weight: 600;
+          color: var(--text-color);
+        }
+
+        .position {
+          font-size: 1.25rem;
+          color: var(--primary-color);
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+    }
+
+    .meta-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .meta-tag {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: rgba(0, 102, 204, 0.08);
+        border-radius: 4px;
+        color: var(--text-color);
+        font-size: 0.9rem;
+
+        [nz-icon] {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .dialog-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    color: var(--text-color);
+
+    .scrollable-content {
+      flex: 1;
+      padding: 2rem 2rem 1rem;
+      overflow-y: auto;
+      scrollbar-width: thin;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    .company-contact-footer {
+      flex-shrink: 0;
+      padding: 1rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      margin-top: 1rem;
+      background-color: white;
+
+      .company-contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        background: var(--primary-lightest);
+        padding: 1.25rem;
+        border-radius: 4px;
+
+        .contact-item {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin-right: 1rem;
+          color: var(--text-light);
+
+          [nz-icon] {
+            color: var(--primary-color);
+          }
+
+          a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.2s ease;
+
+            &:hover {
+              text-decoration: underline;
+              color: var(--primary-light);
+            }
+          }
+        }
+      }
+    }
+
+    .dialog-section {
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.2rem;
+        margin: 0 0 1.25rem;
+        color: var(--text-color);
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+        [nz-icon] {
+          color: var(--primary-color);
+          font-size: 1.2rem;
+        }
+      }
+
+      .content-paragraph {
+        p {
+          margin: 0 0 0.75rem;
+          line-height: 1.6;
+          color: var(--text-light);
+          position: relative;
+          padding-left: 1.5rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &::before {
+            content: '•';
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      .company-description {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+        color: var(--text-light);
+      }
+
+      .company-contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        background: var(--primary-lightest);
+        padding: 1.25rem;
+        border-radius: 4px;
+
+        .contact-item {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin-right: 1rem;
+          color: var(--text-light);
+
+          [nz-icon] {
+            color: var(--primary-color);
+          }
+
+          a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.2s ease;
+
+            &:hover {
+              text-decoration: underline;
+              color: var(--primary-light);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Global modal styles
+:host ::ng-deep {
+  .company-detail-modal {
+    .ant-modal-content {
+      padding: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .ant-modal-body {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      max-height: 90vh;
+    }
+
+    .ant-modal-close {
+      top: 1rem;
+      right: 1rem;
+      z-index: 10;
+
+      .ant-modal-close-x {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.03);
+        color: var(--text-color);
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: var(--primary-color);
+          color: white;
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .experience-card {
+    .card-header {
+      padding: 1.5rem 1.25rem 0.75rem;
+
+      .company-logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .position-company {
+        h3 {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .card-content {
+      padding: 0 1.25rem;
+
+      // Make meta-info more compact on mobile
+      .meta-info {
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+        flex-wrap: wrap;
+
+        .meta-item {
+          padding: 0.25rem 0.5rem;
+          font-size: 0.8rem;
+          gap: 0.3rem;
+          flex-shrink: 0;
+          flex-basis: calc(50% - 0.25rem);
+          max-width: calc(50% - 0.25rem);
+          box-sizing: border-box;
+          justify-content: center;
+
+          [nz-icon] {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    .card-footer {
+      padding: 1rem 1.25rem;
+    }
+  }
+
+  .company-detail-dialog {
+    max-height: calc(100vh - 60px);
+
+    .dialog-header {
+      padding: 2rem 1.5rem 1.5rem;
+
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .meta-tags {
+        justify-content: center;
+      }
+    }
+
+    .dialog-content {
+      .scrollable-content {
+        padding: 1.5rem 1.5rem 1rem;
+        max-height: 40vh; // Limit height on mobile to ensure footer visibility
+      }
+
+      .company-contact-footer {
+        padding: 0.75rem 1.5rem 1.5rem;
+
+        .company-contact-info {
+          flex-direction: column;
+          gap: 0.75rem;
+
+          .contact-item {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .dialog-section {
+        margin-bottom: 1.5rem;
+
+        h3 {
+          font-size: 1.1rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark-theme) {
+  .experience-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+
+    &:hover {
+      background: var(--hover-bg);
+      border-color: var(--primary-color);
+    }
+
+    .card-header {
+      .header-left {
+        .company-name {
+          color: var(--heading-color);
+        }
+
+        .job-title {
+          color: var(--primary-color);
+        }
+
+        .duration {
+          color: var(--text-light);
+        }
+      }
+    }
+
+    .card-content {
+      .description {
+        color: var(--text-light);
+      }
+
+      .meta-tags {
+        .meta-tag {
+          background: var(--hover-bg);
+          color: var(--text-color);
+          border-color: var(--border-color);
+
+          &:hover {
+            background: var(--primary-color);
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// Fix scrollable-content in dark theme
+.company-detail-dialog {
+  .dialog-content {
+    background: var(--card-bg);
+
+    .scrollable-content {
+      background: var(--card-bg) !important;
+      color: var(--text-color);
+
+      .dialog-section {
+        h3 {
+          color: var(--heading-color);
+
+          [nz-icon] {
+            color: var(--primary-color);
+          }
+        }
+
+        p, li {
+          color: var(--text-light);
+        }
+
+        ul li::before {
+          color: var(--primary-color);
+        }
+
+        .achievement-item {
+          background: var(--hover-bg);
+          border-color: var(--border-color);
+          color: var(--text-color);
+
+          .achievement-title {
+            color: var(--heading-color);
+          }
+
+          .achievement-description {
+            color: var(--text-light);
+          }
+        }
+
+        .tech-tags {
+          .tech-tag {
+            background: var(--hover-bg);
+            color: var(--text-color);
+            border-color: var(--border-color);
+
+            &:hover {
+              background: var(--primary-color);
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .company-contact-footer {
+    background: var(--hover-bg) !important;
+    border-top-color: var(--border-color) !important;
+    color: var(--text-color);
+
+    .company-contact-info {
+      .contact-item {
+        color: var(--text-light);
+
+        [nz-icon] {
+          color: var(--primary-color);
+        }
+
+        strong {
+          color: var(--heading-color);
+        }
+      }
+    }
+  }
+}

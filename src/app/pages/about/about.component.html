@@ -1,0 +1,131 @@
+<div [class]="config.className">
+  <div class="about-section">
+    <!-- Page Header with Personal Info -->
+    <app-page-header [showCustomContent]="true">
+      <!-- Custom personal info content for About page -->
+      <div class="personal-info-overlay">
+        <div class="avatar-container animate-pop">
+          <div class="avatar" (click)="showFullscreenAvatar()">
+            <img src="assets/images/avatar.jpeg" alt="Profile Picture">
+            <div class="avatar-overlay">
+              <span nz-icon nzType="fullscreen" nzTheme="outline"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-content">
+          <h2 class="name animate-text">{{ cv()?.personalInfo?.prefix }} {{ cv()?.personalInfo?.name }}</h2>
+          <h3 class="role animate-text-delay">{{ cv()?.personalInfo?.title }}</h3>
+          <div class="location animate-text-delay-2">
+            <span nz-icon nzType="environment" nzTheme="outline"></span>
+            {{ cv()?.personalInfo?.location?.city }}, {{ cv()?.personalInfo?.location?.country }}
+          </div>
+
+          <div class="contact-row animate-text-delay-3">
+            <a class="contact-item pulse-on-hover" [href]="'mailto:' + cv()?.personalInfo?.contact?.email">
+              <span nz-icon nzType="mail" nzTheme="outline"></span>
+              <span>{{ cv()?.personalInfo?.contact?.email }}</span>
+            </a>
+
+            <a class="contact-item pulse-on-hover" [href]="'tel:' + cv()?.personalInfo?.contact?.phone">
+              <span nz-icon nzType="phone" nzTheme="outline"></span>
+              <span>{{ cv()?.personalInfo?.contact?.phone }}</span>
+            </a>
+          </div>
+
+          <div class="social-row animate-text-delay-4">
+            <a class="social-item bounce-on-hover" [href]="cv()?.personalInfo?.contact?.github" target="_blank" rel="noopener noreferrer">
+              <span nz-icon nzType="github" nzTheme="outline"></span>
+              <span>GitHub</span>
+            </a>
+
+            <a class="social-item bounce-on-hover" [href]="cv()?.personalInfo?.contact?.linkedin" target="_blank" rel="noopener noreferrer">
+              <span nz-icon nzType="linkedin" nzTheme="outline"></span>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </app-page-header>
+
+    <!-- Professional Summary with Animation -->
+    <div class="summary-section animate-fade-in-up">
+      <div class="summary-decoration"></div>
+      <h3 class="summary-title">{{ 'SECTIONS.PROFESSIONAL_SUMMARY' | translate }}</h3>
+      <p class="summary-description">{{ cv()?.personalInfo?.summary }}</p>
+      <div class="summary-background-pattern"></div>
+    </div>
+
+    <!-- Featured Projects with Animation -->
+    <div class="featured-section animate-fade-in-up">
+      <div class="featured-header">
+        <h3 class="featured-title">{{ 'SECTIONS.FEATURED_PROJECTS' | translate }}</h3>
+        <a routerLink="/projects" class="view-all-link shine-on-hover">
+          {{ 'CTA.VIEW_ALL_PROJECTS' | translate }}
+          <span nz-icon nzType="arrow-right" nzTheme="outline" class="arrow-animate"></span>
+        </a>
+      </div>
+
+      <div class="featured-projects">
+        <ng-container *ngIf="featuredProjects().length">
+          <div class="project-card animate-card" *ngFor="let project of featuredProjects(); let i = index" [style.animation-delay]="i * 0.2 + 's'">
+            <div class="card-decoration"></div>
+            <div class="project-header">
+              <h4 class="project-name">{{ project.name }}</h4>
+              <span class="project-duration">{{ project.duration }}</span>
+            </div>
+
+            <div class="project-company" *ngIf="project.company">
+              <span nz-icon nzType="bank" nzTheme="outline"></span>
+              {{ project.company }}
+            </div>
+
+            <p class="project-description">{{ project.description }}</p>
+
+            <div class="project-tech">
+              <span class="tech-tag animate-tag" *ngFor="let tech of project.technologies.slice(0, 4); let j = index" [style.animation-delay]="(i * 0.1) + (j * 0.1) + 's'">{{ tech }}</span>
+              <span class="tech-more" *ngIf="project.technologies.length > 4">+{{ project.technologies.length - 4 }}</span>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <!-- Featured Skills with Animation -->
+    <div class="featured-section animate-fade-in-up">
+      <div class="featured-header">
+        <h3 class="featured-title">{{ 'SECTIONS.KEY_SKILLS' | translate }}</h3>
+        <a routerLink="/skills" class="view-all-link shine-on-hover">
+          {{ 'CTA.VIEW_ALL_SKILLS' | translate }}
+          <span nz-icon nzType="arrow-right" nzTheme="outline" class="arrow-animate"></span>
+        </a>
+      </div>
+
+      <div class="skills-container">
+        <div class="skill-category animate-slide-in" *ngFor="let category of featuredSkillCategories(); let i = index" [style.animation-delay]="i * 0.2 + 's'">
+          <h4 class="category-title">{{ formatCategoryName(category) }}</h4>
+          <div class="skill-tags">
+            <span class="skill-tag animate-tag" *ngFor="let skill of getSkillsForCategory(category).slice(0, 6); let j = index" [style.animation-delay]="(i * 0.1) + (j * 0.1) + 's'">
+              {{ skill }}
+            </span>
+            <span class="skill-more" *ngIf="getSkillsForCategory(category).length > 6">
+              +{{ getSkillsForCategory(category).length - 6 }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="cta-section animate-fade-in-up">
+      <div class="cta-content">
+        <h3>{{ 'CTA.READY_TO_COLLABORATE' | translate }}</h3>
+        <p>{{ 'CTA.LETS_DISCUSS' | translate }}</p>
+      </div>
+      <a class="cta-button pulse-animation" [href]="cv()?.personalInfo?.contact?.linkedin" target="_blank" rel="noopener noreferrer">
+        <span nz-icon nzType="linkedin" nzTheme="outline"></span>
+        {{ 'CTA.CONNECT_WITH_ME' | translate }}
+      </a>
+    </div>
+  </div>
+</div>

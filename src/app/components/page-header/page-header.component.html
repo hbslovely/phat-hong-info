@@ -1,0 +1,16 @@
+<div class="page-header" [style.background-image]="'url(' + backgroundImage + ')'">
+  <div class="header-overlay">
+    <div class="header-content container">
+      <!-- Custom content for specific pages like About -->
+      <div *ngIf="showCustomContent" class="custom-content-wrapper">
+        <ng-content></ng-content>
+      </div>
+
+      <!-- Default header content for other pages -->
+      <div *ngIf="!showCustomContent" class="default-header">
+        <h1 class="page-title">{{ title | translate }}</h1>
+        <div *ngIf="subtitle" class="page-subtitle">{{ subtitle | translate }}</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,533 @@
+{
+  "Angular": {
+    "name": "Angular",
+    "description": [
+      "Angular là một nền tảng phát triển toàn diện được xây dựng trên TypeScript, được thiết kế để làm cho việc phát triển ứng dụng hiệu quả và có khả năng mở rộng hơn.",
+      "Là một framework, Angular tuân theo kiến trúc dựa trên component cho phép các nhà phát triển xây dựng các ứng dụng có cấu trúc tốt và dễ bảo trì. Components là các khối xây dựng cơ bản, làm việc cùng với services, directives và pipes để tạo nên một cấu trúc ứng dụng mạch lạc.",
+      "Framework bao gồm hệ thống dependency injection mạnh mẽ thúc đẩy khả năng tái sử dụng mã và khả năng kiểm thử. Hệ thống này cho phép các services được tiêm vào components, làm cho mã trở nên module hóa và dễ bảo trì hơn.",
+      "Cú pháp template của Angular mở rộng HTML với các khả năng bổ sung, cho phép hiển thị nội dung động, ràng buộc dữ liệu hai chiều và xử lý sự kiện. Framework cũng cung cấp xử lý biểu mẫu tích hợp với cả phương pháp template-driven và reactive.",
+      "Đối với quản lý trạng thái, Angular tích hợp tốt với các thư viện như NgRx, triển khai mẫu Redux cho các thay đổi trạng thái có thể dự đoán. Điều này giúp dễ dàng quản lý các trạng thái ứng dụng và luồng dữ liệu phức tạp.",
+      "Framework cũng bao gồm công cụ CLI toàn diện tự động hóa nhiều tác vụ phát triển, từ tạo dự án đến triển khai, tuân theo các phương pháp tốt nhất và duy trì tính nhất quán giữa các ứng dụng."
+    ],
+    "url": "https://angular.io",
+    "githubUrl": "https://github.com/angular/angular",
+    "logo": "https://angular.io/assets/images/logos/angular/angular.svg"
+  },
+  "ReactJS": {
+    "name": "ReactJS",
+    "description": [
+      "ReactJS là thư viện JavaScript mạnh mẽ để xây dựng giao diện người dùng với trọng tâm vào kiến trúc dựa trên component. Triển khai DOM ảo và luồng dữ liệu một chiều của nó tạo ra các ứng dụng hiệu quả và dự đoán được.",
+      "Kiến trúc dựa trên component của React thúc đẩy khả năng tái sử dụng và bảo trì. Component đóng gói UI và hành vi, cho phép nhà phát triển xây dựng giao diện phức tạp từ các phần đơn giản, độc lập quản lý trạng thái riêng của chúng.",
+      "Triển khai DOM ảo tối ưu hóa hiệu suất render. Bằng cách duy trì bản sao nhẹ của DOM trong bộ nhớ, React giảm thiểu các thao tác DOM tốn kém và cập nhật hiệu quả chỉ những gì cần thiết.",
+      "JSX, phần mở rộng cú pháp của React, cho phép viết mã giống HTML trong JavaScript. Cách tiếp cận này cung cấp sức mạnh lập trình đầy đủ trong khi duy trì cú pháp HTML quen thuộc, làm cho template component trực quan và dễ bảo trì hơn.",
+      "Luồng dữ liệu một chiều của React đảm bảo quản lý trạng thái dự đoán được. Props và state cung cấp mẫu rõ ràng cho xử lý dữ liệu, làm cho ứng dụng dễ gỡ lỗi và bảo trì hơn khi mở rộng.",
+      "Hệ sinh thái mở rộng bao gồm các công cụ và thư viện mạnh mẽ. Từ giải pháp quản lý trạng thái như Redux đến thư viện định tuyến và thư viện component UI, hệ sinh thái React cung cấp giải pháp cho nhu cầu ứng dụng phức tạp."
+    ],
+    "url": "https://reactjs.org",
+    "githubUrl": "https://github.com/facebook/react",
+    "logo": "https://reactjs.org/favicon.ico"
+  },
+  "TypeScript": {
+    "name": "TypeScript",
+    "description": [
+      "TypeScript là một ngôn ngữ lập trình kiểu mạnh được xây dựng trên JavaScript, được phát triển và duy trì bởi Microsoft. Nó thêm các kiểu tĩnh tùy chọn, lớp và module vào JavaScript, làm cho nó phù hợp hơn cho phát triển ứng dụng quy mô lớn.",
+      "Một trong những tính năng chính của TypeScript là hệ thống kiểu của nó, cho phép các nhà phát triển thêm chú thích kiểu cho biến, tham số hàm và giá trị trả về. Điều này giúp phát hiện lỗi sớm trong quá trình phát triển và cung cấp hỗ trợ công cụ tốt hơn thông qua khả năng hoàn thành mã và tái cấu trúc nâng cao.",
+      "Ngôn ngữ bao gồm các tính năng kiểu nâng cao như generics, union types, intersection types và type inference. Những tính năng này cho phép các nhà phát triển viết mã an toàn về kiểu và biểu đạt hơn trong khi vẫn duy trì tính linh hoạt.",
+      "TypeScript cũng hỗ trợ các tính năng JavaScript hiện đại đồng thời cung cấp khả năng nhắm mục tiêu các phiên bản ECMAScript khác nhau trong quá trình biên dịch. Điều này đảm bảo tính tương thích với các môi trường runtime khác nhau trong khi cho phép các nhà phát triển sử dụng các tính năng ngôn ngữ mới nhất.",
+      "Trình biên dịch có thể cấu hình cao thông qua tsconfig.json, cho phép các nhóm thực thi các tiêu chuẩn mã hóa và quy tắc kiểm tra kiểu nhất quán trên các dự án. Nó có thể được đặt để nghiêm ngặt hơn hoặc ít nghiêm ngặt hơn, tùy thuộc vào yêu cầu dự án.",
+      "Về công cụ, TypeScript cung cấp hỗ trợ IDE xuất sắc thông qua dịch vụ ngôn ngữ của nó, cho phép các tính năng như hoàn thành mã thông minh, tái cấu trúc và tài liệu nội tuyến. Điều này làm cho nó đặc biệt mạnh mẽ khi được sử dụng với các trình soạn thảo như Visual Studio Code."
+    ],
+    "url": "https://www.typescriptlang.org",
+    "githubUrl": "https://github.com/microsoft/TypeScript",
+    "logo": "https://www.typescriptlang.org/favicon-32x32.png"
+  },
+  "JavaScript": {
+    "name": "JavaScript",
+    "description": [
+      "JavaScript là ngôn ngữ lập trình đa năng, cấp cao tạo nên nền tảng của phát triển web hiện đại. Đây là ngôn ngữ lập trình duy nhất được hỗ trợ tự nhiên bởi các trình duyệt web, làm cho nó trở thành công cụ thiết yếu để tạo ra các ứng dụng web tương tác.",
+      "Ngôn ngữ này hỗ trợ nhiều mô hình lập trình, bao gồm lập trình hướng đối tượng, mệnh lệnh và lập trình hàm. Tính linh hoạt này cho phép các nhà phát triển chọn phương pháp phù hợp nhất cho nhu cầu cụ thể của họ.",
+      "JavaScript hiện đại (ES6+) giới thiệu các tính năng mạnh mẽ như hàm mũi tên, phân rã cấu trúc, module, lớp và promises. Những tính năng này làm cho mã ngắn gọn hơn, dễ bảo trì hơn và dễ hiểu hơn.",
+      "Bản chất hướng sự kiện, không chặn của JavaScript làm cho nó đặc biệt phù hợp để xử lý các hoạt động bất đồng bộ. Với các tính năng như async/await và Promises, các nhà phát triển có thể viết mã bất đồng bộ sạch sẽ, dễ đọc.",
+      "Hệ sinh thái JavaScript rất rộng lớn, với npm là kho đăng ký phần mềm lớn nhất thế giới. Điều này cung cấp cho các nhà phát triển quyền truy cập vào hàng trăm nghìn thư viện và công cụ để nâng cao quy trình phát triển của họ.",
+      "Ngoài trình duyệt, JavaScript đã mở rộng sang phát triển phía máy chủ (Node.js), phát triển di động (React Native, Ionic), ứng dụng máy tính để bàn (Electron), và thậm chí học máy (TensorFlow.js), làm cho nó trở thành một ngôn ngữ lập trình thực sự phổ quát."
+    ],
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png?20120221235433"
+  },
+  "AngularJS": {
+    "name": "AngularJS",
+    "description": [
+      "AngularJS (Angular 1.x) là framework JavaScript đột phá đã cách mạng hóa phát triển ứng dụng web. Nó giới thiệu các khái niệm mạnh mẽ như ràng buộc dữ liệu hai chiều, tiêm phụ thuộc và directive đã ảnh hưởng đến phát triển frontend hiện đại.",
+      "Ràng buộc dữ liệu hai chiều của framework tự động đồng bộ hóa dữ liệu giữa model và view. Tính năng này đáng kể giảm mã soạn sẵn và giúp dễ dàng xây dựng giao diện người dùng động với cập nhật thời gian thực.",
+      "Hệ thống tiêm phụ thuộc của AngularJS thúc đẩy mã module hóa và có thể kiểm thử. Mẫu kiến trúc này cho phép tổ chức mã tốt hơn, khả năng tái sử dụng và kiểm thử đơn vị dễ dàng hơn thông qua mẫu service và factory.",
+      "Hệ thống directive của framework cho phép tạo các thành phần UI có thể tái sử dụng. Directive mở rộng từ vựng HTML với các phần tử và thuộc tính tùy chỉnh, cho phép nhà phát triển tạo các thành phần UI phức tạp đóng gói cả đánh dấu và hành vi.",
+      "Các service tích hợp sẵn cung cấp chức năng phổ biến như giao tiếp HTTP và định tuyến. Các service này trừu tượng hóa các thao tác phức tạp và cung cấp API nhất quán cho các tính năng ứng dụng web phổ biến.",
+      "Ngôn ngữ biểu thức và bộ lọc của AngularJS cho phép thao tác dữ liệu mạnh mẽ trong template. Các tính năng này cho phép chuyển đổi và định dạng dữ liệu phức tạp trực tiếp trong lớp view, giảm độ phức tạp của controller."
+    ],
+    "url": "https://angularjs.org",
+    "githubUrl": "https://github.com/angular/angular.js",
+    "logo": "https://angularjs.org/favicon.ico"
+  },
+  "HTML5": {
+    "name": "HTML5",
+    "description": [
+      "HTML5 đại diện cho sự tiến hóa đáng kể trong tiêu chuẩn web, cung cấp hỗ trợ tự nhiên cho các tính năng ứng dụng web hiện đại mà trước đây yêu cầu plugins hoặc giải pháp JavaScript phức tạp. Nó tạo nền tảng cho phát triển web hiện đại.",
+      "Các phần tử ngữ nghĩa như <header>, <nav>, <main> và <footer> cải thiện cấu trúc tài liệu và khả năng truy cập. Các phần tử này làm cho nội dung web có ý nghĩa hơn cho cả trình duyệt và công nghệ hỗ trợ.",
+      "HTML5 giới thiệu các API mạnh mẽ để xây dựng ứng dụng web tương tác. Các tính năng như Canvas, WebGL và hỗ trợ SVG cho phép đồ họa và hoạt ảnh tinh vi, trong khi các phần tử Audio và Video cung cấp hỗ trợ đa phương tiện tự nhiên.",
+      "Các điều khiển biểu mẫu và kiểu input hiện đại nâng cao tương tác người dùng và thu thập dữ liệu. Các kiểu input mới như date, email và number, cùng với API xác thực biểu mẫu, cải thiện trải nghiệm người dùng và giảm nhu cầu xác thực JavaScript.",
+      "Storage API, bao gồm localStorage và sessionStorage, cung cấp khả năng lưu trữ dữ liệu phía client mạnh mẽ. Điều này cho phép ứng dụng web hoạt động offline và duy trì trạng thái mà không phụ thuộc vào server.",
+      "Sự tập trung của HTML5 vào tuân thủ tiêu chuẩn và tương thích đa trình duyệt đã dẫn đến trải nghiệm web nhất quán hơn. Các tính năng như hình ảnh đáp ứng, thuộc tính truy cập và microdata cải thiện việc phân phối nội dung và SEO."
+    ],
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png"
+  },
+  "CSS": {
+    "name": "CSS",
+    "description": [
+      "CSS (Cascading Style Sheets) là công nghệ web cơ bản định nghĩa cách trình bày và bố cục của tài liệu HTML. Nó đã phát triển từ khả năng tạo kiểu đơn giản thành một hệ thống mạnh mẽ để tạo giao diện web đáp ứng, có hoạt ảnh và tương tác.",
+      "Các tính năng CSS hiện đại như Flexbox và Grid cung cấp hệ thống bố cục tinh vi giúp tạo ra các bố cục phức tạp, đáp ứng với mã tối thiểu. Các hệ thống này cung cấp kiểm soát chính xác về vị trí phần tử và phân phối không gian.",
+      "Hệ thống cascade và specificity trong CSS cung cấp cách mạnh mẽ để quản lý áp dụng kiểu trong các ứng dụng lớn. Hiểu các khái niệm này là quan trọng để viết các stylesheet có thể bảo trì và mở rộng.",
+      "CSS preprocessors và postprocessors mở rộng khả năng của ngôn ngữ, thêm các tính năng như biến, mixins và nesting. Các công cụ như Sass và PostCSS đã trở thành phần thiết yếu của quy trình phát triển web hiện đại.",
+      "CSS Custom Properties (biến) và calc() cho phép khả năng tạo kiểu và chủ đề động. Các tính năng này cho phép hệ thống tạo kiểu linh hoạt và dễ bảo trì hơn có thể thích ứng với tùy chọn người dùng và trạng thái ứng dụng.",
+      "CSS hiện đại bao gồm khả năng animation và transition mạnh mẽ có thể tạo ra tương tác người dùng tinh vi mà không cần JavaScript. Các tính năng như transforms, transitions và keyframe animations cho phép hoạt ảnh mượt mà, hiệu suất cao."
+    ],
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Official_CSS_Logo.svg"
+  },
+  "RxJS": {
+    "name": "RxJS",
+    "description": [
+      "RxJS (Reactive Extensions for JavaScript) là một thư viện mạnh mẽ cho lập trình phản ứng sử dụng Observables, thay đổi cách các nhà phát triển xử lý luồng dữ liệu bất đồng bộ và sự kiện trong các ứng dụng web hiện đại.",
+      "Ở cốt lõi, RxJS triển khai mẫu Observer, cung cấp một kiểu cốt lõi (Observable) cùng với các kiểu vệ tinh (Observer, Schedulers, Subjects) và các toán tử. Cách tiếp cận thống nhất này để xử lý các sự kiện bất đồng bộ làm cho các hoạt động bất đồng bộ phức tạp dễ quản lý hơn.",
+      "Thư viện cung cấp một tập hợp phong phú các toán tử cho phép biến đổi dữ liệu phức tạp. Các toán tử này có thể lọc, kết hợp, biến đổi và thao tác với luồng dữ liệu theo cách mà sẽ phức tạp để triển khai thủ công, giúp dễ dàng biểu đạt các luồng dữ liệu phức tạp.",
+      "Cơ chế xử lý lỗi của RxJS đặc biệt mạnh mẽ, với các toán tử chuyên dụng để bắt và phục hồi từ lỗi, thử lại các hoạt động thất bại và xử lý các trường hợp đặc biệt một cách nhẹ nhàng. Điều này làm cho ứng dụng bền vững và dễ bảo trì hơn.",
+      "Thư viện tích hợp liền mạch với các framework hiện đại, đặc biệt là Angular nơi nó là nền tảng cho nhiều tính năng cốt lõi. Nó được sử dụng rộng rãi trong các giải pháp quản lý trạng thái như NgRx và xử lý yêu cầu HTTP, sự kiện biểu mẫu và định tuyến.",
+      "Các tính năng tối ưu hóa hiệu suất như schedulers và quản lý subscription cho phép kiểm soát chi tiết về cách thức và thời điểm thực thi các hoạt động, giúp xây dựng các ứng dụng hiệu suất cao có thể xử lý các quy trình bất đồng bộ phức tạp."
+    ],
+    "url": "https://rxjs.dev",
+    "githubUrl": "https://github.com/ReactiveX/rxjs",
+    "logo": "https://rxjs.dev/assets/images/favicons/favicon-192x192.png"
+  },
+  "NgRx": {
+    "name": "NgRx",
+    "description": [
+      "NgRx là một framework quản lý trạng thái tinh vi cho các ứng dụng Angular, triển khai mẫu Redux với tích hợp đầy đủ các tính năng mạnh mẽ của RxJS. Nó cung cấp giải pháp mạnh mẽ để quản lý trạng thái ứng dụng phức tạp trong các ứng dụng quy mô lớn.",
+      "Khái niệm cốt lõi của framework xoay quanh một store tập trung làm nguồn sự thật duy nhất cho trạng thái ứng dụng. Store này là bất biến và chỉ có thể được sửa đổi thông qua các action được gửi đi, đảm bảo các thay đổi trạng thái có thể dự đoán được.",
+      "NgRx triển khai các công cụ phát triển mạnh mẽ cung cấp thông tin chi tiết theo thời gian thực về thay đổi trạng thái, gửi action và effects. Các công cụ này, bao gồm tích hợp Redux DevTools, giúp gỡ lỗi và hiểu hành vi ứng dụng dễ dàng hơn đáng kể.",
+      "Tính năng Effects trong NgRx cung cấp cách mạnh mẽ để xử lý các tác dụng phụ, như gọi API, theo cách phản ứng. Effects cô lập các tác dụng phụ khỏi components, làm cho ứng dụng dễ bảo trì và kiểm thử hơn.",
+      "Entity State adapter cung cấp cách tiêu chuẩn để lưu trữ và quản lý các bộ sưu tập thực thể, cung cấp reducers và selectors được xây dựng sẵn cho các hoạt động phổ biến. Điều này giảm đáng kể mã soạn sẵn và cải thiện hiệu suất thông qua chuẩn hóa.",
+      "Framework cũng bao gồm các tính năng như Router Store để đồng bộ hóa trạng thái router, Component Store để quản lý trạng thái cục bộ và Data để quản lý dữ liệu thực thể đơn giản hóa, làm cho nó trở thành giải pháp hoàn chỉnh cho quản lý trạng thái ứng dụng Angular."
+    ],
+    "url": "https://ngrx.io",
+    "githubUrl": "https://github.com/ngrx/platform",
+    "logo": "https://ngrx.io/assets/images/badge.svg"
+  },
+  "D3.js": {
+    "name": "D3.js",
+    "description": [
+      "D3.js (Data-Driven Documents) là thư viện JavaScript mạnh mẽ để tạo các trực quan hóa dữ liệu động, tương tác trong trình duyệt web. Nó kết hợp các thành phần trực quan hóa mạnh mẽ với cách tiếp cận điều khiển DOM dựa trên dữ liệu, cho phép kiểm soát tối đa kết quả trực quan cuối cùng.",
+      "Điểm mạnh cốt lõi của thư viện nằm ở cơ chế ràng buộc dữ liệu, cho phép ánh xạ trực tiếp dữ liệu vào các phần tử trực quan. Cách tiếp cận này cho phép tạo các trực quan hóa phức tạp tự động cập nhật khi dữ liệu thay đổi, lý tưởng cho bảng điều khiển thời gian thực và báo cáo tương tác.",
+      "Kiến trúc module của D3 cung cấp bộ công cụ toàn diện để chuyển đổi và trực quan hóa dữ liệu. Từ biểu đồ cơ bản đến đồ thị có hướng lực phức tạp, thư viện cung cấp các thành phần cho tỷ lệ, trục, chuyển tiếp và các thuật toán bố cục khác nhau.",
+      "Hệ thống hoạt ảnh và chuyển tiếp của thư viện cho phép cập nhật và chuyển đổi mượt mà giữa các trạng thái. Khả năng này tạo ra trải nghiệm người dùng hấp dẫn và giúp người dùng theo dõi thay đổi trong trực quan hóa dữ liệu theo thời gian.",
+      "API lựa chọn và thao tác mở rộng của D3 cung cấp kiểm soát chi tiết đối với các phần tử trực quan. Kiểm soát cấp thấp này cho phép nhà phát triển tạo các trực quan hóa tùy chỉnh không thể thực hiện được với các thư viện biểu đồ cấp cao hơn.",
+      "Hỗ trợ SVG của thư viện cho phép tạo đồ họa độc lập với độ phân giải. Kết hợp với hỗ trợ cho các tiêu chuẩn web hiện đại, điều này đảm bảo trực quan hóa sắc nét trên các thiết bị và kích thước màn hình khác nhau."
+    ],
+    "url": "https://d3js.org",
+    "githubUrl": "https://github.com/d3/d3",
+    "logo": "https://d3js.org/logo.png"
+  },
+  "jQuery": {
+    "name": "jQuery",
+    "description": [
+      "jQuery là thư viện JavaScript nhanh, nhẹ và giàu tính năng đã cách mạng hóa phát triển web. Nó đơn giản hóa việc duyệt tài liệu HTML, xử lý sự kiện, hoạt ảnh và tương tác Ajax cho phát triển web nhanh chóng.",
+      "Động cơ chọn mạnh mẽ của thư viện cho phép thao tác DOM dễ dàng bằng cú pháp CSS quen thuộc. Khả năng này, kết hợp với các phương thức có thể xâu chuỗi, cho phép nhà phát triển viết mã ngắn gọn và dễ đọc cho các thao tác DOM phức tạp.",
+      "Hệ thống xử lý sự kiện của jQuery cung cấp giao diện nhất quán trên các trình duyệt khác nhau. Lớp trừu tượng này đơn giản hóa việc ràng buộc và xử lý tương tác người dùng, giúp dễ dàng tạo ứng dụng web tương tác.",
+      "Khả năng Ajax của thư viện đơn giản hóa trao đổi dữ liệu bất đồng bộ với máy chủ. Giao diện cấp cao của nó cho các yêu cầu HTTP giúp dễ dàng tải và gửi dữ liệu mà không cần xử lý các triển khai đặc thù của trình duyệt.",
+      "Hệ thống hoạt ảnh của jQuery cung cấp hiệu ứng chuyển tiếp và hiệu ứng trực quan mượt mà. Từ hiệu ứng mờ dần đơn giản đến hoạt ảnh tùy chỉnh phức tạp, thư viện giúp dễ dàng thêm phản hồi trực quan hấp dẫn cho tương tác người dùng.",
+      "Hệ sinh thái plugin mở rộng của thư viện mở rộng chức năng của nó để đáp ứng hầu hết mọi nhu cầu phát triển web. Từ xác thực biểu mẫu đến thư viện ảnh, plugin jQuery cung cấp giải pháp sẵn sàng sử dụng cho các tác vụ phát triển web phổ biến."
+    ],
+    "url": "https://jquery.com",
+    "githubUrl": "https://github.com/jquery/jquery",
+    "logo": "https://jquery.com/wp-content/themes/jquery.com/i/favicon.ico"
+  },
+  "Chart.js": {
+    "name": "Chart.js",
+    "description": [
+      "Chart.js là thư viện biểu đồ JavaScript linh hoạt và mạnh mẽ tạo ra các biểu đồ đẹp, đáp ứng bằng HTML5 Canvas. Nó cung cấp API hướng đối tượng thanh lịch để tạo các trực quan hóa tinh vi với mã tối thiểu.",
+      "Thư viện cung cấp tám loại biểu đồ sẵn có, bao gồm biểu đồ đường, cột, radar và tròn. Mỗi loại biểu đồ có thể tùy chỉnh cao và có thể kết hợp để tạo các trực quan hóa phức tạp truyền đạt hiệu quả câu chuyện dữ liệu.",
+      "Chart.js có tính năng hoạt ảnh tích hợp sẵn mang lại sức sống cho trực quan hóa. Chuyển tiếp và hoạt ảnh mượt mà giúp người dùng hiểu thay đổi dữ liệu và làm cho biểu đồ hấp dẫn và tương tác hơn.",
+      "Thiết kế đáp ứng của thư viện đảm bảo biểu đồ trông tuyệt vời trên mọi thiết bị. Biểu đồ tự động điều chỉnh kích thước để vừa với container trong khi duy trì tỷ lệ khung hình và khả năng đọc phù hợp.",
+      "Tùy chọn tùy chỉnh nâng cao cho phép tinh chỉnh mọi khía cạnh của biểu đồ. Từ màu sắc và phông chữ đến chú thích công cụ và chú thích, nhà phát triển có toàn quyền kiểm soát trình bày trực quan.",
+      "Chart.js bao gồm kiến trúc plugin mạnh mẽ để mở rộng chức năng. Hệ thống plugin cho phép thêm loại biểu đồ tùy chỉnh, chế độ tương tác mới và tích hợp với các thư viện khác."
+    ],
+    "url": "https://www.chartjs.org",
+    "githubUrl": "https://github.com/chartjs/Chart.js",
+    "logo": "https://www.chartjs.org/favicon.ico"
+  },
+  "Jest": {
+    "name": "Jest",
+    "description": "Jest là một Framework Kiểm thử JavaScript thú vị với trọng tâm là sự đơn giản. Nó hoạt động với các dự án sử dụng: Babel, TypeScript, Node, React, Angular, Vue và nhiều hơn nữa.",
+    "url": "https://jestjs.io",
+    "githubUrl": "https://github.com/facebook/jest",
+    "logo": "https://jestjs.io/img/favicon/favicon.ico"
+  },
+  "Jasmine": {
+    "name": "Jasmine",
+    "description": [
+      "Jasmine là một framework kiểm thử phát triển dựa trên hành vi (BDD) cho JavaScript đã trở thành tiêu chuẩn trong hệ sinh thái Angular. Nó cung cấp cú pháp sạch sẽ, trực quan để viết các bài kiểm thử phản ánh chặt chẽ cách các nhà phát triển suy nghĩ về hành vi của mã của họ.",
+      "Cú pháp describe-it của framework tạo ra cách tự nhiên để tổ chức các bài kiểm thử thành các nhóm logic. Cấu trúc phân cấp này làm cho các bài kiểm thử dễ đọc và bảo trì hơn, đồng thời cung cấp tài liệu rõ ràng về chức năng của mã.",
+      "Jasmine bao gồm một tập hợp toàn diện các matchers cho phép khẳng định chính xác. Các matchers tích hợp này bao gồm mọi thứ từ kiểm tra bằng nhau cơ bản đến so sánh đối tượng phức tạp, giúp dễ dàng xác minh hành vi mã một cách chi tiết.",
+      "Chức năng spy của framework cung cấp công cụ mạnh mẽ để mocking và cô lập kiểm thử. Spies có thể theo dõi cuộc gọi hàm, mô phỏng giá trị trả về, và thậm chí sửa đổi hành vi hàm trong quá trình kiểm thử, cho phép kiểm thử kỹ lưỡng tương tác giữa các thành phần.",
+      "Kiểm thử bất đồng bộ được hỗ trợ tốt thông qua các tính năng như async/await và done callbacks. Điều này giúp dễ dàng kiểm thử promises, timeouts và các hoạt động bất đồng bộ khác phổ biến trong các ứng dụng web hiện đại.",
+      "Jasmine tích hợp liền mạch với các test runner khác nhau, đặc biệt là Karma trong hệ sinh thái Angular. Tích hợp này cho phép các tính năng như thực thi kiểm thử tự động, báo cáo chi tiết và hỗ trợ tích hợp liên tục."
+    ],
+    "url": "https://jasmine.github.io",
+    "githubUrl": "https://github.com/jasmine/jasmine",
+    "logo": "https://jasmine.github.io/favicon.ico"
+  },
+  "Karma": {
+    "name": "Karma",
+    "description": [
+      "Karma là một test runner tinh vi có thể thực thi mã JavaScript trên nhiều trình duyệt thực đồng thời. Ban đầu được phát triển bởi team Angular, nó đã trở thành công cụ thiết yếu trong quy trình kiểm thử phát triển web hiện đại.",
+      "Khả năng chạy kiểm thử trên các trình duyệt thực của test runner cung cấp độ tin cậy cao về kết quả kiểm thử. Điều này đảm bảo mã hoạt động chính xác trên các môi trường trình duyệt khác nhau và giúp phát hiện sớm các vấn đề đặc thù của trình duyệt trong quá trình phát triển.",
+      "Chế độ watch của Karma cho phép thực thi kiểm thử liên tục khi các tệp thay đổi, cung cấp phản hồi ngay lập tức trong quá trình phát triển. Vòng phản hồi nhanh này giúp các nhà phát triển phát hiện và sửa lỗi nhanh chóng, cải thiện chất lượng mã và hiệu quả phát triển.",
+      "Công cụ hỗ trợ nhiều framework kiểm thử bao gồm Jasmine, Mocha và QUnit. Tính linh hoạt này cho phép các nhóm chọn framework kiểm thử phù hợp nhất với nhu cầu của họ trong khi vẫn được hưởng lợi từ khả năng thực thi mạnh mẽ của Karma.",
+      "Các tính năng nâng cao như báo cáo độ bao phủ mã, hỗ trợ gỡ lỗi và xử lý source map giúp dễ dàng duy trì bộ kiểm thử chất lượng cao. Những tính năng này giúp các nhóm xác định mã chưa được kiểm thử và khắc phục hiệu quả các bài kiểm thử thất bại.",
+      "Hệ thống cấu hình của Karma có thể tùy chỉnh cao, cho phép các nhóm thiết lập môi trường kiểm thử phù hợp với nhu cầu cụ thể của họ. Điều này bao gồm cấu hình browser launchers, reporters, preprocessors và cơ sở hạ tầng kiểm thử khác."
+    ],
+    "url": "https://karma-runner.github.io",
+    "githubUrl": "https://github.com/karma-runner/karma",
+    "logo": "https://karma-runner.github.io/assets/img/favicon/favicon.ico"
+  },
+  "Git": {
+    "name": "Git",
+    "description": "Git là một hệ thống quản lý phiên bản phân tán mã nguồn mở và miễn phí được thiết kế để xử lý mọi thứ từ dự án nhỏ đến rất lớn với tốc độ và hiệu quả.",
+    "url": "https://git-scm.com",
+    "githubUrl": "https://github.com/git/git",
+    "logo": "https://git-scm.com/favicon.ico"
+  },
+  "VS Code": {
+    "name": "Visual Studio Code",
+    "description": [
+      "Visual Studio Code là một trình soạn thảo mã nguồn tinh vi nhưng nhẹ nhàng đã cách mạng hóa cách các nhà phát triển viết và gỡ lỗi mã. Được phát triển bởi Microsoft, nó kết hợp sự đơn giản của một trình soạn thảo văn bản với các tính năng mạnh mẽ của một môi trường phát triển tích hợp (IDE).",
+      "Ở cốt lõi, VS Code có giao diện có thể tùy chỉnh cao với hỗ trợ nhiều chủ đề, phím tắt và bố cục không gian làm việc. Trình soạn thảo bao gồm các tính năng thiết yếu như tô sáng cú pháp, hoàn thành mã thông minh và hỗ trợ terminal tích hợp.",
+      "Một trong những tính năng mạnh nhất của VS Code là hệ sinh thái tiện ích phong phú. Với hàng nghìn tiện ích có sẵn, các nhà phát triển có thể tùy chỉnh môi trường của họ với hỗ trợ ngôn ngữ, trình gỡ lỗi, chủ đề và công cụ phù hợp với nhu cầu phát triển của họ.",
+      "Hỗ trợ Git tích hợp làm cho việc quản lý phiên bản trở nên liền mạch, cho phép các nhà phát triển thực hiện các thao tác Git phổ biến trực tiếp từ trình soạn thảo. Điều này bao gồm xem sự khác biệt, giải quyết xung đột và quản lý nhánh.",
+      "IntelliSense của VS Code cung cấp gợi ý thông minh dựa trên kiểu biến, định nghĩa hàm và module đã import. Tính năng này đặc biệt mạnh mẽ khi làm việc với TypeScript và JavaScript.",
+      "Trải nghiệm gỡ lỗi trong VS Code rất xuất sắc, với hỗ trợ điểm dừng, ngăn xếp cuộc gọi và kiểm tra biến. Trình soạn thảo cũng bao gồm chạy tác vụ tích hợp và phát hiện vấn đề, giúp các nhà phát triển phát hiện và sửa lỗi sớm trong quá trình phát triển."
+    ],
+    "url": "https://code.visualstudio.com",
+    "githubUrl": "https://github.com/microsoft/vscode",
+    "logo": "https://code.visualstudio.com/assets/images/code-stable.png",
+    "isCommonTool": true
+  },
+  "Docker": {
+    "name": "Docker",
+    "description": [
+      "Docker là nền tảng container hóa cách mạng đã thay đổi cách phát triển và triển khai ứng dụng. Nó cho phép nhà phát triển đóng gói ứng dụng với tất cả phụ thuộc của chúng thành các đơn vị chuẩn hóa gọi là container, đảm bảo tính nhất quán trên các môi trường khác nhau.",
+      "Runtime container của nền tảng cung cấp môi trường độc lập, nhẹ nhàng cho ứng dụng. Sự cô lập này đảm bảo ứng dụng chạy nhất quán bất kể môi trường máy chủ, loại bỏ vấn đề 'nó hoạt động trên máy của tôi'.",
+      "Hệ thống image của Docker cho phép đóng gói và phân phối ứng dụng hiệu quả. Image được xây dựng theo lớp, cho phép sử dụng cache và giảm yêu cầu lưu trữ trong khi làm cho cập nhật và rollback đơn giản.",
+      "Hệ sinh thái Docker bao gồm các công cụ mạnh mẽ để điều phối và quản lý container. Docker Compose đơn giản hóa triển khai ứng dụng nhiều container, trong khi tích hợp với Kubernetes cho phép điều phối container có thể mở rộng.",
+      "Tính năng bảo mật trong Docker bao gồm cô lập container, quét image và registry an toàn. Những khả năng này giúp tổ chức duy trì các phương pháp bảo mật tốt nhất trong khi hưởng lợi từ container hóa.",
+      "Hệ thống plugin mở rộng và API của Docker cho phép tích hợp với nhiều công cụ phát triển và triển khai khác nhau. Tính mở rộng này làm cho Docker trở thành phần trung tâm của thực hành DevOps hiện đại và pipeline CI/CD."
+    ],
+    "url": "https://www.docker.com",
+    "githubUrl": "https://github.com/docker",
+    "logo": "https://www.docker.com/favicon.ico",
+    "isCommonTool": true
+  },
+  "Jenkins": {
+    "name": "Jenkins",
+    "description": [
+      "Jenkins là máy chủ tự động hóa mã nguồn mở hàng đầu đã trở thành tiêu chuẩn thực tế cho tích hợp liên tục và phân phối liên tục (CI/CD). Nó cung cấp nền tảng linh hoạt và có thể mở rộng để tự động hóa quy trình phát triển phần mềm.",
+      "Tính năng pipeline của máy chủ tự động hóa cho phép định nghĩa quy trình triển khai phức tạp dưới dạng mã. Script pipeline có thể được quản lý phiên bản và cung cấp định nghĩa rõ ràng, dễ bảo trì về quy trình xây dựng và triển khai.",
+      "Hệ sinh thái plugin mở rộng của Jenkins cung cấp tích hợp với hầu như mọi công cụ và nền tảng phát triển. Các plugin này cho phép tích hợp liền mạch với quản lý mã nguồn, công cụ xây dựng, framework kiểm thử và mục tiêu triển khai.",
+      "Hệ thống xây dựng phân tán của nền tảng cho phép mở rộng việc thực thi xây dựng và kiểm thử trên nhiều máy. Khả năng này cho phép xử lý hiệu quả các dự án lớn và thực thi song song quy trình xây dựng và kiểm thử.",
+      "Tính năng bảo mật bao gồm kiểm soát truy cập dựa trên vai trò và quản lý thông tin xác thực. Các tính năng này cho phép tự động hóa an toàn trong khi duy trì kiểm soát truy cập thích hợp và bảo vệ thông tin nhạy cảm.",
+      "Khả năng giám sát và thông báo của Jenkins cung cấp khả năng hiển thị vào quy trình xây dựng và triển khai. Nhật ký chi tiết, thông báo trạng thái và tích hợp với công cụ giao tiếp giúp các nhóm luôn được thông báo về trạng thái và vấn đề của quy trình."
+    ],
+    "url": "https://www.jenkins.io",
+    "githubUrl": "https://github.com/jenkinsci/jenkins",
+    "logo": "https://www.jenkins.io/favicon.ico",
+    "isCommonTool": true
+  },
+  "npm": {
+    "name": "npm",
+    "description": [
+      "npm (Node Package Manager) là kho đăng ký phần mềm lớn nhất thế giới và là công cụ thiết yếu trong phát triển JavaScript hiện đại. Nó cung cấp khả năng quản lý gói mạnh mẽ và đã trở thành trung tâm của hệ sinh thái JavaScript.",
+      "Hệ thống giải quyết phụ thuộc của trình quản lý gói xử lý hiệu quả cây phụ thuộc phức tạp. Nó đảm bảo cài đặt gói nhất quán trên các môi trường khác nhau trong khi quản lý xung đột phiên bản và tương thích.",
+      "Tính năng scripts của npm cung cấp cách mạnh mẽ để tự động hóa tác vụ phát triển. Các script này có thể xử lý mọi thứ từ xây dựng và kiểm thử đến triển khai, đóng vai trò như một task runner nhẹ tích hợp vào dự án.",
+      "Tính năng bảo mật bao gồm quét lỗ hổng tự động và khả năng kiểm tra. Các công cụ này giúp nhà phát triển xác định và giải quyết vấn đề bảo mật trong các phụ thuộc, duy trì bảo mật ứng dụng.",
+      "Kho đăng ký npm cung cấp khả năng khám phá và phân phối gói toàn diện. Các tính năng như hỗ trợ semantic versioning, gói có phạm vi và kho đăng ký riêng cho phép quản lý gói hiệu quả cho tổ chức.",
+      "Tính năng workspace trong npm cho phép quản lý hiệu quả các dự án monorepo. Khả năng này đơn giản hóa phát triển các ứng dụng lớn với nhiều gói liên kết."
+    ],
+    "url": "https://www.npmjs.com",
+    "githubUrl": "https://github.com/npm/cli",
+    "logo": "https://www.npmjs.com/favicon.ico",
+    "isCommonTool": true
+  },
+  "MacOS": {
+    "name": "macOS",
+    "description": [
+      "macOS là hệ điều hành dựa trên Unix mạnh mẽ của Apple cung cấp môi trường phát triển thanh lịch và hiệu quả. Sự kết hợp giữa giao diện người dùng được đánh bóng với nền tảng Unix mạnh mẽ làm cho nó trở thành lựa chọn ưa thích của nhiều nhà phát triển.",
+      "Nền tảng Unix của hệ điều hành cung cấp quyền truy cập vào các công cụ và tiện ích dòng lệnh mạnh mẽ. Ứng dụng Terminal cho phép sử dụng tập lệnh shell, trình quản lý gói và công cụ phát triển thiết yếu cho phát triển phần mềm hiện đại.",
+      "macOS bao gồm công cụ và framework phát triển tích hợp sẵn. Xcode, Command Line Tools và các công cụ phát triển Unix khác nhau được cài đặt sẵn hoặc dễ dàng truy cập, cung cấp môi trường phát triển toàn diện.",
+      "Khả năng tìm kiếm Spotlight và quản lý tệp của hệ thống nâng cao năng suất. Truy cập nhanh vào tệp, ứng dụng và tài liệu giúp duy trì quy trình phát triển hiệu quả.",
+      "Tích hợp với dịch vụ và công cụ phát triển diễn ra liền mạch. Hỗ trợ cho SSH, Git và các môi trường phát triển khác nhau hoạt động ngay lập tức, trong khi trình quản lý gói như Homebrew mở rộng chức năng.",
+      "Tính năng bảo mật của hệ điều hành bao gồm Gatekeeper, FileVault và System Integrity Protection. Những tính năng này bảo vệ môi trường phát triển trong khi cho phép tính linh hoạt cần thiết cho các tác vụ phát triển."
+    ],
+    "url": "https://www.apple.com/macos",
+    "logo": "https://www.apple.com/favicon.ico"
+  },
+  "Windows": {
+    "name": "Windows",
+    "description": "Windows là hệ điều hành của Microsoft cung cấp giao diện thân thiện với người dùng và các công cụ phát triển mở rộng thông qua Windows Subsystem for Linux (WSL) và tích hợp Visual Studio.",
+    "url": "https://www.microsoft.com/windows",
+    "isCommonTool": true,
+    "logo": "https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png"
+  },
+  "Chrome": {
+    "name": "Chrome",
+    "description": [
+      "Google Chrome là trình duyệt web hàng đầu kết hợp thiết kế tối giản với công nghệ tinh vi để làm cho web nhanh hơn, an toàn hơn và dễ điều hướng hơn. Động cơ JavaScript V8 mạnh mẽ và công cụ phát triển làm cho nó trở thành thiết yếu cho phát triển web.",
+      "Chrome DevTools cung cấp khả năng gỡ lỗi và phân tích hiệu suất toàn diện. Từ kiểm tra DOM và giám sát mạng đến lập hồ sơ hiệu suất và phân tích bộ nhớ, những công cụ này vô giá cho phát triển web hiện đại.",
+      "Trình quản lý tác vụ và cô lập quy trình của trình duyệt nâng cao tính ổn định và bảo mật. Mỗi tab chạy trong một quy trình riêng biệt, ngăn một trang đơn làm sập toàn bộ trình duyệt và cô lập các mối đe dọa bảo mật tiềm ẩn.",
+      "Hệ sinh thái tiện ích mở rộng của Chrome cho phép tùy chỉnh môi trường phát triển. Tiện ích mở rộng có thể thêm công cụ gỡ lỗi, tiện ích kiểm thử, kiểm tra khả năng truy cập và các hỗ trợ phát triển khác nhau.",
+      "Tính năng bảo mật tích hợp của trình duyệt bao gồm Safe Browsing, sandboxing và cập nhật tự động. Những tính năng này bảo vệ nhà phát triển và người dùng khỏi phần mềm độc hại, lừa đảo và các mối đe dọa dựa trên web khác.",
+      "Khả năng đồng bộ hóa đa nền tảng của Chrome hợp lý hóa phát triển trên các thiết bị. Dấu trang, tiện ích mở rộng và cài đặt DevTools có thể được đồng bộ hóa, duy trì môi trường phát triển nhất quán."
+    ],
+    "url": "https://www.google.com/chrome",
+    "isCommonTool": true,
+    "logo": "https://www.google.com/chrome/static/images/chrome-logo.svg"
+  },
+  "Firefox": {
+    "name": "Firefox",
+    "description": [
+      "Firefox là trình duyệt web mã nguồn mở tiên phong được phát triển bởi Mozilla, ủng hộ tiêu chuẩn web, quyền riêng tư và kiểm soát người dùng. Nó đã đóng vai trò quan trọng trong việc duy trì hệ sinh thái web mở và dễ tiếp cận.",
+      "Firefox Developer Tools cung cấp các tính năng độc đáo cho phát triển web, bao gồm trình kiểm tra CSS Grid và Flexbox mạnh mẽ, công cụ truy cập và chế độ thiết kế đáp ứng. Các công cụ này giúp nhà phát triển tạo ra các trang web toàn diện và đáp ứng hơn.",
+      "Cam kết về quyền riêng tư của trình duyệt thể hiện rõ trong các tính năng như Bảo vệ Theo dõi Nâng cao và tab container. Các tính năng này cho người dùng nhiều quyền kiểm soát hơn đối với dữ liệu của họ trong khi cung cấp cho nhà phát triển cách thức đạo đức để triển khai theo dõi khi cần thiết.",
+      "Động cơ Gecko của Firefox cung cấp hỗ trợ xuất sắc cho tiêu chuẩn web và thường dẫn đầu trong việc triển khai các tính năng mới. Cam kết này với tiêu chuẩn giúp đảm bảo nội dung web hoạt động nhất quán trên các nền tảng.",
+      "Các tùy chọn tùy chỉnh mở rộng của trình duyệt thông qua about:config và userChrome.css cho phép nhà phát triển tinh chỉnh môi trường phát triển của họ. Tính linh hoạt này đặc biệt có giá trị cho kiểm thử và gỡ lỗi.",
+      "Hệ thống add-on của Firefox cung cấp API mạnh mẽ để mở rộng chức năng trình duyệt. API WebExtensions cho phép nhà phát triển tạo các tiện ích mở rộng tương thích đa trình duyệt trong khi duy trì bảo mật."
+    ],
+    "url": "https://www.mozilla.org/firefox",
+    "isCommonTool": true
+  },
+  "WebStorm": {
+    "name": "WebStorm",
+    "description": [
+      "WebStorm là một Môi trường Phát triển Tích hợp (IDE) mạnh mẽ được thiết kế đặc biệt cho phát triển JavaScript hiện đại. Được tạo bởi JetBrains, nó cung cấp các công cụ và tính năng toàn diện nâng cao năng suất và chất lượng mã.",
+      "Tính năng hoàn thành mã thông minh của IDE hiểu ngữ cảnh dự án và thông tin kiểu, cung cấp gợi ý chính xác cho JavaScript, TypeScript, HTML và CSS. Sự hiểu biết sâu sắc về cấu trúc mã này giúp ngăn ngừa lỗi và tăng tốc phát triển.",
+      "Khả năng tái cấu trúc của WebStorm rất mở rộng, cho phép nhà phát triển tái cấu trúc mã một cách an toàn. Các tính năng như đổi tên, trích xuất phương thức và di chuyển tệp tự động cập nhật tất cả tham chiếu liên quan trong dự án.",
+      "Các công cụ gỡ lỗi tích hợp hỗ trợ nhiều trình duyệt và Node.js, với các tính năng như điểm dừng có điều kiện, biểu thức theo dõi và chỉnh sửa trực tiếp. Điều này làm cho việc theo dõi và sửa lỗi hiệu quả hơn so với sử dụng công cụ độc lập.",
+      "Tích hợp quản lý phiên bản liền mạch, với hỗ trợ cho các thao tác Git trực tiếp từ IDE. Giao diện cung cấp trực quan hóa rõ ràng về thay đổi, xung đột và thao tác nhánh, hợp lý hóa quy trình quản lý phiên bản.",
+      "IDE bao gồm các công cụ tích hợp sẵn cho kiểm thử, chạy tác vụ và triển khai. Tích hợp với các framework kiểm thử phổ biến, công cụ xây dựng và dịch vụ triển khai giúp dễ dàng duy trì chất lượng trong suốt vòng đời phát triển."
+    ],
+    "url": "https://www.jetbrains.com/webstorm",
+    "logo": "https://www.jetbrains.com/favicon.ico"
+  },
+  "Slack": {
+    "name": "Slack",
+    "description": "Slack là một ứng dụng nhắn tin cho doanh nghiệp kết nối mọi người với thông tin họ cần. Nó chuyển đổi cách các tổ chức giao tiếp bằng cách tập hợp mọi người làm việc như một đội ngũ thống nhất.",
+    "url": "https://slack.com",
+    "isCommonTool": true
+  },
+  "Microsoft Teams": {
+    "name": "Microsoft Teams",
+    "description": "Microsoft Teams là một ứng dụng cộng tác giúp đội của bạn duy trì tổ chức và có các cuộc trò chuyện—tất cả trong một nơi. Nó tích hợp con người, nội dung và công cụ để giúp các đội làm việc hiệu quả và gắn kết hơn.",
+    "url": "https://www.microsoft.com/microsoft-teams",
+    "isCommonTool": true
+  },
+  "Jira": {
+    "name": "Jira",
+    "description": [
+      "Jira là hệ thống quản lý dự án và theo dõi vấn đề toàn diện đã trở thành thiết yếu trong phát triển phần mềm hiện đại. Nó cung cấp công cụ mạnh mẽ để lập kế hoạch, theo dõi và quản lý các dự án phát triển phần mềm agile.",
+      "Động cơ quy trình công việc linh hoạt của nền tảng cho phép các nhóm tùy chỉnh quy trình phát triển của họ. Các nhóm có thể tạo quy trình công việc phù hợp với nhu cầu cụ thể của họ, từ theo dõi tác vụ đơn giản đến quy trình phê duyệt phức tạp.",
+      "Công cụ agile của Jira hỗ trợ cả phương pháp luận Scrum và Kanban. Các tính năng như lập kế hoạch sprint, quản lý backlog và biểu đồ burndown giúp các nhóm triển khai thực hành agile hiệu quả và theo dõi tiến độ trực quan.",
+      "Khả năng báo cáo nâng cao cung cấp thông tin chi tiết về hiệu suất nhóm và trạng thái dự án. Dashboard tùy chỉnh, biểu đồ velocity và biểu đồ luồng tích lũy giúp các nhóm đưa ra quyết định dựa trên dữ liệu.",
+      "Khả năng tích hợp kết nối Jira với công cụ phát triển và hệ thống quản lý phiên bản. Những tích hợp này tạo quy trình công việc liền mạch giữa hoạt động lập kế hoạch, phát triển và triển khai.",
+      "Hệ thống quyền của nền tảng cho phép kiểm soát truy cập và bảo mật chi tiết. Các nhóm có thể quản lý ai có thể xem và sửa đổi các khía cạnh khác nhau của dự án, đảm bảo truy cập thông tin và bảo mật thích hợp."
+    ],
+    "url": "https://www.atlassian.com/software/jira",
+    "isCommonTool": true
+  },
+  "Confluence": {
+    "name": "Confluence",
+    "description": [
+      "Confluence là nền tảng cộng tác nhóm và tài liệu mạnh mẽ đóng vai trò cơ sở kiến thức trung tâm cho tổ chức. Nó cung cấp công cụ mạnh mẽ để tạo, tổ chức và chia sẻ kiến thức nhóm và tài liệu dự án.",
+      "Trình soạn thảo văn bản phong phú của nền tảng hỗ trợ tài liệu kỹ thuật với các tính năng như làm nổi bật mã và sơ đồ. Các nhóm có thể tạo tài liệu toàn diện bao gồm đặc tả kỹ thuật, tài liệu API và hướng dẫn dự án.",
+      "Template và phân cấp trang giúp tổ chức thông tin hiệu quả. Các tính năng này cho phép các nhóm duy trì cấu trúc tài liệu nhất quán và làm cho thông tin dễ dàng khám phá.",
+      "Tính năng cộng tác bao gồm bình luận nội tuyến, đề cập và lịch sử phiên bản. Những khả năng này tạo điều kiện thảo luận nhóm, đánh giá tài liệu và theo dõi thay đổi theo thời gian.",
+      "Tích hợp với các công cụ Atlassian khác tạo hệ sinh thái phát triển liền mạch. Confluence làm việc chặt chẽ với Jira, cho phép các nhóm liên kết vấn đề, tạo tài liệu từ template và duy trì tài liệu dự án bên cạnh công việc phát triển.",
+      "Quyền cấp không gian và trang cung cấp kiểm soát truy cập chi tiết. Các nhóm có thể quản lý ai có thể xem và chỉnh sửa các phần khác nhau của tài liệu, đảm bảo bảo mật thông tin trong khi thúc đẩy cộng tác."
+    ],
+    "url": "https://www.atlassian.com/software/confluence",
+    "isCommonTool": true
+  },
+  "Trello": {
+    "name": "Trello",
+    "description": "Trello là một ứng dụng tạo danh sách kiểu Kanban trên web. Đây là một cách dễ dàng, miễn phí, linh hoạt và trực quan để quản lý dự án và tổ chức mọi thứ.",
+    "url": "https://trello.com",
+    "isCommonTool": true
+  },
+  "Protractor": {
+    "name": "Protractor",
+    "description": [
+      "Protractor là framework kiểm thử end-to-end chuyên biệt được thiết kế đặc biệt cho các ứng dụng Angular. Là công cụ kiểm thử chính thức cho Angular cho đến khi ngừng phát triển vào năm 2023, nó cung cấp khả năng kiểm thử toàn diện hiểu được các tính năng độc đáo của Angular.",
+      "Tích hợp của framework với Angular cho phép nó xử lý các hoạt động bất đồng bộ một cách tự nhiên. Nó có thể tự động đợi chu kỳ digest của Angular và yêu cầu HTTP hoàn thành, làm cho các bài kiểm thử đáng tin cậy hơn và giảm vấn đề kiểm thử không ổn định.",
+      "Chiến lược định vị của Protractor được tối ưu hóa cho ứng dụng Angular, với hỗ trợ tích hợp để tìm phần tử bằng model, binding và repeater. Các chiến lược này làm cho kiểm thử dễ bảo trì hơn và ít dễ vỡ hơn so với bộ chọn CSS hoặc XPath truyền thống.",
+      "Công cụ sử dụng WebDriver API để điều khiển trình duyệt theo chương trình, cho phép kiểm thử end-to-end thực sự. Cách tiếp cận này cho phép kiểm thử mô phỏng tương tác người dùng thực trên các trình duyệt và môi trường khác nhau.",
+      "Tính năng nâng cao bao gồm tự động đợi phần tử, đồng bộ hóa với zone.js của Angular và hỗ trợ cho trang không phải Angular. Những khả năng này cho phép kiểm thử ứng dụng phức tạp với nội dung Angular và không phải Angular hỗn hợp.",
+      "Mặc dù đã ngừng phát triển, các khái niệm và mẫu của Protractor đã ảnh hưởng đến cách tiếp cận kiểm thử hiện đại. Sự tập trung vào nhu cầu kiểm thử đặc thù của Angular đã giúp định hình cách thiết kế và triển khai các công cụ kiểm thử dành riêng cho framework."
+    ],
+    "url": "https://www.protractortest.org",
+    "githubUrl": "https://github.com/angular/protractor",
+    "logo": "https://www.protractortest.org/img/favicon.ico",
+    "isCommonTool": true
+  },
+  "Sinon": {
+    "name": "Sinon.JS",
+    "description": [
+      "Sinon.JS là thư viện kiểm thử độc lập mạnh mẽ cung cấp spies, stubs và mocks cho JavaScript. Nó xuất sắc trong việc cô lập mã đang kiểm thử bằng cách cung cấp công cụ tinh vi để mô phỏng và xác minh tương tác giữa các thành phần hệ thống.",
+      "Chức năng spy của thư viện cho phép theo dõi chi tiết cuộc gọi hàm, đối số và giá trị trả về. Khả năng này là thiết yếu để xác minh rằng tương tác mã xảy ra như mong đợi mà không sửa đổi hành vi gốc.",
+      "Tính năng stub của Sinon cho phép thay thế hàm bằng triển khai đặc thù cho kiểm thử. Stub có thể được cấu hình để trả về giá trị cụ thể, ném lỗi hoặc thực thi logic tùy chỉnh, giúp có thể kiểm thử nhiều kịch bản và trường hợp đặc biệt.",
+      "Đối tượng mock trong Sinon cung cấp cách xác minh mẫu tương tác phức tạp. Chúng kết hợp spies và stubs với kỳ vọng được lập trình trước, giúp dễ dàng đảm bảo mã hoạt động theo giao thức hoặc mẫu cụ thể.",
+      "Thư viện bao gồm tiện ích mạnh mẽ để làm việc với bộ đếm thời gian và ngày tháng. Các tính năng này cho phép kiểm thử kiểm soát mã phụ thuộc thời gian, giúp có thể kiểm thử lập lịch, timeout và chức năng dựa trên ngày tháng một cách đáng tin cậy.",
+      "Khả năng fake server của Sinon cho phép kiểm thử mã thực hiện yêu cầu HTTP mà không cần gọi mạng thực tế. Tính năng này đặc biệt có giá trị để kiểm thử tương tác AJAX và đảm bảo mã xử lý các phản hồi server khác nhau một cách chính xác."
+    ],
+    "url": "https://sinonjs.org",
+    "githubUrl": "https://github.com/sinonjs/sinon",
+    "logo": "https://sinonjs.org/assets/images/logo.png"
+  },
+  "ChaiJS": {
+    "name": "Chai",
+    "description": [
+      "Chai là thư viện assertion đa năng hỗ trợ cả phong cách kiểm thử BDD (Behavior Driven Development) và TDD (Test Driven Development) trong JavaScript. Nó cung cấp ngôn ngữ phong phú, biểu đạt để viết các assertion kiểm thử truyền đạt rõ ràng kỳ vọng mã.",
+      "Thư viện cung cấp ba phong cách assertion - expect, should và assert - mỗi phong cách phục vụ các sở thích và cách tiếp cận kiểm thử khác nhau. Tính linh hoạt này cho phép nhà phát triển chọn phong cách phù hợp nhất với triết lý kiểm thử và codebase của họ.",
+      "Cú pháp assertion có thể xâu chuỗi của Chai tạo ra các bài kiểm thử dễ đọc, tự nhiên. Giao diện trôi chảy giúp dễ dàng tạo các assertion phức tạp trong khi duy trì rõ ràng về những gì đang được kiểm thử.",
+      "Thư viện bao gồm tập hợp toàn diện các assertion để xử lý các kiểu và cấu trúc dữ liệu khác nhau. Từ kiểm tra bằng nhau đơn giản đến so sánh đối tượng sâu, Chai cung cấp công cụ để xác minh các khía cạnh khác nhau của hành vi mã.",
+      "Kiến trúc plugin của Chai cho phép mở rộng chức năng của nó với các assertion tùy chỉnh. Khả năng mở rộng này cho phép các nhóm tạo assertion đặc thù cho miền giúp kiểm thử biểu đạt và dễ bảo trì hơn.",
+      "Thư viện tích hợp liền mạch với các framework và công cụ kiểm thử khác nhau. Bản chất độc lập với framework làm cho nó trở thành công cụ có giá trị bất kể framework kiểm thử hoặc môi trường phát triển được chọn."
+    ],
+    "url": "https://www.chaijs.com",
+    "githubUrl": "https://github.com/chaijs/chai",
+    "logo": "https://www.chaijs.com/img/favicon.ico"
+  },
+  "Agile/Scrum": {
+    "name": "Agile/Scrum",
+    "description": [
+      "Agile/Scrum là phương pháp luận quản lý dự án và phát triển sản phẩm toàn diện nhấn mạnh phát triển lặp lại, cộng tác nhóm và phản ứng nhanh với thay đổi. Cách tiếp cận này đã cách mạng hóa phát triển phần mềm bằng cách cung cấp khung làm việc linh hoạt thích ứng với yêu cầu phát triển.",
+      "Phương pháp luận được xây dựng xung quanh các lần lặp ngắn, tập trung gọi là sprint, thường kéo dài 2-4 tuần. Mỗi sprint cung cấp phần tăng thêm sản phẩm có thể phát hành tiềm năng, cho phép phản hồi thường xuyên và cải tiến liên tục cả sản phẩm và quy trình.",
+      "Scrum định nghĩa vai trò rõ ràng bao gồm Product Owner, Scrum Master và Development Team. Sự rõ ràng về vai trò này đảm bảo quyền sở hữu thích hợp về tầm nhìn sản phẩm, tạo điều kiện quy trình và triển khai kỹ thuật trong khi duy trì tự tổ chức của nhóm.",
+      "Framework bao gồm các nghi thức thường xuyên như Sprint Planning, Daily Standups, Sprint Review và Retrospectives. Các sự kiện có cấu trúc này cung cấp cơ hội thiết yếu cho lập kế hoạch, đồng bộ hóa, trình diễn và cải tiến quy trình.",
+      "Các artifact Agile như Product Backlog, Sprint Backlog và Burndown Charts cung cấp tính minh bạch về tiến độ công việc và ưu tiên. Những công cụ này giúp các nhóm duy trì tập trung vào việc cung cấp giá trị trong khi thích ứng với nhu cầu kinh doanh thay đổi.",
+      "Phương pháp luận nhấn mạnh kiểm soát quy trình thực nghiệm thông qua tính minh bạch, kiểm tra và thích ứng. Retrospectives thường xuyên và thực hành cải tiến liên tục giúp các nhóm tối ưu hóa quy trình của họ và cung cấp kết quả tốt hơn theo thời gian."
+    ],
+    "url": "https://www.scrum.org",
+    "logo": "https://www.scrum.org/themes/custom/scrumorg_v2/assets/images/logo-250.png",
+    "isCommonTool": true
+  },
+  "SVN": {
+    "name": "Apache Subversion (SVN)",
+    "description": "Apache Subversion (SVN) là một hệ thống quản lý phiên bản mã nguồn mở. Nó quản lý các tệp và thư mục theo thời gian, duy trì lịch sử thay đổi và hỗ trợ phát triển cộng tác thông qua các tính năng như branching, merging và giải quyết xung đột.",
+    "url": "https://subversion.apache.org",
+    "githubUrl": "https://github.com/apache/subversion",
+    "logo": "https://subversion.apache.org/images/svn-name-banner.svg"
+  },
+  "Webpack": {
+    "name": "Webpack",
+    "description": [
+      "Webpack là công cụ đóng gói module tĩnh tinh vi đã cách mạng hóa phát triển ứng dụng JavaScript. Nó chuyển đổi các ứng dụng JavaScript hiện đại thành các gói được tối ưu hóa sẵn sàng cho triển khai sản xuất, xử lý không chỉ JavaScript mà còn tất cả các loại tài nguyên.",
+      "Khái niệm cốt lõi của công cụ đóng gói về việc xử lý tất cả tệp như module tạo ra cách tiếp cận thống nhất để quản lý tài nguyên. Điều này cho phép nhà phát triển sử dụng tính năng JavaScript hiện đại, quản lý phụ thuộc hiệu quả và tối ưu hóa tải tài nguyên.",
+      "Hệ thống loader của Webpack cung cấp tính linh hoạt đáng kinh ngạc trong xử lý các loại tệp khác nhau. Loader có thể chuyển đổi TypeScript thành JavaScript, SCSS thành CSS, tối ưu hóa hình ảnh và xử lý nhiều loại tài nguyên khác, tạo ra pipeline xây dựng liền mạch.",
+      "Kiến trúc plugin cho phép tùy chỉnh quy trình xây dựng mạnh mẽ. Plugin có thể sửa đổi cách tạo gói, tối ưu hóa đầu ra, tạo tài nguyên và tích hợp với các công cụ khác, làm cho Webpack thích ứng với nhiều nhu cầu dự án.",
+      "Khả năng phân chia mã cho phép chia gói thông minh và tải lười biếng. Tính năng này giúp tối ưu hóa thời gian tải trang ban đầu bằng cách chỉ tải mã khi cần thiết, quan trọng cho hiệu suất ứng dụng web hiện đại.",
+      "Các tính năng phát triển như Hot Module Replacement (HMR) nâng cao trải nghiệm phát triển. HMR cho phép cập nhật module trong thời gian thực mà không cần tải lại trang hoàn toàn, đáng kể tăng tốc quy trình phát triển."
+    ],
+    "url": "https://webpack.js.org",
+    "githubUrl": "https://github.com/webpack/webpack",
+    "logo": "https://webpack.js.org/assets/icon-square-big.svg"
+  },
+  "Grunt": {
+    "name": "Grunt",
+    "description": [
+      "Grunt là một task runner JavaScript tiên phong tự động hóa các tác vụ phát triển thông thường và hợp lý hóa quy trình xây dựng. Nó thiết lập nhiều mẫu hiện đã trở thành tiêu chuẩn trong công cụ phát triển web hiện đại.",
+      "Task runner sử dụng cách tiếp cận cấu hình khai báo làm cho quy trình xây dựng rõ ràng và dễ bảo trì. Các tác vụ được định nghĩa trong Gruntfile sử dụng JavaScript, cho phép cả định nghĩa tác vụ đơn giản và logic xây dựng phức tạp.",
+      "Hệ sinh thái plugin mở rộng của Grunt cung cấp giải pháp có sẵn cho các tác vụ phát triển thông thường. Các plugin này bao gồm mọi thứ từ thao tác tệp và biên dịch đến kiểm thử và triển khai, giảm nhu cầu viết script xây dựng tùy chỉnh.",
+      "Công cụ xuất sắc trong các hoạt động dựa trên tệp, làm cho nó đặc biệt hiệu quả cho các tác vụ như nối, thu nhỏ và tối ưu hóa hình ảnh. Các mẫu khớp tệp của nó giúp dễ dàng xử lý các nhóm tệp với các hoạt động tương tự.",
+      "Chức năng watch của Grunt cho phép thực thi tác vụ tự động khi tệp thay đổi, tạo quy trình phát triển hiệu quả. Tính năng này đặc biệt hữu ích cho các tác vụ như biên dịch, linting và chạy kiểm thử trong quá trình phát triển.",
+      "Kiến trúc module của task runner cho phép các nhóm tạo cấu hình xây dựng có thể tái sử dụng. Các tác vụ có thể được kết hợp và cấu hình theo nhiều cách khác nhau, cho phép quy trình xây dựng linh hoạt có thể được chia sẻ giữa các dự án."
+    ],
+    "url": "https://gruntjs.com",
+    "githubUrl": "https://github.com/gruntjs/grunt",
+    "logo": "https://gruntjs.com/img/grunt-logo.svg"
+  },
+  "Angular CLI": {
+    "name": "Angular CLI",
+    "description": [
+      "Angular CLI là một công cụ dòng lệnh mạnh mẽ được phát triển bởi team Angular, nhằm đơn giản hóa và tự động hóa quy trình phát triển ứng dụng Angular. Nó cung cấp một bộ công cụ toàn diện cho toàn bộ vòng đời phát triển ứng dụng.",
+      "Công cụ này cung cấp các lệnh để tạo mới dự án với cấu trúc chuẩn và các cấu hình tốt nhất. Nó tự động thiết lập môi trường phát triển với TypeScript, định cấu hình thử nghiệm và các công cụ xây dựng cần thiết.",
+      "Angular CLI đơn giản hóa việc tạo các thành phần mới như components, services, pipes và directives thông qua các lệnh generate. Mỗi lệnh tạo ra mã nguồn tuân theo các quy ước và phương pháp tốt nhất của Angular.",
+      "Trong quá trình phát triển, CLI cung cấp một development server với hot reload, giúp các nhà phát triển thấy ngay các thay đổi của họ. Nó cũng tích hợp các công cụ kiểm tra và gỡ lỗi để đảm bảo chất lượng mã.",
+      "Khi chuẩn bị cho production, CLI cung cấp các tính năng xây dựng nâng cao như tree-shaking, minification và optimization. Nó tự động xử lý các tác vụ phức tạp như code splitting và lazy loading.",
+      "CLI cũng hỗ trợ việc tạo và chạy các bài kiểm thử đơn vị và end-to-end. Nó tích hợp với các công cụ kiểm thử như Karma và Protractor, giúp duy trì chất lượng mã nguồn trong suốt quá trình phát triển."
+    ],
+    "url": "https://cli.angular.io",
+    "githubUrl": "https://github.com/angular/angular-cli",
+    "logo": "https://angular.dev/assets/icons/favicon.ico"
+  },
+  "KendoUI": {
+    "name": "Kendo UI",
+    "description": [
+      "Kendo UI là một bộ components UI toàn diện cung cấp giải pháp hoàn chỉnh để xây dựng ứng dụng web hiện đại. Nó cung cấp triển khai tự nhiên cho nhiều framework JavaScript, đảm bảo hiệu suất tối ưu và tích hợp liền mạch.",
+      "Component data grid của framework đặc biệt mạnh mẽ, cung cấp các tính năng như virtualization, sắp xếp, lọc và nhóm ngay từ đầu. Khả năng xử lý hiệu quả các tập dữ liệu lớn trong khi duy trì hiệu suất mượt mà làm cho nó lý tưởng cho các ứng dụng doanh nghiệp.",
+      "Khả năng tạo biểu đồ mở rộng của Kendo UI cho phép trực quan hóa dữ liệu tinh vi. Các biểu đồ có thể tùy chỉnh cao và tương tác, hỗ trợ các tính năng như phóng to, di chuyển và chức năng drill-down, làm cho việc trình bày dữ liệu phức tạp trở nên trực quan.",
+      "Framework bao gồm một tập hợp phong phú các component biểu mẫu giúp đơn giản hóa việc nhập và xác thực dữ liệu. Các component này hỗ trợ các kịch bản phức tạp như chọn ngày/giờ, nhập số có định dạng và nhập có mặt nạ với quy tắc xác thực tùy chỉnh.",
+      "Khả năng truy cập là trọng tâm cốt lõi, với tất cả các component tuân theo hướng dẫn WCAG 2.1 và cung cấp hỗ trợ ARIA. Cam kết này với khả năng truy cập đảm bảo ứng dụng có thể tiếp cận đối tượng rộng hơn và tuân thủ yêu cầu truy cập.",
+      "Hệ thống chủ đề của framework cho phép tùy chỉnh toàn diện giao diện component. Các chủ đề tích hợp sẵn và khả năng tạo chủ đề tùy chỉnh cho phép thương hiệu nhất quán trên các ứng dụng trong khi duy trì vẻ ngoài chuyên nghiệp."
+    ],
+    "url": "https://www.telerik.com/kendo-ui",
+    "logo": "https://www.telerik.com/favicon.ico"
+  },
+  "Webstorm": {
+    "name": "WebStorm",
+    "description": [
+      "WebStorm là môi trường phát triển tích hợp (IDE) mạnh mẽ được thiết kế đặc biệt cho phát triển JavaScript hiện đại. Hỗ trợ lập trình thông minh và thiết kế công gônômích làm cho nó trở thành lựa chọn ưa thích cho phát triển web chuyên nghiệp.",
+      "Phân tích mã nâng cao của IDE cung cấp phát hiện lỗi thời gian thực, kiểm tra chất lượng mã và điều hướng thông minh. Những tính năng này giúp nhà phát triển viết mã tốt hơn nhanh hơn trong khi duy trì tiêu chuẩn chất lượng cao.",
+      "Khả năng gỡ lỗi tích hợp của WebStorm hỗ trợ nhiều môi trường runtime. Từ ứng dụng Node.js đến gỡ lỗi dựa trên trình duyệt, IDE cung cấp công cụ toàn diện để xác định và sửa vấn đề hiệu quả.",
+      "Tích hợp quản lý phiên bản tích hợp sẵn hợp lý hóa quy trình phát triển. IDE cung cấp giao diện phong phú cho các thao tác Git, bao gồm công cụ diff trực quan, giải quyết xung đột và quản lý nhánh.",
+      "Công cụ tái cấu trúc của IDE hỗ trợ thay đổi mã an toàn trên toàn dự án. Từ đổi tên biểu tượng đến trích xuất thành phần, WebStorm đảm bảo các thao tác tái cấu trúc duy trì tính toàn vẹn mã trong toàn bộ dự án.",
+      "Tích hợp kiểm thử của WebStorm hỗ trợ các framework kiểm thử khác nhau và cung cấp trình chạy kiểm thử trực quan. Các tính năng như phân tích độ bao phủ kiểm thử và thực thi kiểm thử tự động giúp duy trì chất lượng mã trong suốt quá trình phát triển."
+    ],
+    "url": "https://www.jetbrains.com/webstorm",
+    "isCommonTool": true,
+    "logo": "https://resources.jetbrains.com/storage/products/webstorm/img/meta/webstorm_logo_300x300.png"
+  },
+  "SOLID principles": {
+    "name": "Nguyên tắc SOLID",
+    "description": [
+      "SOLID là tập hợp năm nguyên tắc cơ bản của lập trình và thiết kế hướng đối tượng giúp tạo ra phần mềm có thể bảo trì và mở rộng. Những nguyên tắc này đóng vai trò như hướng dẫn để xây dựng ứng dụng mạnh mẽ và linh hoạt.",
+      "Nguyên tắc Trách nhiệm Đơn lẻ (SRP) nêu rằng một lớp chỉ nên có một lý do để thay đổi. Nguyên tắc này thúc đẩy các thành phần tập trung, gắn kết dễ hiểu, kiểm thử và bảo trì hơn.",
+      "Nguyên tắc Đóng/Mở (OCP) ủng hộ việc các thực thể phần mềm nên mở để mở rộng nhưng đóng để sửa đổi. Điều này cho phép thêm chức năng mới mà không thay đổi mã hiện có, giảm nguy cơ gây ra lỗi.",
+      "Nguyên tắc Thay thế Liskov (LSP) đảm bảo rằng đối tượng của lớp cha có thể được thay thế bằng đối tượng của lớp con mà không ảnh hưởng đến tính đúng đắn của chương trình. Nguyên tắc này duy trì tính nhất quán hành vi trong phân cấp kế thừa.",
+      "Nguyên tắc Phân tách Giao diện (ISP) gợi ý rằng client không nên bị buộc phụ thuộc vào các giao diện mà họ không sử dụng. Điều này dẫn đến giao diện tập trung hơn và giảm sự ràng buộc giữa các thành phần.",
+      "Nguyên tắc Đảo ngược Phụ thuộc (DIP) nêu rằng các module cấp cao không nên phụ thuộc vào module cấp thấp; cả hai nên phụ thuộc vào trừu tượng. Nguyên tắc này thúc đẩy sự ràng buộc lỏng lẻo và kiểm thử dễ dàng hơn thông qua tiêm phụ thuộc."
+    ],
+    "url": "https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design",
+    "isCommonTool": true
+  },
+  "Visual Studio Code": {
+    "name": "Visual Studio Code",
+    "description": [
+      "Visual Studio Code là trình soạn thảo mã nguồn mở có khả năng mở rộng cao kết hợp sự đơn giản của trình soạn thảo văn bản với công cụ phát triển mạnh mẽ. Kiến trúc nhẹ nhưng mạnh mẽ làm cho nó phù hợp cho phát triển trên nhiều ngôn ngữ và nền tảng.",
+      "Tính năng IntelliSense của trình soạn thảo cung cấp gợi ý thông minh dựa trên kiểu biến, định nghĩa hàm và module đã import. Tự động hoàn thành mã thông minh này nâng cao năng suất trong khi giảm lỗi lập trình.",
+      "Hỗ trợ gỡ lỗi tích hợp của VS Code cung cấp trải nghiệm gỡ lỗi phong phú. Với hỗ trợ điểm dừng, kiểm tra ngăn xếp cuộc gọi và theo dõi biến, nhà phát triển có thể theo dõi và sửa vấn đề trong mã của họ một cách hiệu quả.",
+      "Tích hợp Git tích hợp sẵn đơn giản hóa quy trình làm việc quản lý phiên bản. Các tính năng như chú thích blame nội tuyến, xem diff và quản lý nhánh làm cho các thao tác quản lý phiên bản liền mạch trong trình soạn thảo.",
+      "Marketplace mở rộng của VS Code cung cấp hàng nghìn tiện ích mở rộng. Những tiện ích này thêm hỗ trợ cho ngôn ngữ mới, framework, công cụ và theme, cho phép nhà phát triển tùy chỉnh môi trường phát triển theo nhu cầu cụ thể của họ.",
+      "Khả năng chạy terminal tích hợp và tác vụ của trình soạn thảo hợp lý hóa quy trình phát triển. Nhà phát triển có thể thực thi lệnh, chạy tác vụ xây dựng và quản lý máy chủ phát triển mà không cần rời khỏi môi trường lập trình."
+    ],
+    "url": "https://code.visualstudio.com",
+    "githubUrl": "https://github.com/microsoft/vscode",
+    "logo": "https://code.visualstudio.com/favicon.ico"
+  }
+}

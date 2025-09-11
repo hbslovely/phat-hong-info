@@ -1,0 +1,163 @@
+.language-switcher {
+  display: inline-block;
+}
+
+.language-toggle {
+  display: flex;
+  background: #f1f5f9;
+  padding: 3px;
+  border-radius: 8px;
+  position: relative;
+  min-width: 70px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    border-color: #cbd5e1;
+    background: #f8fafc;
+  }
+  
+  &.switching {
+    .toggle-button {
+      .button-content {
+        animation: textPulse 0.3s ease;
+      }
+    }
+  }
+  
+  .slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    height: calc(100% - 6px);
+    width: calc(50% - 3px);
+    background: #006aca;
+    border-radius: 5px;
+    z-index: 1;
+    transition: transform 0.25s ease;
+    box-shadow: 0 1px 3px rgba(0, 106, 202, 0.2);
+  }
+
+  .toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 6px 8px;
+    border: none;
+    background: transparent;
+    border-radius: 5px;
+    color: #64748b;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    min-height: 28px;
+
+    &.active {
+      color: white;
+    }
+
+    .button-content {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      transition: transform 0.2s ease;
+      
+      .flag {
+        font-size: 0.9rem;
+        line-height: 1;
+      }
+
+      .lang-code {
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+      }
+    }
+    
+    &:hover:not(.active) {
+      color: #475569;
+    }
+  }
+}
+
+@keyframes textPulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark-theme) {
+  .language-toggle {
+    background: #1e293b;
+    border-color: #334155;
+    
+    &:hover {
+      background: #334155;
+      border-color: #475569;
+    }
+    
+    .slider {
+      background: #006aca;
+      box-shadow: 0 1px 3px rgba(0, 106, 202, 0.3);
+    }
+
+    .toggle-button {
+      color: #94a3b8;
+      
+      &.active {
+        color: white;
+      }
+      
+      &:hover:not(.active) {
+        color: #cbd5e1;
+      }
+    }
+  }
+}
+
+// Mobile adjustments
+@media (max-width: 768px) {
+  .language-toggle {
+    min-width: 65px;
+    padding: 2px;
+    
+    .slider {
+      top: 2px;
+      left: 2px;
+      height: calc(100% - 4px);
+      width: calc(50% - 2px);
+    }
+
+    .toggle-button {
+      padding: 5px 6px;
+      min-height: 26px;
+      
+      .button-content {
+        gap: 2px;
+        
+        .flag {
+          font-size: 0.8rem;
+        }
+        
+        .lang-code {
+          font-size: 0.65rem;
+        }
+      }
+    }
+  }
+} 

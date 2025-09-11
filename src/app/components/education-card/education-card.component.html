@@ -1,0 +1,141 @@
+<div class="education-card" (click)="openEducationDialog()">
+  <div class="card-header">
+    <div class="education-logo">
+      <span nz-icon nzType="book" nzTheme="outline"></span>
+    </div>
+    <div class="position-institution">
+      <h3>{{ education.degree }}</h3>
+      <div class="institution">
+        <span nz-icon nzType="bank" nzTheme="outline"></span>
+        {{ education.institution }}
+      </div>
+    </div>
+  </div>
+
+  <div class="card-content">
+    <div class="field-specialty">{{ education.field }}</div>
+    <div class="duration">
+      <span nz-icon nzType="calendar" nzTheme="outline"></span>
+      <span>{{ education.startDate }} - {{ education.endDate }}</span>
+    </div>
+    @if (education.grade) {
+      <div class="grade">
+        <span nz-icon nzType="trophy" nzTheme="outline"></span>
+        <span>{{ education.grade }}</span>
+      </div>
+    }
+    @if (education.description) {
+      <p class="description">{{ education.description }}</p>
+    }
+  </div>
+
+  <div class="card-footer">
+    <button class="details-button compact">
+      <span>{{ 'COMMON.VIEW_DETAILS' | translate }}</span>
+      <span nz-icon nzType="right-circle" nzTheme="outline"></span>
+    </button>
+  </div>
+</div>
+
+<!-- Education Detail Dialog -->
+<ng-template #educationDetailDialog>
+  <div class="education-detail-dialog">
+    <div class="dialog-background"></div>
+    <app-watermark class="dialog-watermark" [customIcon]="'book'"></app-watermark>
+    
+    <div class="dialog-header">
+      <div class="header-content">
+        <div class="institution-logo">
+          <span nz-icon nzType="book" nzTheme="outline"></span>
+        </div>
+        <div class="education-info">
+          <h2>{{ education.degree }}</h2>
+          <h3 class="field">{{ education.field }}</h3>
+        </div>
+      </div>
+      
+      <div class="meta-tags">
+        <div class="meta-tag">
+          <span nz-icon nzType="calendar" nzTheme="outline"></span>
+          <span>{{ education.startDate }} - {{ education.endDate }}</span>
+        </div>
+        <div class="meta-tag">
+          <span nz-icon nzType="bank" nzTheme="outline"></span>
+          <span>{{ education.institution }}</span>
+        </div>
+        @if (education.grade) {
+          <div class="meta-tag">
+            <span nz-icon nzType="trophy" nzTheme="outline"></span>
+            <span>{{ education.grade }}</span>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="dialog-content">
+      <div class="scrollable-content">
+        @if (education.achievements && education.achievements.length > 0) {
+          <div class="dialog-section">
+            <h3>
+              <span nz-icon nzType="trophy" nzTheme="outline"></span>
+              {{ 'SECTIONS.EDUCATION.ACHIEVEMENTS' | translate }}
+            </h3>
+            <div class="content-paragraph">
+              @for (achievement of education.achievements; track achievement) {
+                <p>{{ achievement }}</p>
+              }
+            </div>
+          </div>
+        }
+
+        @if (education.description) {
+          <div class="dialog-section">
+            <h3>
+              <span nz-icon nzType="profile" nzTheme="outline"></span>
+              {{ 'SECTIONS.EDUCATION.DESCRIPTION' | translate }}
+            </h3>
+            <div class="content-paragraph">
+              <p>{{ education.description }}</p>
+            </div>
+          </div>
+        }
+
+        <!-- Institution Information Section - Description Only -->
+        @if (education.institutionInfo) {
+          <div class="dialog-section institution-details">
+            <h3>
+              <span nz-icon nzType="bank" nzTheme="outline"></span>
+              {{ 'SECTIONS.EDUCATION.ABOUT_INSTITUTION' | translate }}
+            </h3>
+            <div class="institution-description">
+              {{ education.institutionInfo.description }}
+            </div>
+          </div>
+        }
+      </div>
+      
+      <!-- Fixed Institution Contact Info at Bottom -->
+      @if (education.institutionInfo) {
+        <div class="institution-contact-footer">
+          <div class="institution-contact-info">
+            <div class="contact-item">
+              <span nz-icon nzType="environment" nzTheme="outline"></span>
+              {{ education.institutionInfo.address }}
+            </div>
+            <div class="contact-item">
+              <span nz-icon nzType="global" nzTheme="outline"></span>
+              <a [href]="education.institutionInfo.website"
+                target="_blank" rel="noopener noreferrer">{{ education.institutionInfo.website }}</a>
+            </div>
+            @if (education.institutionInfo.contact) {
+              <div class="contact-item">
+                <span nz-icon nzType="phone" nzTheme="outline"></span>
+                {{ education.institutionInfo.contact }}
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,17 @@
+<button 
+  class="export-button" 
+  [class.loading]="isExporting()" 
+  [class.success]="isSuccess()" 
+  [disabled]="isExporting()"
+  (click)="exportPDF()"
+>
+  <div class="button-content">
+    <span class="icon-container">
+      <span class="default-icon" nz-icon nzType="file-pdf" nzTheme="outline"></span>
+      <span class="loading-icon" nz-icon nzType="loading" nzTheme="outline" nzSpin></span>
+      <span class="success-icon" nz-icon nzType="check" nzTheme="outline"></span>
+    </span>
+    <span class="button-text">{{ 'ACTIONS.EXPORT_PDF' | translate }}</span>
+  </div>
+  <div class="progress-bar"></div>
+</button> 

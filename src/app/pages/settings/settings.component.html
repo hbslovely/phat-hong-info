@@ -1,0 +1,168 @@
+<div class="settings-page">
+  <!-- Page Header -->
+  <app-page-header
+    title="{{ 'SETTINGS.TITLE' | translate }}"
+    subtitle="{{ 'SETTINGS.SUBTITLE' | translate }}">
+  </app-page-header>
+
+  <div class="container">
+    <div class="settings-grid">
+      
+      <!-- Theme Settings Card -->
+      <div class="settings-card">
+        <div class="card-header">
+          <div class="header-icon">
+            <span nz-icon nzType="bg-colors" nzTheme="outline"></span>
+          </div>
+          <div class="header-content">
+            <h3>{{ 'SETTINGS.THEME.TITLE' | translate }}</h3>
+            <p>{{ 'SETTINGS.THEME.DESCRIPTION' | translate }}</p>
+          </div>
+          <div class="header-status">
+            <div class="status-indicator" [class]="currentTheme()">
+              <span nz-icon [nzType]="getThemeIcon(currentTheme())" nzTheme="outline"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <div class="theme-options">
+            @for (option of themeOptions; track option.value) {
+              <div 
+                class="theme-option" 
+                [class.active]="isThemeSelected(option.value)"
+                (click)="setTheme(option.value)"
+              >
+                <div class="option-icon">
+                  <span nz-icon [nzType]="option.icon" nzTheme="outline"></span>
+                </div>
+                <div class="option-content">
+                  <div class="option-title">{{ option.label | translate }}</div>
+                  <div class="option-description">{{ option.description | translate }}</div>
+                </div>
+                <div class="option-indicator">
+                  <div class="radio-indicator" [class.selected]="isThemeSelected(option.value)"></div>
+                </div>
+              </div>
+            }
+          </div>
+
+          <div class="theme-preview">
+            <div class="preview-label">{{ 'SETTINGS.THEME.PREVIEW' | translate }}</div>
+            <div class="preview-container">
+              <div class="preview-card" [class.dark]="isDarkMode()">
+                <div class="preview-header">
+                  <div class="preview-title">{{ 'SETTINGS.THEME.PREVIEW_TITLE' | translate }}</div>
+                  <div class="preview-actions">
+                    <div class="preview-button primary">{{ 'SETTINGS.THEME.PREVIEW_BUTTON' | translate }}</div>
+                  </div>
+                </div>
+                <div class="preview-content">
+                  <div class="preview-text">{{ 'SETTINGS.THEME.PREVIEW_TEXT' | translate }}</div>
+                  <div class="preview-tags">
+                    <span class="preview-tag">Angular</span>
+                    <span class="preview-tag">TypeScript</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Language Settings Card -->
+      <div class="settings-card">
+        <div class="card-header">
+          <div class="header-icon">
+            <span nz-icon nzType="global" nzTheme="outline"></span>
+          </div>
+          <div class="header-content">
+            <h3>{{ 'SETTINGS.LANGUAGE.TITLE' | translate }}</h3>
+            <p>{{ 'SETTINGS.LANGUAGE.DESCRIPTION' | translate }}</p>
+          </div>
+          <div class="header-status">
+            <div class="language-flag">
+              {{ currentLanguageOption()?.flag }}
+            </div>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <div class="language-options">
+            @for (option of languageOptions; track option.value) {
+              <div 
+                class="language-option" 
+                [class.active]="isLanguageSelected(option.value)"
+                (click)="setLanguage(option.value)"
+              >
+                <div class="option-flag">
+                  {{ option.flag }}
+                </div>
+                <div class="option-content">
+                  <div class="option-title">{{ option.label }}</div>
+                  <div class="option-description">{{ option.description | translate }}</div>
+                </div>
+                <div class="option-indicator">
+                  <div class="radio-indicator" [class.selected]="isLanguageSelected(option.value)"></div>
+                </div>
+              </div>
+            }
+          </div>
+
+          <div class="language-info">
+            <div class="info-item">
+              <span nz-icon nzType="info-circle" nzTheme="outline"></span>
+              <span>{{ 'SETTINGS.LANGUAGE.INFO' | translate }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Settings Card -->
+      <div class="settings-card">
+        <div class="card-header">
+          <div class="header-icon">
+            <span nz-icon nzType="tool" nzTheme="outline"></span>
+          </div>
+          <div class="header-content">
+            <h3>{{ 'SETTINGS.PREFERENCES.TITLE' | translate }}</h3>
+            <p>{{ 'SETTINGS.PREFERENCES.DESCRIPTION' | translate }}</p>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <div class="preference-options">
+            <div class="preference-item">
+              <div class="preference-content">
+                <div class="preference-title">{{ 'SETTINGS.PREFERENCES.AUTO_SAVE' | translate }}</div>
+                <div class="preference-description">{{ 'SETTINGS.PREFERENCES.AUTO_SAVE_DESC' | translate }}</div>
+              </div>
+              <div class="preference-control">
+                <nz-switch [ngModel]="true" [nzDisabled]="true"></nz-switch>
+              </div>
+            </div>
+
+            <div class="preference-item">
+              <div class="preference-content">
+                <div class="preference-title">{{ 'SETTINGS.PREFERENCES.ANIMATIONS' | translate }}</div>
+                <div class="preference-description">{{ 'SETTINGS.PREFERENCES.ANIMATIONS_DESC' | translate }}</div>
+              </div>
+              <div class="preference-control">
+                <nz-switch [ngModel]="true" [nzDisabled]="true"></nz-switch>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Contact CTA Section -->
+    <app-contact-cta
+      title="CTA.SETTINGS_FEEDBACK"
+      description="CTA.SETTINGS_FEEDBACK_DESC"
+      buttonText="CTA.CONTACT_ME"
+      buttonIcon="message">
+    </app-contact-cta>
+  </div>
+</div>

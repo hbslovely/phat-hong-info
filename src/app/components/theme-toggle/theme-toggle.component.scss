@@ -1,0 +1,126 @@
+.theme-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  min-width: 48px;
+  
+  &:hover {
+    background: var(--hover-bg);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .theme-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    
+    .theme-icon {
+      font-size: 18px;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        color: var(--primary-color);
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  .theme-indicator {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    
+    .indicator-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--text-light);
+      transition: all 0.2s ease;
+      opacity: 0.4;
+      
+      &.active {
+        background: var(--primary-color);
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+// Animation for theme switching
+.theme-toggle {
+  .theme-icon {
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+  }
+  
+  &:active .theme-icon {
+    animation-name: themeSwitch;
+  }
+}
+
+@keyframes themeSwitch {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(0.8) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark-theme) {
+  .theme-toggle {
+    .theme-icon {
+      color: var(--text-color);
+    }
+  }
+}
+
+// Mobile adjustments
+@media (max-width: 768px) {
+  .theme-toggle {
+    padding: 6px 10px;
+    min-width: 44px;
+    
+    .theme-icon-container {
+      width: 20px;
+      height: 20px;
+      
+      .theme-icon {
+        font-size: 16px;
+      }
+    }
+    
+    .theme-indicator {
+      gap: 2px;
+      
+      .indicator-dot {
+        width: 3px;
+        height: 3px;
+      }
+    }
+  }
+}

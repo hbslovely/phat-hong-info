@@ -1,0 +1,65 @@
+<div class="navbar">
+  <div class="container">
+    <div class="navbar-content">
+      <a routerLink="/" class="navbar-brand" (click)="closeMobileMenu()">
+        <span class="logo">P</span>
+      </a>
+
+      <button class="mobile-menu-button" (click)="toggleMobileMenu()" aria-label="Toggle navigation menu">
+        <span nz-icon [nzType]="isMobileMenuOpen() ? 'close' : 'menu'" nzTheme="outline"></span>
+      </button>
+
+      <nav [class.open]="isMobileMenuOpen()">
+        <ul class="nav-links">
+          <li>
+            <a routerLink="/about"
+               routerLinkActive="active"
+               [routerLinkActiveOptions]="{exact: true}"
+               (click)="closeMobileMenu()">
+              {{ 'NAV.ABOUT' | translate }}
+            </a>
+          </li>
+          <li>
+            <a routerLink="/experience"
+               routerLinkActive="active"
+               (click)="closeMobileMenu()">
+              {{ 'NAV.EXPERIENCE' | translate }}
+            </a>
+          </li>
+          <li>
+            <a routerLink="/projects"
+               routerLinkActive="active"
+               (click)="closeMobileMenu()">
+              {{ 'NAV.PROJECTS' | translate }}
+            </a>
+          </li>
+          <li>
+            <a routerLink="/skills"
+               routerLinkActive="active"
+               (click)="closeMobileMenu()">
+              {{ 'NAV.SKILLS' | translate }}
+            </a>
+          </li>
+          <li>
+            <a routerLink="/my-pages"
+               routerLinkActive="active"
+               (click)="closeMobileMenu()">
+              {{ 'NAV.MY_PAGES' | translate }}
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <a routerLink="/settings" 
+             class="settings-link"
+             routerLinkActive="active"
+             (click)="closeMobileMenu()"
+             [title]="'NAV.SETTINGS' | translate">
+            <span nz-icon nzType="setting" nzTheme="outline"></span>
+          </a>
+          <app-export-pdf></app-export-pdf>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>

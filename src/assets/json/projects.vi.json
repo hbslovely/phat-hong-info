@@ -1,0 +1,467 @@
+{
+  "projects": [
+    {
+      "name": "Backbase",
+      "company": "Backbase",
+      "duration": "Tháng 11/2024 - Hiện tại",
+      "description": "Dẫn dắt phát triển các tính năng dựa trên AI trong sản phẩm chính của công ty sử dụng Angular. Triển khai các thành phần UI phức tạp và tích hợp dịch vụ AI trong khi vẫn duy trì hiệu suất cao và tiêu chuẩn truy cập.",
+      "scope": "Ngân hàng",
+      "technologies": [
+        "Angular",
+        "Bootstrap",
+        "Jest",
+        "Backbase",
+        "Rxjs"
+      ],
+      "environment": [
+        "Webstorm",
+        "Github",
+        "Nx",
+        "Git",
+        "MacOS",
+        "Agile/Scrum"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "active"
+    },
+    {
+      "name": "Statrys",
+      "company": "HCL",
+      "duration": "Tháng 9/2022 - Tháng 11/2024",
+      "description": "Phát triển nền tảng fintech toàn diện sử dụng cả Angular và React. Dẫn dắt việc chuyển đổi các thành phần cũ sang kiến trúc Angular hiện đại trong khi xây dựng tính năng mới bằng React. Triển khai quy trình tài chính phức tạp và giao diện chuyển đổi tiền tệ thời gian thực.",
+      "scope": "Công nghệ tài chính",
+      "technologies": [
+        "Angular",
+        "ReactJS",
+        "TailwindCSS",
+        "Material",
+        "GraphQL",
+        "Jasmine",
+        "Karma",
+        "AG Grid"
+      ],
+      "environment": [
+        "Visual Studio Code",
+        "Git",
+        "Chrome",
+        "Windows",
+        "Agile/Scrum",
+        "WebStorm"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed"
+    },
+    {
+      "name": "PW",
+      "company": "HCL",
+      "duration": "Tháng 12/2021 - Tháng 12/2023",
+      "description": "Xây dựng Hệ thống Quản lý Tài liệu tinh vi cho ngành hàng không sử dụng Angular 14. Triển khai quy trình tài liệu phức tạp, kiểm soát phiên bản và tính năng sơ đồ tương tác sử dụng GoJS. Tập trung vào tối ưu hóa hiệu suất và trải nghiệm người dùng mượt mà.",
+      "scope": "Hàng không, Quản lý tài liệu",
+      "technologies": [
+        "Angular",
+        "GoJS",
+        "ASP.NET"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Windows",
+        "Agile/Scrum",
+        "Remote Desktop Connection"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed"
+    },
+    {
+      "name": "Topicus - Ứng dụng Web",
+      "company": "SaigonTech",
+      "duration": "Tháng 10/2020 - Tháng 12/2021",
+      "description": "Làm việc trên ứng dụng Web quản lý các thực thể liên quan đến lĩnh vực Quản lý tài sản (đơn hàng, hóa đơn, thanh toán,...). Giải pháp giúp các nhân viên ngân hàng hoặc quản lý tài sản thu hút khách hàng mới và giảm thiểu khối lượng công việc có thể được xử lý tự động bởi hệ thống.",
+      "scope": "Quản lý tài sản",
+      "technologies": [
+        "Angular",
+        "Karma"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Windows",
+        "Agile/Scrum"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed"
+    },
+    {
+      "name": "Finantix",
+      "company": "Nashtech",
+      "duration": "Tháng 12/2018 – Tháng 10/2020",
+      "description": "Dẫn dắt việc chuyển đổi từ AngularJS sang Angular 7 cho nền tảng quản lý tài chính toàn diện. Phát triển giao diện đáp ứng cho quản lý đơn hàng, lập hóa đơn và xử lý thanh toán. Triển khai công cụ demo quản lý tài sản cho các buổi thuyết trình khách hàng.",
+      "scope": "Công nghệ tài chính",
+      "technologies": [
+        "AngularJS",
+        "Angular",
+        "Nodejs",
+        "IOS (Swift)",
+        "Android (Java)",
+        "SOLID principles"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "IOS",
+        "Android",
+        "MacOS",
+        "Agile/Scrum"
+      ],
+      "role": "Lập trình viên Front-end, Lập trình viên Ứng dụng Di động (Phụ)",
+      "status": "completed"
+    },
+    {
+      "name": "Trabble",
+      "company": "NOIS",
+      "duration": "Tháng 2/2018 – Tháng 10/2018",
+      "description": "Phát triển nền tảng chatbot du lịch sử dụng cả Angular 5 và React, thể hiện sự đa dạng trong các framework frontend hiện đại. Tích hợp nhiều API (Facebook, Google Places) và triển khai tính năng giao tiếp thời gian thực sử dụng SignalR.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "Angular",
+        "ReactJS",
+        "Nativescript",
+        "SignalR"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Angular Cli",
+        "Azure portal",
+        "Invision",
+        "Trello"
+      ],
+      "role": "Lập trình viên Front-end và Back-end",
+      "status": "completed"
+    },
+    {
+      "name": "Dairy NZ",
+      "company": "NOIS",
+      "duration": "Tháng 1/2018 - Tháng 3/2018",
+      "description": "Dự án xây dựng ứng dụng cho thiết bị Android và iOS để chấm điểm bò và cho phép người khác cũng chấm điểm.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "ReactJS",
+        "Ant Design"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Cordova",
+        "Phonegap"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed",
+      "excludeFromPdf": true
+    },
+    {
+      "name": "Analytics Platform",
+      "company": "NOIS",
+      "duration": "Tháng 10/2017 - Tháng 11/2017",
+      "description": "Dự án xây dựng bảng tính giống Excel cho phép chỉnh sửa trực tiếp để quản lý dữ liệu.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "jQuery",
+        "Angular",
+        "Handsontable"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Webpack",
+        "Angular Cli"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed",
+      "excludeFromPdf": true
+    },
+    {
+      "name": "Bitcoin Monitoring",
+      "company": "NOIS",
+      "duration": "Tháng 10/2017 - Tháng 11/2017",
+      "description": "Dự án xây dựng trang web để quản lý trạng thái của các máy đào. Nó cũng quản lý một số thực thể như (trang trại, người dùng, chủ sở hữu).",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "jQuery",
+        "Angular",
+        "SignalR",
+        "D3.js",
+        "Dygraph",
+        "ASP.NET"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Webpack",
+        "Visual Studio 2017"
+      ],
+      "role": "Lập trình viên Full-stack",
+      "status": "completed",
+      "excludeFromPdf": true
+    },
+    {
+      "name": "Alythex",
+      "company": "NOIS",
+      "duration": "Tháng 8/2017 - Tháng 10/2017",
+      "description": "Dự án hiển thị báo cáo từ PowerBI. Toàn bộ trang web chỉ để hiển thị giao diện người dùng đã được xây dựng sẵn.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "jQuery",
+        "Angular",
+        "Bootstrap"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Webpack",
+        "Angular Cli"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed",
+      "excludeFromPdf": true
+    },
+    {
+      "name": "Alythex Admin",
+      "company": "NOIS",
+      "duration": "Tháng 8/2017 - Tháng 10/2017",
+      "description": "Trang quản trị để quản lý người dùng, khách hàng và mã nhúng từ dự án Alythex.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "jQuery",
+        "Angular",
+        "Bootstrap"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Webpack",
+        "Angular Cli"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed",
+      "excludeFromPdf": true
+    },
+    {
+      "name": "CIBOS Portal",
+      "company": "NOIS",
+      "duration": "Tháng 4/2017 - Tháng 6/2017",
+      "description": "Dự án xây dựng trang web cho phép người dùng đăng nhập và tải lên thông tin về món ăn. Người khác cũng có thể đăng nhập, xem các món ăn này và đặt hàng.",
+      "scope": "Quản lý",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "jQuery",
+        "AngularJS",
+        "Slick"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Webpack"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed",
+      "excludeFromPdf": true
+    },
+    {
+      "name": "CIBOS Admin",
+      "company": "NOIS",
+      "duration": "Tháng 4/2017 - Tháng 7/2017",
+      "description": "Phần của dự án CIBOS để xây dựng trang quản lý Admin.",
+      "scope": "Quản lý",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "jQuery",
+        "AngularJS",
+        "Slick"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Webpack"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed",
+      "excludeFromPdf": true
+    },
+    {
+      "name": "AMS",
+      "company": "NOIS",
+      "duration": "Tháng 4/2016",
+      "description": "Một dự án khác tương tự như IMS nhưng với nhiều tính năng hơn (phát hiện lỗi...).",
+      "scope": "Quản lý Mạng",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "jQuery",
+        "AngularJS",
+        "Leaflet",
+        "KendoUI",
+        "Socket"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Grunt"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed",
+      "excludeFromPdf": true
+    },
+    {
+      "name": "IMS",
+      "company": "NOIS",
+      "duration": "Tháng 4/2016",
+      "description": "Phần của dự án cho phép người dùng hiển thị dữ liệu đã tải lên qua chế độ xem bản đồ và có thể tích hợp với bản đồ như thêm các mục, xóa hoặc đánh dấu các mục. Nó cũng cho phép người dùng xem tổng hợp dữ liệu qua chế độ xem biểu đồ.",
+      "scope": "Quản lý Mạng",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "jQuery",
+        "AngularJS",
+        "Leaflet",
+        "KendoUI",
+        "Socket"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Grunt"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed",
+      "excludeFromPdf": true
+    },
+    {
+      "name": "DMS",
+      "company": "NOIS",
+      "duration": "Tháng 1/2016",
+      "description": "Trang quản lý tài liệu được tải lên bởi người dùng. Nó cũng quản lý một số thực thể.",
+      "scope": "Quản lý",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "D3.js",
+        "jQuery",
+        "AngularJS",
+        "Angular UI Bootstrap",
+        "Lodash",
+        "KendoUI"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Grunt"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed",
+      "excludeFromPdf": true
+    },
+    {
+      "name": "Soev",
+      "company": "NOIS",
+      "duration": "Tháng 3/2016 - Tháng 9/2016",
+      "description": "Một trang mạng xã hội để chia sẻ địa điểm, đóng góp cảm nhận về địa điểm hoặc sự kiện.",
+      "scope": "Mạng xã hội",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "jQuery",
+        "AngularJS",
+        "Facebook API",
+        "Google API"
+      ],
+      "environment": [
+        "Webstorm",
+        "SVN",
+        "Chrome",
+        "Grunt"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed",
+      "excludeFromPdf": true
+    },
+    {
+      "name": "SIFT Security",
+      "company": "NOIS",
+      "duration": "Tháng 5/2015 - Tháng 6/2016",
+      "description": "Một trang web để quản lý thiết bị trong mạng cũng như sử dụng học máy để phát hiện các kết nối bất thường thông qua biểu đồ.",
+      "scope": "Quản lý Mạng",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "D3.js",
+        "jQuery",
+        "AngularJS",
+        "Angular UI Bootstrap",
+        "Lodash",
+        "Scala",
+        "Protractor",
+        "Karma",
+        "ChaiJS",
+        "Sinon"
+      ],
+      "environment": [
+        "Webstorm",
+        "Git",
+        "Chrome",
+        "Grunt"
+      ],
+      "role": "Lập trình viên Front-end",
+      "status": "completed",
+      "excludeFromPdf": true
+    },
+    {
+      "name": "COBB và Coach Office",
+      "company": "NOIS",
+      "duration": "Tháng 10/2014",
+      "description": "Trang web này là một dự án back-office được sử dụng để quản lý tất cả các mặt của một công ty dịch vụ vận tải nước ngoài bao gồm quản lý khách hàng, báo giá, đơn hàng, bảng lương, v.v.",
+      "scope": "Quản lý Vận tải",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "jQuery",
+        "AngularJS",
+        "Angular UI Bootstrap",
+        "Underscore",
+        "ASP.NET"
+      ],
+      "environment": [
+        "Visual Studio",
+        "Firefox",
+        "SVN",
+        "Git",
+        "WebStorm"
+      ],
+      "role": "Lập trình viên Full-stack",
+      "status": "completed",
+      "excludeFromPdf": true
+    }
+  ]
+}

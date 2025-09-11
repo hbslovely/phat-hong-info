@@ -1,0 +1,24 @@
+<div class="skill-item"
+     [class.has-experience]="experience"
+     [class.clickable]="clickable"
+     (click)="handleClick()">
+  <div class="hover-background"></div>
+  <div class="skill-content">
+    <div class="skill-info">
+      <span class="skill-name">{{ name }}</span>
+      @if (experience) {
+        <div class="experience-badge" [class]="getExperienceLevel().level">
+          {{ formatExperience() }}
+        </div>
+      }
+    </div>
+    @if (clickable) {
+      <span class="info-icon" nz-icon nzType="info-circle" nzTheme="outline"></span>
+    }
+  </div>
+  @if (experience) {
+    <div class="experience-bar">
+      <div class="bar-fill" [style.width.%]="getExperiencePercentage()"></div>
+    </div>
+  }
+</div>

@@ -1,0 +1,215 @@
+{
+  "NAV": {
+    "ABOUT": "About",
+    "EXPERIENCE": "Experience",
+    "PROJECTS": "Projects",
+    "SKILLS": "Skills",
+    "EXPORT_PDF": "Export PDF",
+    "MY_PAGES": "My Pages",
+    "SETTINGS": "Settings"
+  },
+  "COMMON": {
+    "CLOSE": "Close",
+    "COPY": "Copy to clipboard",
+    "MORE": "more",
+    "VIEW_DETAILS": "View Details",
+    "PRESENT": "Present"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Hong Phung Phat. All rights reserved.",
+    "MADE_WITH": "Made with Angular & AI️",
+    "ABOUT": "About Me",
+    "DESCRIPTION": "Senior Frontend Developer with over 10 years of experience specializing in Angular and React applications.",
+    "QUICK_LINKS": "Quick Links",
+    "CONTACT": "Contact",
+    "BUILT_WITH": "Built With"
+  },
+  "ACTIONS": {
+    "EXPORT_PDF": "Export PDF"
+  },
+  "CTA": {
+    "READY_TO_COLLABORATE": "Ready to collaborate?",
+    "LETS_DISCUSS": "Let's discuss how we can work together on your next project",
+    "CONNECT_WITH_ME": "Connect with me",
+    "INTERESTED_IN_WORKING_TOGETHER": "Interested in working together?",
+    "REACH_OUT": "Feel free to reach out to discuss potential opportunities",
+    "CONTACT_ME": "Contact Me",
+    "VIEW_ALL_PROJECTS": "View All Projects",
+    "VIEW_ALL_SKILLS": "View All Skills",
+    "SETTINGS_FEEDBACK": "Have feedback about these settings?",
+    "SETTINGS_FEEDBACK_DESC": "I'd love to hear your thoughts on how to improve the user experience"
+  },
+  "MY_PAGES": {
+    "SUBTITLE": "Explore my personal projects and creative digital initiatives",
+    "ABOUT_PROJECT": "About This Project",
+    "VISIT_SITE": "Visit Website",
+    "ABOUT_SECTION": "About My Personal Portfolio",
+    "ABOUT_DESCRIPTION": "These personal websites and projects represent my passion for web development beyond professional work. Each project is built with attention to detail, modern design principles, and cutting-edge technologies. They showcase my interests, creativity, and ability to develop complete solutions from concept to deployment. Feel free to explore them to gain insights into my technical skills, design approach, and personal interests.",
+    "STATUS": "Status",
+    "TECH_STACK": "Technology Stack",
+    "CREATION_PROCESS": "Creation Process",
+    "PROJECT_GOALS": "Project Goals"
+  },
+  "PERSONAL_INFO": {
+    "PROFILE_PICTURE": "Profile Picture",
+    "EXPERIENCE": "Experience",
+    "YEARS_EXPERIENCE": "10+ Years",
+    "PROJECTS": "Projects",
+    "PROJECTS_COUNT": "20+",
+    "POSITION": "Position",
+    "POSITION_LEVEL": "Senior",
+    "EMAIL": "Email",
+    "PHONE": "Phone",
+    "LINKEDIN": "LinkedIn",
+    "GITHUB": "GitHub",
+    "PROFESSIONAL_SUMMARY": "Professional Summary",
+    "LANGUAGES": "Languages",
+    "LANGUAGE_LEVELS": {
+      "NATIVE": "Native",
+      "WORKING_PROFICIENCY": "Working Proficiency"
+    },
+    "AREAS_OF_INTEREST": "Areas of Interest",
+    "INTERESTS": {
+      "WEB_DEVELOPMENT": "Web Development",
+      "CLOUD_COMPUTING": "Cloud Computing",
+      "DEVOPS": "DevOps",
+      "FinTech": "FinTech",
+      "AI": "Artificial Intelligence",
+      "Performance": "Application Performance",
+      "BLOCKCHAIN": "Blockchain"
+    },
+    "WORK_PREFERENCES": "Work Preferences",
+    "WORK_TYPES": {
+      "FULL_TIME": "Full Time",
+      "CONTRACT": "Contract",
+      "FREELANCE": "Freelance"
+    },
+    "WORK_LOCATIONS": {
+      "REMOTE": "Remote",
+      "HYBRID": "Hybrid",
+      "ONSITE": "On-site"
+    }
+  },
+  "SECTIONS": {
+    "WORK_EXPERIENCE": {
+      "TITLE": "Work Experience",
+      "NOTABLE_ACHIEVEMENTS": "Notable Impact & Achievements",
+      "CORE_RESPONSIBILITIES": "Core Expertise & Responsibilities",
+      "ABOUT_COMPANY": "About Company"
+    },
+    "EDUCATION": {
+      "TITLE": "Education",
+      "ACHIEVEMENTS": "Academic Achievements",
+      "DESCRIPTION": "Program Description",
+      "ABOUT_INSTITUTION": "About Institution"
+    },
+    "TECHNICAL_SKILLS": "Technical Skills",
+    "FEATURED_PROJECTS": "Featured Projects",
+    "KEY_SKILLS": "Key Skills",
+    "PROFESSIONAL_SUMMARY": "Professional Summary",
+    "SUBTITLES": {
+      "WORK_EXPERIENCE": "Over a decade of proven expertise in web development and technical leadership",
+      "EDUCATION": "Strong academic foundation supporting technical excellence",
+      "TECHNICAL_SKILLS": "A comprehensive overview of my technical expertise",
+      "FEATURED_PROJECTS": "Specialized in Angular development with 6+ years of experience, and proficient in React with 4+ years of hands-on expertise"
+    },
+    "TITLES": {
+      "PROFESSIONAL_JOURNEY": "Professional Journey"
+    },
+    "STATS": {
+      "YEARS_EXPERIENCE": "Years Experience",
+      "COMPANIES": "Companies",
+      "PROJECTS": "Projects"
+    }
+  },
+  "STATUS": {
+    "ACTIVE": "Active",
+    "COMPLETED": "Completed",
+    "PLANNED": "Planned"
+  },
+  "PROJECTS": {
+    "SEARCH_PLACEHOLDER": "Search projects...",
+    "COUNT": {
+      "TOTAL": "Projects Available",
+      "FILTERED": "Projects Matching Criteria"
+    },
+    "NO_RESULTS": {
+      "TITLE": "No Projects Found",
+      "DESCRIPTION": "Try adjusting your search or filters to find what you're looking for."
+    },
+    "FILTERS": {
+      "TITLE": "Filter Projects",
+      "CLEAR_ALL": "Clear All",
+      "TECHNOLOGIES": "Technologies",
+      "PROJECT_SCOPE": "Project Scope",
+      "PROJECT_STATUS": "Project Status"
+    },
+    "VIEWS": {
+      "GRID": "Grid View",
+      "LIST": "List View"
+    },
+    "FILTER_BUTTON": "Filters",
+    "VIEW_DETAILS": "View Details"
+  },
+  "SKILLS": {
+    "FEATURED_SKILLS": "Featured Skills",
+    "ALL_SKILLS": "All Skills by Category",
+    "VIEW_DETAILS": "View Details",
+    "SEE_IN_ACTION": "See My Skills in Action",
+    "DESCRIPTION": "A comprehensive overview of my technical expertise and professional capabilities.",
+    "SEARCH_PLACEHOLDER": "Search skills...",
+    "SKILLS": "skills",
+    "VIEW_PROJECTS": "View Projects",
+    "PROJECTS_HINT": "Check out my portfolio to see these skills applied in real-world projects.",
+    "DIALOG": {
+      "USED_IN": "Used in {{count}} projects",
+      "OVERVIEW": "Overview",
+      "RESOURCES": "Resources",
+      "VISIT_WEBSITE": "Official Website",
+      "VISIT_GITHUB": "GitHub Repository",
+      "EXPERIENCE_LEVEL": {
+        "BEGINNER": "Beginner",
+        "INTERMEDIATE": "Intermediate",
+        "ADVANCED": "Advanced",
+        "EXPERT": "Expert"
+      },
+      "SKILL_TYPE": {
+        "TECHNOLOGY": "Technology",
+        "COMMON_TOOL": "Common Tool"
+      }
+    }
+  },
+  "SETTINGS": {
+    "TITLE": "Settings",
+    "SUBTITLE": "Customize your experience and preferences",
+    "THEME": {
+      "TITLE": "Appearance",
+      "DESCRIPTION": "Choose your preferred theme and visual settings",
+      "LIGHT": "Light Mode",
+      "LIGHT_DESC": "Clean and bright interface for daytime use",
+      "DARK": "Dark Mode", 
+      "DARK_DESC": "Easy on the eyes for low-light environments",
+      "AUTO": "Auto Mode",
+      "AUTO_DESC": "Automatically switches based on your system preference",
+      "PREVIEW": "Preview",
+      "PREVIEW_TITLE": "Sample Content",
+      "PREVIEW_BUTTON": "Action",
+      "PREVIEW_TEXT": "This is how your content will look in the selected theme."
+    },
+    "LANGUAGE": {
+      "TITLE": "Language & Region",
+      "DESCRIPTION": "Select your preferred language for the interface",
+      "EN_DESC": "Display interface in English",
+      "VI_DESC": "Hiển thị giao diện bằng tiếng Việt",
+      "INFO": "Language changes will be applied immediately across all pages"
+    },
+    "PREFERENCES": {
+      "TITLE": "Additional Preferences",
+      "DESCRIPTION": "Configure additional settings and behaviors",
+      "AUTO_SAVE": "Auto-save preferences",
+      "AUTO_SAVE_DESC": "Automatically save your settings changes",
+      "ANIMATIONS": "Enable animations",
+      "ANIMATIONS_DESC": "Show smooth transitions and animations"
+    }
+  }
+}

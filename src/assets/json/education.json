@@ -1,0 +1,25 @@
+{
+  "education": [
+    {
+      "institution": "Ho Chi Minh City University of Science",
+      "degree": "Bachelor Degree in Computer Science",
+      "field": "Computer Vision and Robotics",
+      "startDate": "2010",
+      "endDate": "2014",
+      "grade": "Excellent",
+      "description": "Specialized in Computer Vision and Robotics, with a focus on machine learning algorithms for object detection and recognition systems.",
+      "achievements": [
+        "Graduated with honors, achieving top 5% in class ranking",
+        "Completed thesis on 'Real-time object recognition for autonomous robots'",
+        "Received university scholarship for academic excellence (2012-2014)",
+        "Participated in national robotics competition, securing 2nd place"
+      ],
+      "institutionInfo": {
+        "description": "Ho Chi Minh City University of Science (HCMUS) is one of Vietnam's premier institutions for scientific research and education. Founded in 1941, the university has produced numerous scientists and technologists who have contributed significantly to Vietnam's development.",
+        "address": "227 Nguyen Van Cu Street, District 5, Ho Chi Minh City, Vietnam",
+        "website": "https://www.hcmus.edu.vn",
+        "contact": "+84 28 3835 2020"
+      }
+    }
+  ]
+}

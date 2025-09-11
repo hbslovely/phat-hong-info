@@ -1,0 +1,38 @@
+{
+  "prefix": "Ông",
+  "name": "Hồng Phùng Phát",
+  "title": "Kỹ sư phần mềm cao cấp",
+  "dateOfBirth": "30/09/1992",
+  "location": {
+    "address": "Bình Thới",
+    "city": "Hồ Chí Minh",
+    "country": "Việt Nam"
+  },
+  "contact": {
+    "phone": "+84 764 74 99 64",
+    "email": "hpphat1992@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/hpphat1992/",
+    "github": "https://github.com/hpphat92"
+  },
+  "languages": [
+    {
+      "name": "Tiếng Việt",
+      "level": "NATIVE"
+    },
+    {
+      "name": "Tiếng Anh",
+      "level": "WORKING_PROFICIENCY"
+    }
+  ],
+  "summary": "Là một Kỹ sư phần mềm cao cấp với hơn 10 năm kinh nghiệm, tôi chuyên về việc tạo ra các ứng dụng web hiện đại và hiệu quả. Chuyên môn của tôi bao gồm làm việc với Angular và React để xây dựng giao diện thân thiện với người dùng, giải quyết các vấn đề kinh doanh thực tế. Trong suốt sự nghiệp, tôi đã thành công trong việc triển khai các dự án cho nhiều ngành công nghiệp, từ mạng xã hội đến hệ thống quản lý dữ liệu. Tôi tự hào về việc viết mã sạch, dễ bảo trì và luôn cập nhật với các công nghệ web mới nhất.\n\nTrong vai trò hiện tại, tôi tập trung vào thiết kế các ứng dụng có khả năng mở rộng và giúp đỡ các lập trình viên junior phát triển kỹ năng của họ. Tôi đặc biệt quan tâm đến việc cải thiện hiệu suất ứng dụng và tạo ra trải nghiệm người dùng tốt hơn. Hiện tại tôi đang tìm kiếm cơ hội để có thể sử dụng kỹ năng kỹ thuật và kinh nghiệm lãnh đạo của mình để tạo ra tác động đáng kể trong các dự án đầy thách thức.",
+  "shortSummary": "Kỹ sư phần mềm cao cấp với hơn 10 năm kinh nghiệm về Angular và React. Tập trung mạnh vào clean code, tối ưu hiệu suất và hướng dẫn. Hiện đang tìm kiếm cơ hội để lãnh đạo các dự án đầy thách thức và thúc đẩy đổi mới kỹ thuật.",
+  "interests": [
+    "AI",
+    "FinTech",
+    "Performance"
+  ],
+  "availability": {
+    "workType": "FULL_TIME",
+    "workLocation": "REMOTE"
+  }
+}

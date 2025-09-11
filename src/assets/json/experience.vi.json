@@ -1,0 +1,116 @@
+{
+  "workExperience": [
+    {
+      "company": "Backbase",
+      "position": "Kỹ sư phần mềm cao cấp",
+      "department": "Đội AI R&D",
+      "location": "Quận 3 - HCM",
+      "type": "Kết hợp",
+      "startDate": "Tháng 11/2024",
+      "endDate": "Hiện tại",
+      "companyInfo": {
+        "description": "Backbase là nhà cung cấp nền tảng Ngân hàng số hàng đầu thế giới, trao quyền cho các tổ chức tài chính đẩy nhanh quá trình chuyển đổi số. Được thành lập vào năm 2003, Backbase có sứ mệnh giúp các ngân hàng và tổ chức tín dụng làm chủ quá trình chuyển đổi số với nền tảng ngân hàng số hiện đại, thống nhất dữ liệu và chức năng từ các hệ thống core truyền thống và các fintech mới thành trải nghiệm khách hàng số liền mạch. Với hoạt động trên 4 châu lục và phục vụ hơn 150 tổ chức tài chính trên toàn thế giới, Backbase là nhà cung cấp phần mềm ngân hàng đa kênh đã được kiểm chứng, nâng cao trải nghiệm khách hàng và thúc đẩy đổi mới số.",
+        "address": "Jacob Bontiusplaats 9, 1018 LL Amsterdam, Hà Lan",
+        "website": "https://www.backbase.com",
+        "contact": "+31 20 465 88 88"
+      },
+      "responsibilities": [
+        "Hợp tác chặt chẽ với quản lý dự án và đội AI để phát triển và triển khai các giải pháp dựa trên AI cho ngành ngân hàng",
+        "Triển khai các ý tưởng và đảm bảo tuân theo lịch phát hành"
+      ],
+      "achievements": [
+        "Làm việc trong đội R&D tại công ty tập trung vào sản phẩm, nơi quy trình và luồng công việc nhấn mạnh đổi mới và phát triển ý tưởng hơn là lịch trình phát hành truyền thống"
+      ]
+    },
+    {
+      "company": "HCL Technologies Limited",
+      "position": "Kỹ sư phần mềm cao cấp",
+      "location": "Quận 1 - HCM",
+      "type": "Từ xa",
+      "startDate": "Tháng 12/2021",
+      "endDate": "Tháng 11/2024",
+      "companyInfo": {
+        "description": "HCL Technologies là công ty công nghệ toàn cầu thế hệ mới, giúp các doanh nghiệp định hình lại hoạt động kinh doanh trong kỷ nguyên số. Với mạng lưới cơ sở R&D và phòng thí nghiệm đổi mới sáng tạo trên toàn cầu, năng lực cung cấp toàn cầu, và hơn 211.000+ 'Ideapreneurs' trên 52 quốc gia, HCL cung cấp dịch vụ toàn diện trong các lĩnh vực công nghiệp cho các doanh nghiệp hàng đầu. Công ty chuyên về Digital, IoT, Cloud, Tự động hóa, An ninh mạng, Phân tích dữ liệu, Quản lý cơ sở hạ tầng và Dịch vụ kỹ thuật. Thông qua các giải pháp công nghệ đổi mới, HCL đã khẳng định vị thế là nhà lãnh đạo trong chuyển đổi số, giúp các công ty Fortune 500 và Global 2000 xây dựng tổ chức sẵn sàng cho tương lai.",
+        "address": "Plot No. 3A, Sector 126, Noida - 201304, UP, Ấn Độ",
+        "website": "https://www.hcltech.com",
+        "contact": "+91-120-6125000"
+      },
+      "responsibilities": [
+        "Làm việc với đội ngũ từ công ty đa quốc gia để phát triển hệ thống DMS quản lý tài liệu cho toàn bộ công ty hàng không vũ trụ sử dụng công nghệ: Angular 11-14, GoJS",
+        "Tham gia các cuộc họp trong quy trình Agile/Scrum để hiểu, báo cáo và đóng góp vào quá trình phát triển",
+        "Đề xuất các ý tưởng mới để cải thiện giao diện người dùng hiện tại của ứng dụng"
+      ],
+      "achievements": [
+        "Học hỏi phạm vi kinh doanh mới trong quản lý tài liệu",
+        "Làm việc với các thành viên từ các quốc gia khác với múi giờ khác nhau"
+      ]
+    },
+    {
+      "company": "Saigon Technology Solution",
+      "position": "Kỹ sư phần mềm cao cấp",
+      "location": "Tân Bình - HCM",
+      "type": "Kết hợp",
+      "startDate": "Tháng 10/2020",
+      "endDate": "Tháng 12/2021",
+      "companyInfo": {
+        "description": "Saigon Technology là công ty phát triển phần mềm hàng đầu tại Việt Nam, được thành lập năm 2012. Với đội ngũ hơn 450+ lập trình viên giàu kinh nghiệm, công ty chuyên cung cấp các dịch vụ phát triển phần mềm chất lượng cao cho khách hàng trên toàn thế giới. Họ xuất sắc trong phát triển phần mềm tùy chỉnh, phát triển ứng dụng web, phát triển ứng dụng di động và giải pháp doanh nghiệp. Được công nhận là một trong những công ty phát triển phần mềm hàng đầu Việt Nam, Saigon Technology đã thành công triển khai hơn 800+ dự án trong nhiều lĩnh vực bao gồm Tài chính, Y tế, Giáo dục và Thương mại điện tử. Công ty nổi tiếng với chuyên môn về các công nghệ hiện đại như .NET, Java, Python, Angular, React và Node.js.",
+        "address": "Lầu 15, Saigon Tower, 29 Lê Duẩn, Quận 1, TP.HCM, Việt Nam",
+        "website": "https://saigontechnology.com",
+        "contact": "+84 28 7108 1500"
+      },
+      "responsibilities": [
+        "Làm việc trong đội phát triển ứng dụng quản lý tài sản sử dụng Angular, Ruby on Rails, các nguyên tắc SOLID",
+        "Tham gia các cuộc họp trong quy trình Agile/Scrum",
+        "Đóng góp vào quá trình phát triển"
+      ],
+      "achievements": [
+        "Đóng góp vào quá trình làm việc và cải thiện chất lượng mã nguồn"
+      ]
+    },
+    {
+      "company": "NashTech Vietnam",
+      "position": "Kỹ sư phần mềm cao cấp",
+      "location": "Tân Bình - HCM",
+      "type": "Tại văn phòng",
+      "startDate": "Tháng 12/2018",
+      "endDate": "Tháng 10/2020",
+      "companyInfo": {
+        "description": "NashTech là nhà cung cấp giải pháp công nghệ toàn cầu với hơn 20 năm kinh nghiệm. Là một phần của Nash Squared, nhà lãnh đạo toàn cầu về giải pháp công nghệ và nhân tài, NashTech đã phát triển lên hơn 2.500 nhân viên tại các trung tâm phát triển của mình. Công ty chuyên về phát triển phần mềm, tối ưu hóa quy trình kinh doanh và dịch vụ chuyển đổi số. Với sự tập trung mạnh mẽ vào chất lượng và đổi mới, NashTech đã khẳng định mình là đối tác đáng tin cậy cho các doanh nghiệp trên toàn thế giới, cung cấp các giải pháp công nghệ thúc đẩy tăng trưởng và hiệu quả. Chuyên môn của họ bao gồm Điện toán Đám mây, AI/ML, IoT, Blockchain và Giải pháp Doanh nghiệp, phục vụ khách hàng từ các công ty khởi nghiệp đến Fortune 500.",
+        "address": "364 Cộng Hòa, Quận Tân Bình, TP.HCM, Việt Nam",
+        "website": "https://www.nashtechglobal.com",
+        "contact": "+84 28 3810 6200"
+      },
+      "responsibilities": [
+        "Tham gia nhóm phát triển ứng dụng web cho lĩnh vực quản lý tài sản của ngân hàng",
+        "Tham gia các cuộc họp và tuân thủ quy trình Agile/Scrum",
+        "Sử dụng các công nghệ hiện đại tại thời điểm đó: Kendo UI, moment, lodash"
+      ],
+      "achievements": [
+        "Học hỏi nhiều điều mới từ phạm vi kinh doanh mới trong quản lý tài sản và quy trình Agile/Scrum"
+      ]
+    },
+    {
+      "company": "New Ocean Information System Co., Ltd",
+      "position": "Kỹ sư phần mềm",
+      "location": "Tân Bình - HCM",
+      "type": "Tại văn phòng",
+      "startDate": "Tháng 9/2014",
+      "endDate": "Tháng 12/2018",
+      "companyInfo": {
+        "description": "New Ocean IS là công ty IT hàng đầu cung cấp các giải pháp phần mềm toàn diện từ năm 2010. Là đối tác giải pháp của Microsoft với nhiều chứng nhận Gold, họ chuyên về phát triển phần mềm tùy chỉnh, dịch vụ điện toán đám mây Azure và các giải pháp chuyển đổi số cho lĩnh vực sản xuất và công nghiệp. Công ty đã phát triển từ một bộ phận IT thành nhà cung cấp dịch vụ công nghệ toàn diện, phục vụ hơn 70+ khách hàng trên toàn thế giới. Chuyên môn của họ bao gồm phát triển AI Agent, Ứng dụng Công nghiệp và Tự động hóa, Phân tích Dữ liệu và giải pháp Thương mại điện tử. Với sự tập trung mạnh mẽ vào R&D và đổi mới, New Ocean IS đã khẳng định mình là đối tác đáng tin cậy cho các doanh nghiệp tìm kiếm chuyển đổi số, đặc biệt trong lĩnh vực sản xuất và công nghiệp.",
+        "address": "Lầu 4, 51 Hoàng Việt, Phường Tân Sơn Nhất, TP.HCM, Việt Nam",
+        "website": "https://nois.vn",
+        "contact": "(+84) 28 6681 0782"
+      },
+      "responsibilities": [
+        "Tham gia nhóm phát triển ứng dụng dựa trên Qt để gửi và nhận dữ liệu trên mạng lớn",
+        "Tham gia nhóm phát triển ứng dụng sử dụng công nghệ hiện đại tại thời điểm đó (AngularJS, Angular, ReactJS)",
+        "Hỗ trợ các đội khác trong việc xem xét mã nguồn",
+        "Hỗ trợ công ty đào tạo nhân viên mới"
+      ],
+      "achievements": [
+        "Đạt được kiến thức về phát triển web và có kiến thức cơ bản về Javascript"
+      ]
+    }
+  ]
+}
