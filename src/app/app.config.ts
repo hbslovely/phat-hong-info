@@ -11,6 +11,7 @@ import { provideNzIcons } from './icons-provider';
 import { FormsModule } from '@angular/forms';
 import { en_US, provideNzI18n } from 'ng-zorro-antd/i18n';
 import { NzModalService } from 'ng-zorro-antd/modal';
+import { NzMessageService } from 'ng-zorro-antd/message';
 import { ScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 import { CustomModalService } from './services/custom-modal.service';
 import { ScrollToTopService } from './services/scroll-to-top.service';
@@ -55,6 +56,7 @@ export const appConfig: ApplicationConfig = {
     provideNzIcons(),
     FormsModule,
     NzModalService,
+    NzMessageService,
     CustomModalService,
     ScrollToTopService
   ]

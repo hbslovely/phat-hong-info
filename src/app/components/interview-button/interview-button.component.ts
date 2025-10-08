@@ -1,19 +1,17 @@
-import { Component, OnInit, OnDestroy, inject, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-import { PersonalInfo } from '../../models/cv.models';
-import { CVService } from '../../services/cv.service';
+import { InterviewChatComponent } from '../interview-chat/interview-chat.component';
 
 @Component({
-  selector: 'app-contact-button',
-  standalone: true,
-  imports: [CommonModule, NzIconModule],
-  templateUrl: './contact-button.component.html',
-  styleUrls: ['./contact-button.component.scss']
+  selector: 'app-interview-button',
+  imports: [CommonModule, NzIconModule, InterviewChatComponent],
+  templateUrl: './interview-button.component.html',
+  styleUrl: './interview-button.component.scss'
 })
-export class ContactButtonComponent implements OnInit, OnDestroy {
-  public cvService = inject(CVService);
-  info: PersonalInfo | undefined;
+export class InterviewButtonComponent implements OnInit, OnDestroy {
+  @ViewChild(InterviewChatComponent) interviewChat!: InterviewChatComponent;
+  
   isMobile = false;
   isShaking = false;
   private shakeInterval: any;
@@ -38,10 +36,10 @@ export class ContactButtonComponent implements OnInit, OnDestroy {
   }
 
   private setupShakeAnimation() {
-    // Shake every 10 seconds
+    // Shake every 15 seconds (different from contact button)
     this.shakeInterval = setInterval(() => {
       this.startShake();
-    }, 10000);
+    }, 15000);
   }
 
   private startShake() {
@@ -61,17 +59,16 @@ export class ContactButtonComponent implements OnInit, OnDestroy {
   }
 
   getIconType(): string {
-    return 'linkedin';
+    return 'message';
   }
 
   getTooltipText(): string {
-    return 'LinkedIn';
+    return 'Phỏng vấn tôi';
   }
 
-  contact() {
-    const linkedinUrl = this.cvService.cv()?.personalInfo?.contact?.linkedin;
-    if (linkedinUrl) {
-      window.open(linkedinUrl, '_blank');
+  openInterview() {
+    if (this.interviewChat) {
+      this.interviewChat.openInterview();
     }
   }
 }

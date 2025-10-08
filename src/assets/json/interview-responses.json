@@ -1,0 +1,1377 @@
+{
+  "responses": [
+    {
+      "id": "1",
+      "keywords": [
+        "xin chào",
+        "chào bạn",
+        "chào",
+        "hello",
+        "hi",
+        "hey",
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "greetings",
+        "howdy",
+        "what's up",
+        "sup"
+      ],
+      "answer": "Xin chào! Rất vui được gặp bạn. Tôi là Phát - Senior Software Developer tại Backbase. Bạn có câu hỏi gì về kinh nghiệm làm việc của tôi không? / Hello! Nice to meet you! I'm Phat - Senior Software Developer at Backbase. Do you have any questions about my work experience?",
+      "yes": "2",
+      "no": "100",
+      "category": "greeting",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "greeting_response",
+      "contextTags": [
+        "social"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2",
+      "keywords": [
+        "giới thiệu",
+        "giới thiệu về bản thân",
+        "giới thiệu bản thân",
+        "bản thân",
+        "introduce",
+        "introduce yourself",
+        "about yourself",
+        "tell me about yourself",
+        "who are you",
+        "về bạn",
+        "nói về bản thân"
+      ],
+      "answer": "Tôi là Hong Phung Phat (Phát), hiện tại 32 tuổi và đang làm Senior Software Developer tại Backbase. Tôi có hơn 10 năm kinh nghiệm trong phát triển web, chuyên về Angular và React. Tôi đã từng làm việc tại nhiều công ty như HCL Technologies, Saigon Technology, NashTech và New Ocean IS. Tôi rất đam mê công nghệ và luôn tìm hiểu những xu hướng mới, đặc biệt là AI trong thời gian gần đây.",
+      "category": "greeting",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "greeting_response",
+      "contextTags": [
+        "social"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "3",
+      "keywords": [
+        "tạm biệt",
+        "bye",
+        "goodbye",
+        "see you",
+        "see ya",
+        "talk to you later",
+        "ttyl",
+        "chào tạm biệt",
+        "hẹn gặp lại",
+        "farewell",
+        "take care",
+        "catch you later",
+        "until next time",
+        "adios",
+        "ciao"
+      ],
+      "answer": "Cảm ơn bạn đã dành thời gian trò chuyện với tôi! Hy vọng cuộc trò chuyện hữu ích với bạn. Nếu có thêm câu hỏi nào, đừng ngại liên hệ với tôi qua LinkedIn nhé. Chúc bạn một ngày tốt lành! / Thank you for taking the time to chat with me! I hope our conversation was helpful. If you have any more questions, feel free to reach out to me on LinkedIn. Have a great day!",
+      "category": "greeting",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "greeting_response",
+      "contextTags": [
+        "social"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "4",
+      "keywords": [
+        "thông tin cơ bản",
+        "thông tin",
+        "về bạn",
+        "basic info",
+        "about you",
+        "personal info"
+      ],
+      "answer": "Đây là thông tin cơ bản về tôi: Tên: Hong Phung Phat (Phát), Tuổi: 32 tuổi (sinh 30/09/1992), Quê quán: TP. Hồ Chí Minh, Việt Nam, Nghề nghiệp: Senior Software Developer tại Backbase, Kinh nghiệm: 10+ năm trong web development, Chuyên môn: Angular, React, TypeScript, JavaScript. Bạn muốn biết thêm chi tiết về phần nào không?",
+      "yes": "101",
+      "no": "100",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "5",
+      "keywords": [
+        "bao nhiêu tuổi",
+        "tuổi",
+        "age",
+        "how old"
+      ],
+      "answer": "Tôi 32 tuổi, sinh ngày 30 tháng 9 năm 1992. Tôi bắt đầu sự nghiệp lập trình từ năm 2014 sau khi tốt nghiệp đại học, vậy là đã có hơn 10 năm kinh nghiệm trong ngành này rồi!",
+      "category": "greeting",
+      "subcategory": "general",
+      "complexity": "simple",
+      "responseType": "greeting_response",
+      "contextTags": [
+        "social"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "6",
+      "keywords": [
+        "quê quán",
+        "quê",
+        "ở đâu",
+        "where from",
+        "hometown",
+        "đang ở",
+        "sống ở",
+        "ở TP HCM",
+        "ở Sài Gòn",
+        "living in",
+        "currently in",
+        "sinh sống",
+        "sinh sống ở đâu",
+        "làm việc ở đâu",
+        "work where",
+        "live where",
+        "based in",
+        "location"
+      ],
+      "answer": "Có, tôi đang sống và làm việc tại TP. Hồ Chí Minh, Việt Nam. Đây là một thành phố năng động với hệ sinh thái công nghệ đang phát triển mạnh mẽ. Tôi rất tự hào về xuất thân Việt Nam và luôn sẵn sàng đại diện cho các developer Việt Nam trong các dự án quốc tế.",
+      "category": "personal",
+      "subcategory": "origin",
+      "complexity": "moderate",
+      "responseType": "personal_sharing",
+      "contextTags": [
+        "biographical"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "7",
+      "keywords": [
+        "tên",
+        "tên gì",
+        "name",
+        "what's your name"
+      ],
+      "answer": "Tên tôi là Hong Phung Phat, nhưng mọi người thường gọi tôi là Phát cho dễ. Trong môi trường làm việc quốc tế, tôi thường được gọi là Phat. Rất vui được làm quen với bạn!",
+      "category": "personal",
+      "subcategory": "identity",
+      "complexity": "simple",
+      "responseType": "personal_sharing",
+      "contextTags": [
+        "biographical"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "8",
+      "keywords": [
+        "làm gì",
+        "nghề gì",
+        "job",
+        "what do you do",
+        "work"
+      ],
+      "answer": "Tôi là Senior Software Developer tại Backbase - một công ty fintech hàng đầu thế giới. Hiện tại tôi đang làm việc trong team R&D AI, tập trung vào phát triển các giải pháp AI cho ngành banking. Công việc chính của tôi là phát triển các ứng dụng frontend sử dụng Angular và React.",
+      "category": "professional",
+      "subcategory": "current_role",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "9",
+      "keywords": [
+        "gia đình",
+        "vợ con",
+        "family",
+        "married",
+        "wife"
+      ],
+      "answer": "Tôi đã có gia đình nhỏ hạnh phúc. Tôi rất trân trọng sự cân bằng giữa công việc và cuộc sống gia đình. Gia đình luôn là động lực để tôi cố gắng phát triển trong sự nghiệp và trở thành phiên bản tốt hơn của chính mình.",
+      "category": "personal",
+      "subcategory": "family",
+      "complexity": "moderate",
+      "responseType": "personal_sharing",
+      "contextTags": [
+        "biographical"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "10",
+      "keywords": [
+        "học ở đâu",
+        "trường nào",
+        "university",
+        "education",
+        "school"
+      ],
+      "answer": "Tôi tốt nghiệp Đại học Khoa học Tự nhiên TP.HCM (HCMUS) năm 2014, chuyên ngành Khoa học Máy tính với chuyên sâu về Computer Vision và Robotics. Tôi đã tốt nghiệp loại Xuất sắc và được nhận học bổng trong 2 năm cuối đại học.",
+      "category": "educational",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "educational"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "11",
+      "keywords": [
+        "sở thích",
+        "hobby",
+        "thích gì",
+        "interest",
+        "sở ghét",
+        "không thích",
+        "ghét gì",
+        "dislike",
+        "hate",
+        "sở thích và sở ghét",
+        "thích và ghét"
+      ],
+      "answer": "Về sở thích: Ngoài lập trình, tôi thích tìm hiểu về các xu hướng AI mới, đọc các blog công nghệ và thử nghiệm với các công nghệ mới. Tôi cũng thích xây dựng các dự án cá nhân để thực hành kỹ năng. Trong thời gian rảnh, tôi thích du lịch và chụp ảnh để thư giãn và tìm cảm hứng.\n\nVề sở ghét: Tôi không thích code không có documentation, làm việc trong môi trường thiếu communication, và những công nghệ quá cũ không được maintain. Tôi cũng không thích việc rush deadline mà không có planning hợp lý.",
+      "category": "personal",
+      "subcategory": "interests",
+      "complexity": "moderate",
+      "responseType": "personal_sharing",
+      "contextTags": [
+        "biographical"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "12",
+      "keywords": [
+        "lương",
+        "thu nhập",
+        "salary",
+        "income",
+        "money"
+      ],
+      "answer": "Tôi thích tập trung vào giá trị mà mình có thể mang lại cho team và cơ hội phát triển hơn là chỉ nói về con số lương. Tuy nhiên, với 10+ năm kinh nghiệm và vị trí Senior tại công ty fintech hàng đầu, tôi tin rằng mức lương của tôi khá cạnh tranh trong thị trường.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "13",
+      "keywords": [
+        "backbase",
+        "công ty",
+        "company",
+        "workplace"
+      ],
+      "answer": "Backbase là nơi làm việc tuyệt vời! Đây là công ty fintech hàng đầu thế giới với hơn 2000 nhân viên. Tôi làm việc trong team R&D AI, tập trung vào việc phát triển các giải pháp AI cho ngành banking. Môi trường làm việc rất tập trung vào đổi mới và tôi được học hỏi rất nhiều từ các đồng nghiệp quốc tế.",
+      "category": "professional",
+      "subcategory": "current_role",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "14",
+      "keywords": [
+        "kinh nghiệm",
+        "kinh nghiệm làm việc",
+        "experience",
+        "work experience",
+        "career",
+        "career path",
+        "background",
+        "work history",
+        "professional experience",
+        "lịch sử công việc",
+        "quá trình làm việc",
+        "từng làm về gì",
+        "làm về gì",
+        "từng làm",
+        "đã làm gì",
+        "what have you worked on",
+        "what did you do"
+      ],
+      "answer": "Tôi có hơn 10 năm kinh nghiệm trong phát triển web. Hiện tại tôi đang làm Senior Software Engineer tại Backbase (từ Nov 2024), trước đó tôi đã làm việc tại HCL Technologies, Saigon Technology, NashTech và New Ocean IS. Tôi đã tham gia phát triển nhiều dự án từ banking, document management đến wealth management applications.",
+      "category": "greeting",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "greeting_response",
+      "contextTags": [
+        "social"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "15",
+      "keywords": [
+        "angular",
+        "framework",
+        "frontend"
+      ],
+      "answer": "Angular là công nghệ tôi yêu thích nhất! Tôi đã sử dụng Angular từ phiên bản AngularJS cho đến Angular 19 hiện tại. Tôi có kinh nghiệm sâu về Angular ecosystem, từ component architecture, services, routing, forms cho đến state management với NgRx. Website này cũng được xây dựng bằng Angular đấy!",
+      "category": "professional",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "16",
+      "keywords": [
+        "react",
+        "reactjs",
+        "javascript",
+        "hooks",
+        "react hooks"
+      ],
+      "answer": "Tôi có kinh nghiệm tốt với React! Tôi đã sử dụng React trong nhiều dự án, đặc biệt là tại HCL Technologies khi phát triển fintech platform. Tôi hiểu rõ về component lifecycle, hooks (useState, useEffect, useContext, useMemo...), state management và có thể làm việc hiệu quả với cả Angular và React tùy theo yêu cầu dự án.",
+      "category": "technical",
+      "subcategory": "frontend",
+      "complexity": "moderate",
+      "responseType": "skill_demonstration",
+      "contextTags": [
+        "technical"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "17",
+      "keywords": [
+        "kỹ năng",
+        "công nghệ",
+        "skills",
+        "technology",
+        "tech"
+      ],
+      "answer": "Tôi chuyên về frontend development với Angular, React, TypeScript và JavaScript. Tôi cũng có kinh nghiệm với các thư viện như RxJS, NgRx, D3.js và các công cụ testing như Jest, Jasmine. Tôi theo phương pháp Agile/Scrum và luôn áp dụng SOLID principles trong code.",
+      "category": "skills",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "skill_demonstration",
+      "contextTags": [
+        "technical"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "18",
+      "keywords": [
+        "dự án",
+        "project",
+        "portfolio",
+        "thường dự án",
+        "dự án làm về gì",
+        "project about"
+      ],
+      "answer": "Tôi đã tham gia nhiều dự án thú vị! Gần đây nhất là làm việc trong team R&D AI tại Backbase để phát triển các giải pháp AI cho ngành banking. Trước đó tôi đã phát triển hệ thống quản lý tài liệu cho ngành hàng không và các ứng dụng wealth management. Mỗi dự án đều mang lại cho tôi những kinh nghiệm quý báu.",
+      "category": "projects",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "19",
+      "keywords": [
+        "typescript",
+        "javascript",
+        "programming"
+      ],
+      "answer": "TypeScript là ngôn ngữ tôi sử dụng hàng ngày! Tôi thích TypeScript vì nó mang lại type safety và tooling tốt hơn so với JavaScript thuần. Tôi có kinh nghiệm với advanced types, generics, decorators và có thể setup TypeScript configuration cho các dự án từ nhỏ đến lớn.",
+      "category": "technical",
+      "subcategory": "frontend",
+      "complexity": "moderate",
+      "responseType": "skill_demonstration",
+      "contextTags": [
+        "technical"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "20",
+      "keywords": [
+        "testing",
+        "test",
+        "kiểm thử"
+      ],
+      "answer": "Testing là một phần quan trọng trong công việc của tôi. Tôi có kinh nghiệm với unit testing (Jest, Jasmine), integration testing và e2e testing (Protractor, Cypress). Tôi luôn viết test để đảm bảo code quality và maintain coverage ở mức cao trong các dự án.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "21",
+      "keywords": [
+        "tiếng Anh",
+        "English",
+        "kỹ năng tiếng Anh",
+        "English skills",
+        "ngoại ngữ",
+        "language skills"
+      ],
+      "answer": "Có! Tôi có kỹ năng tiếng Anh khá tốt ở mức độ làm việc (working proficiency). Tôi thường xuyên sử dụng tiếng Anh trong công việc hàng ngày tại Backbase, từ việc đọc tài liệu kỹ thuật, tham gia meetings với team quốc tế, cho đến viết code comments và documentation. Tôi cũng đã làm việc với các đồng nghiệp từ nhiều quốc gia khác nhau nên khá tự tin giao tiếp bằng tiếng Anh.",
+      "category": "personal",
+      "subcategory": "demographics",
+      "complexity": "moderate",
+      "responseType": "personal_sharing",
+      "contextTags": [
+        "biographical"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "agile",
+        "scrum",
+        "methodology"
+      ],
+      "answer": "Tôi đã làm việc theo phương pháp Agile/Scrum trong hầu hết các công ty. Tôi hiểu rõ về sprint planning, daily standup, retrospective và có thể làm việc hiệu quả trong môi trường agile. Tôi cũng có kinh nghiệm với các tools như Jira, Confluence để quản lý dự án.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "hcl",
+        "technologies",
+        "previous"
+      ],
+      "answer": "Tại HCL Technologies, tôi đã làm việc gần 3 năm (Dec 2021 - Nov 2024) trong team đa quốc gia để phát triển Document Management System cho ngành hàng không sử dụng Angular và GoJS. Đây là nơi tôi học được cách làm việc với timezone khác nhau và improve UI/UX skills.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "saigon technology",
+        "saigontech",
+        "wealth management"
+      ],
+      "answer": "Tại Saigon Technology, tôi đã phát triển ứng dụng wealth management sử dụng Angular và Ruby on Rails. Đây là nơi tôi học được về SOLID principles và có đóng góp tích cực vào việc cải thiện code quality và working process của team.",
+      "category": "personal",
+      "subcategory": "demographics",
+      "complexity": "moderate",
+      "responseType": "personal_sharing",
+      "contextTags": [
+        "biographical"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "nashtech",
+        "vietnam",
+        "fintech"
+      ],
+      "answer": "NashTech là nơi tôi bắt đầu làm quen với lĩnh vực fintech và wealth management. Tôi đã tham gia phát triển web application cho ngân hàng, sử dụng các công nghệ như Kendo UI, moment.js và lodash. Đây cũng là nơi tôi học được Agile/Scrum process.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "fintech"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "new ocean",
+        "nois",
+        "first job"
+      ],
+      "answer": "New Ocean IS là công ty đầu tiên tôi làm việc sau khi tốt nghiệp (Sep 2014 - Dec 2018). Đây là nơi tôi học được nền tảng web development, từ Qt application đến modern web technologies như AngularJS, Angular và ReactJS. Tôi cũng có cơ hội support và train cho newcomers.",
+      "category": "professional",
+      "subcategory": "current_role",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "học vấn",
+        "education",
+        "university",
+        "degree"
+      ],
+      "answer": "Tôi tốt nghiệp Cử nhân Khoa học Máy tính tại Đại học Khoa học Tự nhiên TP.HCM (2010-2014), chuyên ngành Thị giác Máy tính và Robotics. Tôi đã tốt nghiệp loại Xuất sắc với thứ hạng top 5% lớp và nhận học bổng trong 2 năm cuối.",
+      "category": "educational",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "educational"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "ai",
+        "artificial intelligence",
+        "machine learning"
+      ],
+      "answer": "Hiện tại tôi đang làm việc trong team R&D AI tại Backbase, tập trung vào phát triển các giải pháp AI cho ngành banking. Mặc dù chuyên môn chính là frontend, tôi rất hứng thú với AI và đang học hỏi để có thể đóng góp nhiều hơn vào các dự án AI.",
+      "category": "greeting",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "greeting_response",
+      "contextTags": [
+        "social",
+        "ai"
+      ],
+      "priority": "high"
+    },
+    {
+      "keywords": [
+        "fintech",
+        "banking",
+        "financial"
+      ],
+      "answer": "Tôi có nhiều kinh nghiệm trong lĩnh vực fintech và banking. Từ wealth management applications tại NashTech và SaigonTech, đến fintech platform tại HCL, và hiện tại là AI solutions cho banking tại Backbase. Tôi hiểu rõ về financial workflows và security requirements trong ngành này.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "fintech"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "remote",
+        "hybrid",
+        "work style"
+      ],
+      "answer": "Tôi có kinh nghiệm làm việc cả remote và hybrid. Tại HCL tôi làm hoàn toàn remote, còn hiện tại tại Backbase là hybrid. Tôi có thể adapt tốt với các môi trường làm việc khác nhau và maintain productivity cao dù ở đâu.",
+      "category": "professional",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional",
+        "work_style"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "teamwork",
+        "collaboration",
+        "team"
+      ],
+      "answer": "Tôi rất thích làm việc nhóm và có kinh nghiệm collaborate với team đa quốc gia. Tôi đã làm việc với colleagues từ nhiều quốc gia khác nhau, handle timezone differences và contribute tích cực vào team discussions. Tôi cũng có kinh nghiệm mentor junior developers.",
+      "category": "professional",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "future",
+        "goal",
+        "career plan",
+        "tương lai"
+      ],
+      "answer": "Tôi muốn tiếp tục phát triển trong lĩnh vực frontend development, đặc biệt là kết hợp với các công nghệ AI. Mục tiêu của tôi là trở thành technical lead và có thể đóng góp nhiều hơn vào chiến lược sản phẩm. Tôi cũng muốn chia sẻ kiến thức và hướng dẫn nhiều developer junior hơn.",
+      "category": "professional",
+      "subcategory": "experience",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "challenge",
+        "difficult",
+        "problem",
+        "thách thức"
+      ],
+      "answer": "Một trong những thách thức lớn nhất tôi đã gặp là khi làm việc với team đa quốc gia tại HCL với múi giờ khác nhau. Tôi đã học cách tổ chức công việc hiệu quả, giao tiếp không đồng bộ và duy trì sự hợp tác tốt mặc dù có sự khác biệt về thời gian. Điều này giúp tôi trở nên linh hoạt và độc lập hơn.",
+      "category": "challenges",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "22",
+      "keywords": [
+        "strength",
+        "điểm mạnh",
+        "advantage",
+        "điểm mạnh của bạn",
+        "strengths",
+        "strong points"
+      ],
+      "answer": "Điểm mạnh của tôi là khả năng học hỏi nhanh và thích ứng với công nghệ mới. Tôi có nền tảng tốt về các công nghệ web nên có thể nhanh chóng tiếp thu các framework hoặc công cụ mới. Tôi cũng có tư duy giải quyết vấn đề tốt và luôn tìm cách cải thiện chất lượng code và trải nghiệm người dùng.",
+      "category": "personal",
+      "subcategory": "demographics",
+      "complexity": "moderate",
+      "responseType": "personal_sharing",
+      "contextTags": [
+        "biographical"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "23",
+      "keywords": [
+        "weakness",
+        "điểm yếu",
+        "improve",
+        "điểm yếu thì sao",
+        "còn điểm yếu",
+        "weakness how about",
+        "areas for improvement"
+      ],
+      "answer": "Tôi đang cố gắng cải thiện kỹ năng backend để trở thành full-stack developer. Mặc dù có kiến thức cơ bản về Node.js và databases, tôi muốn hiểu sâu hơn về system design và scalability. Tôi cũng đang học thêm về các thực hành DevOps để có cái nhìn tổng quan tốt hơn.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "hobby",
+        "sở thích",
+        "interest",
+        "free time"
+      ],
+      "answer": "Ngoài lập trình, tôi thích tìm hiểu về các xu hướng AI, đọc các blog công nghệ và thử nghiệm với các công nghệ mới. Tôi cũng thích xây dựng các dự án cá nhân để thực hành kỹ năng. Trong thời gian rảnh, tôi thích du lịch và chụp ảnh để thư giãn và tìm cảm hứng.",
+      "category": "personal",
+      "subcategory": "interests",
+      "complexity": "moderate",
+      "responseType": "personal_sharing",
+      "contextTags": [
+        "biographical"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "vietnam",
+        "ho chi minh",
+        "saigon",
+        "việt nam"
+      ],
+      "answer": "Tôi đến từ TP. Hồ Chí Minh, Việt Nam. Đây là thành phố năng động với hệ sinh thái công nghệ đang phát triển mạnh. Tôi tự hào về xuất thân Việt Nam và luôn sẵn sàng đại diện cho các developer Việt Nam trong các dự án quốc tế.",
+      "category": "greeting",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "greeting_response",
+      "contextTags": [
+        "social"
+      ],
+      "priority": "high"
+    },
+    {
+      "keywords": [
+        "tell me about yourself",
+        "who are you",
+        "introduction"
+      ],
+      "answer": "Hi there! I'm Hong Phung Phat, but you can call me Phat. I'm a Senior Software Developer with 10+ years of experience in web development. Currently, I'm working at Backbase in the R&D AI team, focusing on developing AI-powered solutions for the banking sector. My expertise lies in frontend technologies, particularly Angular and React, but I'm always eager to learn new technologies and take on challenging projects.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "what do you do",
+        "job",
+        "role",
+        "position"
+      ],
+      "answer": "I'm currently a Senior Software Engineer at Backbase, where I work in the R&D AI team. My role involves developing innovative AI solutions for the banking industry. I collaborate closely with project managers and the AI team to implement cutting-edge ideas while ensuring they align with our release schedule. It's exciting to work in a product-focused environment that emphasizes innovation over traditional delivery timelines.",
+      "category": "professional",
+      "subcategory": "current_role",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "your experience",
+        "work history",
+        "background"
+      ],
+      "answer": "I have over 10 years of experience in web development. I started my career at New Ocean IS (2014-2018), then moved to NashTech (2018-2020), followed by Saigon Technology (2020-2021), and HCL Technologies (2021-2024). Currently, I'm at Backbase since November 2024. Throughout my career, I've worked on diverse projects ranging from banking and document management systems to wealth management applications.",
+      "category": "greeting",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "greeting_response",
+      "contextTags": [
+        "social"
+      ],
+      "priority": "high"
+    },
+    {
+      "keywords": [
+        "angular experience",
+        "angular skills"
+      ],
+      "answer": "Angular is my favorite technology! I've been using Angular since the AngularJS days up to the current Angular 19. I have deep experience with the Angular ecosystem - component architecture, services, routing, forms, and state management with NgRx. I've built numerous production applications with Angular, including this very website you're viewing! I'm particularly skilled in creating scalable, maintainable Angular applications.",
+      "category": "professional",
+      "subcategory": "experience",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "react experience",
+        "react skills"
+      ],
+      "answer": "I have solid experience with React! I've used React in several projects, especially during my time at HCL Technologies when developing fintech platforms. I understand component lifecycle, hooks, state management, and can work effectively with both Angular and React depending on project requirements. I appreciate React's flexibility and the vast ecosystem it offers.",
+      "category": "professional",
+      "subcategory": "experience",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "technical skills",
+        "technologies",
+        "stack"
+      ],
+      "answer": "I specialize in frontend development with Angular, React, TypeScript, and JavaScript. I also have experience with libraries like RxJS, NgRx, D3.js, and testing tools like Jest and Jasmine. I follow Agile/Scrum methodologies and always apply SOLID principles in my code. I'm also familiar with modern development tools and practices including Git, CI/CD, and responsive design.",
+      "category": "skills",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "skill_demonstration",
+      "contextTags": [
+        "technical"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "projects",
+        "what have you built"
+      ],
+      "answer": "I've worked on many exciting projects! Most recently, I'm working with the R&D AI team at Backbase to develop AI solutions for the banking sector. Previously, I developed document management systems for the aerospace industry and wealth management applications. Each project has brought valuable experience and allowed me to work with different technologies and business domains.",
+      "category": "projects",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "why backbase",
+        "current company"
+      ],
+      "answer": "Backbase is an amazing place to work! It's a leading global fintech company with over 2000 employees. I work in the R&D AI team, focusing on developing AI solutions for the banking industry. The work environment is very innovation-focused, and I get to learn a lot from international colleagues. It's exciting to be part of a company that's shaping the future of digital banking.",
+      "category": "professional",
+      "subcategory": "current_role",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "education",
+        "university",
+        "study"
+      ],
+      "answer": "I graduated with a Bachelor's degree in Computer Science from Ho Chi Minh City University of Science (2010-2014), specializing in Computer Vision and Robotics. I graduated with honors, ranking in the top 5% of my class, and received a university scholarship for academic excellence during my final two years. My thesis was on 'Real-time object recognition for autonomous robots'.",
+      "category": "educational",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "educational"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "artificial intelligence",
+        "ai",
+        "machine learning"
+      ],
+      "answer": "Currently, I'm working in the R&D AI team at Backbase, focusing on developing AI solutions for the banking sector. While my main expertise is in frontend development, I'm very interested in AI and continuously learning to contribute more to AI projects. It's fascinating to see how AI can transform the banking industry and improve customer experiences.",
+      "category": "greeting",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "greeting_response",
+      "contextTags": [
+        "social",
+        "ai"
+      ],
+      "priority": "high"
+    },
+    {
+      "keywords": [
+        "testing",
+        "quality assurance",
+        "qa"
+      ],
+      "answer": "Testing is a crucial part of my work. I have experience with unit testing using Jest and Jasmine, integration testing, and end-to-end testing with tools like Protractor and Cypress. I always write tests to ensure code quality and maintain high coverage in projects. I believe in test-driven development and the importance of automated testing in modern software development.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "agile",
+        "scrum",
+        "methodology"
+      ],
+      "answer": "I've worked with Agile/Scrum methodology in most of my companies. I understand sprint planning, daily standups, retrospectives, and can work effectively in agile environments. I also have experience with tools like Jira and Confluence for project management. I appreciate the iterative approach and the focus on collaboration and continuous improvement that Agile brings.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "teamwork",
+        "collaboration",
+        "international"
+      ],
+      "answer": "I really enjoy working in teams and have experience collaborating with international teams. I've worked with colleagues from many different countries, handled timezone differences, and contributed actively to team discussions. I also have experience mentoring junior developers and helping them grow their skills. Communication and collaboration are key to successful project delivery.",
+      "category": "professional",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "challenges",
+        "difficulties",
+        "problems"
+      ],
+      "answer": "One of the biggest challenges I faced was working with an international team at HCL with different timezones. I learned to organize work efficiently, communicate asynchronously, and maintain good collaboration despite time differences. This experience made me more flexible and independent. I believe challenges are opportunities to grow and improve our skills.",
+      "category": "challenges",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "strengths",
+        "what are you good at"
+      ],
+      "answer": "My main strengths are my ability to learn quickly and adapt to new technologies. I have a solid foundation in web technologies, so I can quickly pick up new frameworks or tools. I also have a good problem-solving mindset and always look for ways to improve code quality and user experience. I'm detail-oriented and enjoy creating clean, maintainable code.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "weaknesses",
+        "areas for improvement"
+      ],
+      "answer": "I'm currently working on improving my backend skills to become a more well-rounded full-stack developer. While I have basic knowledge of Node.js and databases, I want to deepen my understanding of system design and scalability. I'm also learning more about DevOps practices to have a better overall view of the software development lifecycle.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "goals",
+        "future plans",
+        "career goals"
+      ],
+      "answer": "I want to continue growing in frontend development, especially combining it with AI technologies. My goal is to become a technical lead and contribute more to product strategy. I also want to share knowledge and mentor more junior developers. I'm excited about the intersection of AI and frontend development and want to be part of that evolution.",
+      "category": "professional",
+      "subcategory": "experience",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "hobbies",
+        "interests",
+        "free time"
+      ],
+      "answer": "Outside of coding, I enjoy exploring AI trends, reading tech blogs, and experimenting with new technologies. I also enjoy building side projects to practice my skills. In my free time, I like traveling and photography to relax and find inspiration. I believe it's important to have interests outside of work to maintain a good work-life balance.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "keywords": [
+        "remote work",
+        "hybrid",
+        "work style"
+      ],
+      "answer": "I have experience with both remote and hybrid work styles. At HCL, I worked completely remotely, and currently at Backbase, I work in a hybrid model. I can adapt well to different work environments and maintain high productivity regardless of location. I believe effective communication and self-discipline are key to successful remote work.",
+      "category": "professional",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional",
+        "work_style"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "typescript",
+        "programming languages"
+      ],
+      "answer": "TypeScript is the language I use daily! I love TypeScript because it provides type safety and better tooling compared to plain JavaScript. I have experience with advanced types, generics, decorators, and can set up TypeScript configurations for projects of all sizes. The type system helps catch errors early and makes code more maintainable.",
+      "category": "personal",
+      "subcategory": "demographics",
+      "complexity": "moderate",
+      "responseType": "personal_sharing",
+      "contextTags": [
+        "biographical"
+      ],
+      "priority": "medium"
+    },
+    {
+      "keywords": [
+        "why should we hire you",
+        "what makes you special"
+      ],
+      "answer": "I bring over 10 years of solid web development experience, with deep expertise in modern frontend technologies like Angular and React. I have a proven track record of delivering quality projects across different industries - from banking to aerospace. I'm a quick learner, a good team player, and I'm passionate about writing clean, maintainable code. Plus, I'm currently working with AI technologies, which gives me insights into the future of web development.",
+      "category": "greeting",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "greeting_response",
+      "contextTags": [
+        "social"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "50",
+      "keywords": [
+        "salary",
+        "compensation",
+        "money"
+      ],
+      "answer": "I prefer to focus on the value I can bring to a team and the growth opportunities available. Compensation is important, but I'm more interested in working on challenging projects with great teams and continuing to learn and grow. I'm open to discussing compensation based on the role requirements and market standards.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "100",
+      "keywords": [
+        "không",
+        "no",
+        "nope",
+        "không cần",
+        "thôi"
+      ],
+      "answer": "Không sao cả! Tôi hiểu rồi. Bạn có muốn hỏi gì khác về kinh nghiệm làm việc, kỹ năng, hoặc bất cứ điều gì khác về tôi không? Tôi sẵn sàng trả lời mọi câu hỏi của bạn!",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "simple",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "101",
+      "keywords": [
+        "chi tiết",
+        "detail",
+        "more",
+        "thêm"
+      ],
+      "answer": "Tuyệt! Bạn muốn biết chi tiết về phần nào? Tôi có thể chia sẻ thêm về: kinh nghiệm làm việc tại các công ty, các dự án đã thực hiện, kỹ năng technical, quá trình học tập, hoặc bất cứ điều gì khác mà bạn quan tâm. Chỉ cần hỏi tôi nhé!",
+      "category": "greeting",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "greeting_response",
+      "contextTags": [
+        "social"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "24",
+      "keywords": [
+        "đồng nghiệp",
+        "quốc gia nào",
+        "colleagues",
+        "countries",
+        "international team",
+        "làm việc với ai",
+        "team members"
+      ],
+      "answer": "Tôi đã có cơ hội làm việc với đồng nghiệp từ nhiều quốc gia khác nhau! Tại HCL Technologies, tôi làm việc với team đa quốc gia bao gồm đồng nghiệp từ Ấn Độ, Singapore, và một số quốc gia châu Âu. Hiện tại tại Backbase, tôi hợp tác với các đồng nghiệp từ Hà Lan, Anh, Mỹ, và nhiều quốc gia khác trong châu Âu. Việc làm việc trong môi trường đa văn hóa giúp tôi học hỏi được rất nhiều về cách giao tiếp và hợp tác hiệu quả.",
+      "category": "greeting",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "greeting_response",
+      "contextTags": [
+        "social"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "25",
+      "keywords": [
+        "tại sao chọn",
+        "why choose",
+        "tại sao lại",
+        "lý do",
+        "reason",
+        "motivation"
+      ],
+      "answer": "Tôi chọn ngành công nghệ vì đam mê tạo ra những sản phẩm có thể giúp ích cho nhiều người. Từ nhỏ tôi đã thích tìm hiểu cách thức hoạt động của mọi thứ, và lập trình cho phép tôi biến những ý tưởng thành hiện thực. Đặc biệt, việc thấy người dùng sử dụng những ứng dụng mình tạo ra một cách hữu ích luôn mang lại cho tôi cảm giác hài lòng và động lực để tiếp tục phát triển.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "26",
+      "keywords": [
+        "làm thế nào",
+        "how do you",
+        "cách nào",
+        "phương pháp",
+        "approach",
+        "method"
+      ],
+      "answer": "Khi tiếp cận một vấn đề mới, tôi thường bắt đầu bằng việc hiểu rõ yêu cầu và phân tích vấn đề một cách chi tiết. Sau đó tôi sẽ research các giải pháp có sẵn, tham khảo best practices và thảo luận với đồng nghiệp nếu cần. Tôi thích áp dụng phương pháp divide-and-conquer để chia nhỏ vấn đề phức tạp thành các phần nhỏ hơn, dễ quản lý hơn.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "27",
+      "keywords": [
+        "khó khăn nhất",
+        "hardest",
+        "most difficult",
+        "challenging",
+        "toughest"
+      ],
+      "answer": "Khó khăn nhất tôi từng gặp là khi phải migrate một hệ thống legacy từ AngularJS lên Angular 8 trong thời gian rất gấp tại một dự án trước đây. Hệ thống có rất nhiều dependencies phức tạp và không có documentation đầy đủ. Tôi đã phải dành nhiều thời gian để reverse engineer code cũ, viết lại các components và đảm bảo không làm ảnh hưởng đến tính năng hiện có. Cuối cùng thì project hoàn thành đúng deadline và performance cải thiện đáng kể.",
+      "category": "challenges",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "28",
+      "keywords": [
+        "công nghệ mới",
+        "new technology",
+        "latest",
+        "trends",
+        "emerging",
+        "cutting edge"
+      ],
+      "answer": "Tôi luôn theo dõi các xu hướng công nghệ mới, đặc biệt trong lĩnh vực frontend và AI. Gần đây tôi đang tìm hiểu về Web Components, Progressive Web Apps, và các framework mới như Svelte. Tôi cũng quan tâm đến việc tích hợp AI vào các ứng dụng web, đặc biệt là trong dự án hiện tại tại Backbase. Tôi thường đọc tech blogs, tham gia các conference online và thử nghiệm với các công nghệ mới thông qua side projects.",
+      "category": "skills",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "skill_demonstration",
+      "contextTags": [
+        "technical"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "29",
+      "keywords": [
+        "làm việc dưới áp lực",
+        "under pressure",
+        "deadline",
+        "stress",
+        "tight schedule",
+        "áp lực"
+      ],
+      "answer": "Tôi làm việc khá tốt dưới áp lực và deadline gấp. Kinh nghiệm đã dạy tôi cách ưu tiên công việc, tập trung vào những tính năng core trước, và giao tiếp thường xuyên với team để đảm bảo mọi người đều hiểu rõ tiến độ. Tôi cũng học cách break down công việc thành các milestone nhỏ để dễ tracking và adjust khi cần thiết. Quan trọng nhất là giữ tinh thần tích cực và không để stress ảnh hưởng đến chất lượng code.",
+      "category": "general",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "standard",
+      "contextTags": [
+        "general"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "30",
+      "keywords": [
+        "conflict",
+        "xung đột",
+        "disagreement",
+        "tranh cãi",
+        "bất đồng",
+        "problem with team"
+      ],
+      "answer": "Khi có bất đồng trong team, tôi luôn cố gắng lắng nghe quan điểm của mọi người trước khi đưa ra ý kiến. Tôi tin rằng hầu hết các xung đột đều xuất phát từ việc hiểu sai hoặc thiếu thông tin. Tôi thường đề xuất thảo luận mở, trình bày rõ ràng các pros/cons của từng approach, và tìm giải pháp win-win. Nếu cần thiết, tôi sẵn sàng thử nghiệm prototype để chứng minh tính khả thi của ý tưởng.",
+      "category": "professional",
+      "subcategory": "general",
+      "complexity": "moderate",
+      "responseType": "work_description",
+      "contextTags": [
+        "professional"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "31",
+      "keywords": [
+        "linkedin",
+        "liên hệ",
+        "contact",
+        "tài khoản linkedin",
+        "linkedin profile",
+        "social media",
+        "network",
+        "connect",
+        "kết nối"
+      ],
+      "answer": "Bạn có thể kết nối với tôi qua LinkedIn tại: <a href=\"https://www.linkedin.com/in/hpphat1992/\" target=\"_blank\" rel=\"noopener noreferrer\">linkedin.com/in/hpphat1992</a>. Tôi rất vui được kết nối và trao đổi về công nghệ cũng như cơ hội hợp tác!",
+      "category": "personal",
+      "subcategory": "contact",
+      "complexity": "simple",
+      "responseType": "contact_info",
+      "contextTags": [
+        "social", "contact"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "32",
+      "keywords": [
+        "github",
+        "git",
+        "source code",
+        "repository",
+        "repo",
+        "code",
+        "projects",
+        "open source",
+        "github profile",
+        "github account"
+      ],
+      "answer": "Bạn có thể xem các dự án và source code của tôi trên GitHub tại: <a href=\"https://github.com/hpphat92\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/hpphat92</a>. Tôi có 46 repositories với các dự án từ React, JavaScript đến các ứng dụng web khác nhau. Rất hoan nghênh bạn star hoặc fork nếu thấy hữu ích!",
+      "category": "personal",
+      "subcategory": "contact",
+      "complexity": "simple",
+      "responseType": "contact_info",
+      "contextTags": [
+        "social", "contact", "technical"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "33",
+      "keywords": [
+        "số điện thoại",
+        "số đt",
+        "phone",
+        "phone number",
+        "điện thoại",
+        "liên hệ điện thoại",
+        "gọi điện",
+        "call",
+        "mobile",
+        "contact number",
+        "số phone",
+        "đt",
+        "sđt"
+      ],
+      "answer": "Bạn có thể liên hệ với tôi qua số điện thoại: <strong>0764749964</strong>. Tôi thường có mặt từ 9h sáng đến 6h chiều (giờ Việt Nam) cho các cuộc gọi về công việc hoặc cơ hội hợp tác.",
+      "category": "personal",
+      "subcategory": "contact",
+      "complexity": "simple",
+      "responseType": "contact_info",
+      "contextTags": [
+        "contact"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "34",
+      "keywords": [
+        "thông tin liên hệ",
+        "contact info",
+        "contact information",
+        "liên hệ",
+        "contact",
+        "reach out",
+        "get in touch",
+        "kết nối"
+      ],
+      "answer": "Đây là thông tin liên hệ của tôi:\n\n📧 LinkedIn: <a href=\"https://www.linkedin.com/in/hpphat1992/\" target=\"_blank\" rel=\"noopener noreferrer\">linkedin.com/in/hpphat1992</a>\n💻 GitHub: <a href=\"https://github.com/hpphat92\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/hpphat92</a>\n📱 Điện thoại: <strong>0764749964</strong>\n\nTôi rất vui được kết nối và thảo luận về các cơ hội hợp tác, dự án công nghệ hoặc chia sẻ kinh nghiệm!",
+      "category": "personal",
+      "subcategory": "contact",
+      "complexity": "moderate",
+      "responseType": "contact_info",
+      "contextTags": [
+        "social", "contact"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "35",
+      "keywords": [
+        "du lịch",
+        "travel",
+        "đi du lịch",
+        "hay đi du lịch",
+        "thích du lịch",
+        "đi đâu chưa",
+        "đã đi đâu",
+        "trip",
+        "vacation",
+        "holiday",
+        "địa điểm",
+        "places",
+        "visited",
+        "đã đến"
+      ],
+      "answer": "Có! Tôi rất thích du lịch và khám phá những địa điểm mới. Tôi đã có cơ hội đi nhiều nơi và thường chụp ảnh để lưu giữ kỷ niệm.\n\nTôi đã tạo một trang web để chia sẻ những địa điểm đã đi qua: <a href=\"https://hbslovely.vercel.app/#/place\" target=\"_blank\" rel=\"noopener noreferrer\">hbslovely.vercel.app/#/place</a>\n\nTrang này có thể giúp bạn khám phá những địa điểm thú vị mà tôi đã trải nghiệm. Du lịch không chỉ giúp tôi thư giãn mà còn mang lại cảm hứng cho công việc lập trình!",
+      "category": "personal",
+      "subcategory": "interests",
+      "complexity": "moderate",
+      "responseType": "personal_sharing",
+      "contextTags": [
+        "personal", "interests", "travel"
+      ],
+      "priority": "high"
+    }
+  ]
+}

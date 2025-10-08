@@ -4,6 +4,7 @@ import { RouterOutlet, Router } from '@angular/router';
 import { NavBarComponent } from '../../components/nav-bar/nav-bar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { ContactButtonComponent } from '../../components/contact-button/contact-button.component';
+import { InterviewButtonComponent } from '../../components/interview-button/interview-button.component';
 import { WatermarkComponent } from '../../components/watermark/watermark.component';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { ScrollToTopDirective } from '../../directives/scroll-to-top.directive';
@@ -17,6 +18,7 @@ import { ScrollToTopDirective } from '../../directives/scroll-to-top.directive';
     NavBarComponent,
     FooterComponent,
     ContactButtonComponent,
+    InterviewButtonComponent,
     WatermarkComponent,
     ScrollToTopDirective
   ],

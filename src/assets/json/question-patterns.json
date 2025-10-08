@@ -1,0 +1,643 @@
+{
+  "questionPatterns": {
+    "greeting": {
+      "patterns": [
+        "^(xin chào|chào|hello|hi|hey)$",
+        "^(xin chào|chào|hello|hi|hey)\\s*[!.]*$",
+        "^(good morning|good afternoon|good evening)$",
+        "^(chào bạn|chào anh|chào chị)$",
+        "^(xin chào bạn|xin chào anh|xin chào chị)$",
+        "^(hế lô|hế lu|helo)$",
+        "^(chào buổi sáng|chào buổi chiều|chào buổi tối)$"
+      ],
+      "weight": 10,
+      "type": "greeting",
+      "priority": "high",
+      "context": ["social", "opening"],
+      "expectedResponse": "greeting_response",
+      "followUpSuggestions": ["Bạn có muốn tôi giới thiệu về bản thân?", "Có câu hỏi gì về kinh nghiệm của tôi không?"]
+    },
+    "personal_introduction": {
+      "patterns": [
+        "\\b(giới thiệu.*bản thân|giới thiệu về bạn|introduce yourself)\\b",
+        "\\b(xin giới thiệu|hãy giới thiệu|tell me about yourself)\\b",
+        "\\b(nói về bản thân|chia sẻ về bản thân|about yourself)\\b",
+        "\\b(bạn là ai|who are you|what about you)\\b"
+      ],
+      "weight": 9,
+      "type": "personal_introduction",
+      "priority": "high",
+      "context": ["personal", "biographical"],
+      "expectedResponse": "introduction_response",
+      "followUpSuggestions": ["Bạn muốn biết thêm về kinh nghiệm làm việc?", "Có câu hỏi gì khác về tôi không?"]
+    },
+    "farewell": {
+      "patterns": [
+        "(tạm biệt|bye|goodbye)$",
+        "(see you|take care|chào tạm biệt)$",
+        "^(hẹn gặp lại|until next time)",
+        "(cảm ơn.*tạm biệt|thanks.*bye)",
+        "(chúc.*ngày.*tốt|have.*good.*day)",
+        "(talk.*later|nói chuyện.*sau)",
+        "(cảm ơn.*thời gian|thanks.*time)"
+      ],
+      "weight": 10,
+      "type": "farewell",
+      "priority": "high",
+      "context": ["social", "closing"],
+      "expectedResponse": "farewell_response",
+      "followUpSuggestions": []
+    },
+    "yes_no_question": {
+      "patterns": [
+        "\\b(có|không|k)\\?*$",
+        "\\b(yes|no)\\?*$",
+        "\\b(có phải|có đúng|có thể|có được)\\b",
+        "\\b(is it|are you|do you|can you|will you)\\b",
+        "\\b(đúng không|phải không|có đúng vậy không)\\b",
+        "\\b(có thật|thật không|really)\\?*$",
+        "\\b(sure|chắc chắn|certain)\\?*"
+      ],
+      "weight": 8,
+      "type": "yes_no_question",
+      "priority": "high",
+      "context": ["confirmation", "verification"],
+      "expectedResponse": "direct_answer",
+      "followUpSuggestions": ["Bạn muốn biết thêm chi tiết?"]
+    },
+    "what_question": {
+      "patterns": [
+        "^(gì|cái gì|thế nào|như thế nào|ra sao)",
+        "^(what|how|which)",
+        "\\b(là gì|về gì|làm gì|thế nào)\\b",
+        "\\b(.*là gì|.*về gì|.*thế nào)$",
+        "\\b(định nghĩa|definition|meaning)\\b",
+        "\\b(explain|giải thích|mô tả|describe)\\b",
+        "\\b(tell me about|nói về|chia sẻ về)\\b"
+      ],
+      "weight": 7,
+      "type": "what_question",
+      "priority": "medium",
+      "context": ["information", "definition"],
+      "expectedResponse": "explanatory",
+      "followUpSuggestions": ["Có phần nào bạn muốn tôi giải thích rõ hơn?"]
+    },
+    "where_question": {
+      "patterns": [
+        "^(ở đâu|đâu|where)",
+        "\\b(ở|tại|at|in)\\b.*\\b(nào|đâu|where)\\b",
+        "\\b(địa điểm|location|place)\\b",
+        "\\b(quê quán|hometown|origin)\\b",
+        "\\b(làm việc.*đâu|work.*where)\\b",
+        "\\b(sống.*đâu|live.*where)\\b",
+        "\\b(từ.*đâu|from.*where)\\b"
+      ],
+      "weight": 7,
+      "type": "where_question",
+      "priority": "medium",
+      "context": ["location", "geography"],
+      "expectedResponse": "location_specific",
+      "followUpSuggestions": ["Bạn có muốn biết về thành phố này?"]
+    },
+    "when_question": {
+      "patterns": [
+        "^(khi nào|bao giờ|when)",
+        "\\b(lúc nào|thời gian|time)\\b",
+        "\\b(năm nào|tháng nào|ngày nào)\\b",
+        "\\b(từ khi|since when|until when)\\b",
+        "\\b(bắt đầu.*khi|started.*when)\\b",
+        "\\b(bao lâu|how long|duration)\\b"
+      ],
+      "weight": 7,
+      "type": "when_question",
+      "priority": "medium",
+      "context": ["time", "chronology"],
+      "expectedResponse": "time_specific",
+      "followUpSuggestions": ["Bạn muốn biết timeline chi tiết hơn?"]
+    },
+    "why_question": {
+      "patterns": [
+        "^(tại sao|vì sao|why)",
+        "\\b(lý do|reason|vì|because)\\b",
+        "\\b(tại sao lại|why do you|why did you)\\b",
+        "\\b(động lực|motivation|purpose)\\b",
+        "\\b(mục đích|purpose|goal)\\b",
+        "\\b(what drives|gì thúc đẩy)\\b"
+      ],
+      "weight": 7,
+      "type": "why_question",
+      "priority": "medium",
+      "context": ["reasoning", "motivation"],
+      "expectedResponse": "reasoning_based",
+      "followUpSuggestions": ["Có yếu tố nào khác bạn quan tâm?"]
+    },
+    "how_question": {
+      "patterns": [
+        "^(làm thế nào|cách nào|how)",
+        "\\b(phương pháp|method|approach)\\b",
+        "\\b(quy trình|process|procedure)\\b",
+        "\\b(bằng cách nào|how to|how do you)\\b",
+        "\\b(steps|bước|stages)\\b",
+        "\\b(workflow|luồng công việc)\\b"
+      ],
+      "weight": 7,
+      "type": "how_question",
+      "priority": "medium",
+      "context": ["methodology", "process"],
+      "expectedResponse": "process_explanation",
+      "followUpSuggestions": ["Bạn muốn biết chi tiết từng bước?"]
+    },
+    "experience_question": {
+      "patterns": [
+        "\\b(kinh nghiệm|experience|background|career)\\b",
+        "\\b(đã làm|worked|từng)\\b",
+        "\\b(bao lâu|how long|years)\\b",
+        "\\b(quá trình|journey|path)\\b",
+        "\\b(lịch sử làm việc|work history)\\b",
+        "\\b(portfolio|hồ sơ|profile)\\b",
+        "\\b(achievements|thành tựu|accomplishments)\\b"
+      ],
+      "weight": 6,
+      "type": "experience_question",
+      "priority": "medium",
+      "context": ["professional", "history"],
+      "expectedResponse": "experience_narrative",
+      "followUpSuggestions": ["Bạn muốn biết về dự án cụ thể nào?"]
+    },
+    "skill_question": {
+      "patterns": [
+        "\\b(kỹ năng|skills|ability|biết)\\b",
+        "\\b(công nghệ|technology|tech|framework)\\b",
+        "\\b(programming|coding|development)\\b",
+        "\\b(thành thạo|proficient|expert)\\b",
+        "\\b(chuyên môn|expertise|specialization)\\b",
+        "\\b(tools|công cụ|software)\\b",
+        "\\b(languages|ngôn ngữ lập trình)\\b"
+      ],
+      "weight": 6,
+      "type": "skill_question",
+      "priority": "medium",
+      "context": ["technical", "competency"],
+      "expectedResponse": "skill_demonstration",
+      "followUpSuggestions": ["Bạn muốn biết về công nghệ cụ thể nào?"]
+    },
+    "personal_question": {
+      "patterns": [
+        "\\b(tên|name|tuổi|age|gia đình|family)\\b",
+        "\\b(sở thích|hobby|interest|thích)\\b",
+        "\\b(quê|hometown|đến từ|from)\\b",
+        "\\b(cá nhân|personal|private|riêng)\\b",
+        "\\b(bản thân|yourself|about you)\\b",
+        "\\b(personality|tính cách|character)\\b",
+        "\\b(lifestyle|lối sống)\\b"
+      ],
+      "weight": 6,
+      "type": "personal_question",
+      "priority": "medium",
+      "context": ["personal", "biographical"],
+      "expectedResponse": "personal_sharing",
+      "followUpSuggestions": ["Có gì khác về tôi bạn muốn biết?"]
+    },
+    "work_question": {
+      "patterns": [
+        "\\b(công việc|job|work|làm việc)\\b",
+        "\\b(công ty|company|workplace|team)\\b",
+        "\\b(dự án|project|portfolio)\\b",
+        "\\b(nhiệm vụ|responsibility|role)\\b",
+        "\\b(đồng nghiệp|colleague|coworker)\\b",
+        "\\b(manager|quản lý|boss)\\b",
+        "\\b(culture|văn hóa công ty)\\b"
+      ],
+      "weight": 6,
+      "type": "work_question",
+      "priority": "medium",
+      "context": ["professional", "workplace"],
+      "expectedResponse": "work_description",
+      "followUpSuggestions": ["Bạn muốn biết về môi trường làm việc?"]
+    },
+    "comparison_question": {
+      "patterns": [
+        "\\b(so với|compared|versus|vs)\\b",
+        "\\b(khác|different|difference|giống|similar)\\b",
+        "\\b(tốt hơn|better|worse|hơn)\\b",
+        "\\b(ưu điểm|advantage|nhược điểm|disadvantage)\\b",
+        "\\b(lựa chọn|choice|prefer|thích hơn)\\b",
+        "\\b(pros.*cons|ưu.*nhược)\\b",
+        "\\b(alternative|lựa chọn khác)\\b"
+      ],
+      "weight": 5,
+      "type": "comparison_question",
+      "priority": "low",
+      "context": ["analytical", "comparative"],
+      "expectedResponse": "comparative_analysis",
+      "followUpSuggestions": ["Bạn muốn so sánh với gì khác?"]
+    },
+    "opinion_question": {
+      "patterns": [
+        "\\b(nghĩ|think|opinion|ý kiến|quan điểm)\\b",
+        "\\b(thấy|feel|cảm thấy)\\b",
+        "\\b(đánh giá|evaluate|assessment)\\b",
+        "\\b(có vẻ|seems|appears|looks like)\\b",
+        "\\b(theo bạn|in your opinion|what do you think)\\b",
+        "\\b(perspective|góc nhìn|viewpoint)\\b",
+        "\\b(impression|ấn tượng)\\b"
+      ],
+      "weight": 5,
+      "type": "opinion_question",
+      "priority": "low",
+      "context": ["subjective", "evaluative"],
+      "expectedResponse": "opinion_based",
+      "followUpSuggestions": ["Bạn có quan điểm khác về vấn đề này?"]
+    },
+    "future_question": {
+      "patterns": [
+        "\\b(tương lai|future|sẽ|will|plan|kế hoạch)\\b",
+        "\\b(mục tiêu|goal|target|ambition)\\b",
+        "\\b(tiếp theo|next|sau này|later)\\b",
+        "\\b(dự định|intention|intend|planning)\\b",
+        "\\b(mong muốn|hope|wish|aspiration)\\b",
+        "\\b(vision|tầm nhìn|roadmap)\\b",
+        "\\b(career.*path|lộ trình sự nghiệp)\\b"
+      ],
+      "weight": 5,
+      "type": "future_question",
+      "priority": "low",
+      "context": ["planning", "aspirational"],
+      "expectedResponse": "future_oriented",
+      "followUpSuggestions": ["Bạn muốn biết về kế hoạch dài hạn?"]
+    },
+    "problem_solving_question": {
+      "patterns": [
+        "\\b(giải quyết|solve|solution|fix)\\b",
+        "\\b(vấn đề|problem|issue|challenge)\\b",
+        "\\b(khó khăn|difficulty|trouble|obstacle)\\b",
+        "\\b(debug|troubleshoot|diagnose)\\b",
+        "\\b(approach|strategy|tactic)\\b",
+        "\\b(resolution|giải pháp|remedy)\\b",
+        "\\b(overcome|vượt qua|handle)\\b"
+      ],
+      "weight": 6,
+      "type": "problem_solving_question",
+      "priority": "medium",
+      "context": ["technical", "analytical"],
+      "expectedResponse": "solution_focused",
+      "followUpSuggestions": ["Bạn muốn biết cách xử lý tình huống tương tự?"]
+    },
+    "learning_question": {
+      "patterns": [
+        "\\b(học|learn|study|research)\\b",
+        "\\b(tự học|self-taught|autodidact)\\b",
+        "\\b(cải thiện|improve|develop|enhance)\\b",
+        "\\b(kiến thức|knowledge|understanding)\\b",
+        "\\b(training|course|certification)\\b",
+        "\\b(skill.*development|phát triển kỹ năng)\\b",
+        "\\b(upskill|reskill|học thêm)\\b"
+      ],
+      "weight": 5,
+      "type": "learning_question",
+      "priority": "medium",
+      "context": ["educational", "development"],
+      "expectedResponse": "learning_narrative",
+      "followUpSuggestions": ["Bạn muốn biết về phương pháp học?"]
+    },
+    "achievement_question": {
+      "patterns": [
+        "\\b(thành tựu|achievement|accomplishment)\\b",
+        "\\b(thành công|success|successful)\\b",
+        "\\b(giải thưởng|award|recognition)\\b",
+        "\\b(milestone|cột mốc|landmark)\\b",
+        "\\b(proud.*of|tự hào về)\\b",
+        "\\b(highlight|điểm nổi bật)\\b",
+        "\\b(greatest.*achievement|thành tựu lớn nhất)\\b"
+      ],
+      "weight": 6,
+      "type": "achievement_question",
+      "priority": "medium",
+      "context": ["accomplishment", "success"],
+      "expectedResponse": "achievement_narrative",
+      "followUpSuggestions": ["Bạn muốn biết về dự án đặc biệt nào?"]
+    },
+    "challenge_question": {
+      "patterns": [
+        "\\b(thách thức|challenge|challenging)\\b",
+        "\\b(khó khăn|difficulty|difficult)\\b",
+        "\\b(struggle|đấu tranh|gặp khó)\\b",
+        "\\b(obstacle|trở ngại|barrier)\\b",
+        "\\b(hardest|khó nhất|toughest)\\b",
+        "\\b(failure|thất bại|mistake)\\b",
+        "\\b(lesson.*learned|bài học rút ra)\\b"
+      ],
+      "weight": 6,
+      "type": "challenge_question",
+      "priority": "medium",
+      "context": ["adversity", "growth"],
+      "expectedResponse": "challenge_narrative",
+      "followUpSuggestions": ["Bạn muốn biết cách tôi vượt qua khó khăn?"]
+    },
+    "motivation_question": {
+      "patterns": [
+        "\\b(động lực|motivation|motivate)\\b",
+        "\\b(inspire|truyền cảm hứng|inspiration)\\b",
+        "\\b(passion|đam mê|passionate)\\b",
+        "\\b(drive|thúc đẩy|driving force)\\b",
+        "\\b(what keeps you|gì giữ bạn)\\b",
+        "\\b(energize|tạo năng lượng)\\b",
+        "\\b(purpose|mục đích|meaning)\\b"
+      ],
+      "weight": 6,
+      "type": "motivation_question",
+      "priority": "medium",
+      "context": ["personal", "drive"],
+      "expectedResponse": "motivation_explanation",
+      "followUpSuggestions": ["Bạn muốn biết về nguồn cảm hứng khác?"]
+    },
+    "advice_question": {
+      "patterns": [
+        "\\b(advice|lời khuyên|suggest)\\b",
+        "\\b(recommend|đề xuất|recommendation)\\b",
+        "\\b(should.*I|tôi nên|ought to)\\b",
+        "\\b(guidance|hướng dẫn|guide)\\b",
+        "\\b(tip|mẹo|tips)\\b",
+        "\\b(best.*practice|thực hành tốt nhất)\\b",
+        "\\b(mentor|cố vấn|mentoring)\\b"
+      ],
+      "weight": 5,
+      "type": "advice_question",
+      "priority": "medium",
+      "context": ["guidance", "mentoring"],
+      "expectedResponse": "advisory_response",
+      "followUpSuggestions": ["Bạn có tình huống cụ thể nào cần tư vấn?"]
+    },
+    "technology_question": {
+      "patterns": [
+        "\\b(angular|react|javascript|typescript)\\b",
+        "\\b(frontend|backend|fullstack)\\b",
+        "\\b(framework|library|tool)\\b",
+        "\\b(api|database|server)\\b",
+        "\\b(cloud|aws|azure|docker)\\b",
+        "\\b(ai|machine learning|artificial intelligence)\\b",
+        "\\b(mobile|responsive|web)\\b"
+      ],
+      "weight": 7,
+      "type": "technology_question",
+      "priority": "high",
+      "context": ["technical", "development"],
+      "expectedResponse": "technical_explanation",
+      "followUpSuggestions": ["Bạn muốn biết về implementation cụ thể?"]
+    },
+    "industry_question": {
+      "patterns": [
+        "\\b(fintech|banking|financial)\\b",
+        "\\b(startup|enterprise|corporate)\\b",
+        "\\b(industry|ngành|sector)\\b",
+        "\\b(market|thị trường|business)\\b",
+        "\\b(trend|xu hướng|direction)\\b",
+        "\\b(innovation|đổi mới|disruption)\\b",
+        "\\b(digital.*transformation|chuyển đổi số)\\b"
+      ],
+      "weight": 6,
+      "type": "industry_question",
+      "priority": "medium",
+      "context": ["business", "market"],
+      "expectedResponse": "industry_insight",
+      "followUpSuggestions": ["Bạn muốn biết về xu hướng ngành?"]
+    }
+  },
+  "contextClues": {
+    "technical": {
+      "keywords": ["angular", "react", "javascript", "typescript", "css", "html", "node", "database", "api", "framework", "library", "code", "programming", "development", "software", "web", "frontend", "backend", "fullstack", "git", "github", "testing", "deployment", "ci/cd", "docker", "kubernetes", "microservices", "architecture", "design patterns", "algorithms", "data structures"],
+      "weight": 3,
+      "category": "technology",
+      "subcategories": ["frontend", "backend", "devops", "tools", "architecture"],
+      "relatedTopics": ["performance", "scalability", "security", "best practices"]
+    },
+    "personal": {
+      "keywords": ["tôi", "mình", "bản thân", "cá nhân", "riêng", "myself", "personal", "individual", "private", "own", "family", "hobby", "interest", "lifestyle", "personality", "character", "values", "beliefs"],
+      "weight": 2,
+      "category": "biographical",
+      "subcategories": ["identity", "preferences", "characteristics", "relationships"],
+      "relatedTopics": ["background", "upbringing", "influences", "goals"]
+    },
+    "professional": {
+      "keywords": ["công việc", "nghề nghiệp", "career", "professional", "work", "job", "company", "team", "project", "experience", "colleague", "manager", "client", "business", "industry", "role", "responsibility", "leadership", "collaboration", "productivity"],
+      "weight": 2,
+      "category": "workplace",
+      "subcategories": ["career", "teamwork", "projects", "responsibilities", "growth"],
+      "relatedTopics": ["culture", "environment", "challenges", "achievements"]
+    },
+    "educational": {
+      "keywords": ["học", "trường", "university", "education", "study", "degree", "graduation", "học vấn", "course", "training", "certification", "knowledge", "research", "thesis", "academic", "scholarship", "learning", "skill development"],
+      "weight": 2,
+      "category": "academic",
+      "subcategories": ["formal_education", "self_learning", "certifications", "continuous_learning"],
+      "relatedTopics": ["specialization", "expertise", "knowledge transfer"]
+    },
+    "location": {
+      "keywords": ["ở", "tại", "từ", "đến", "nơi", "place", "location", "where", "country", "city", "address", "hometown", "origin", "region", "area", "district", "neighborhood", "remote", "office", "workplace"],
+      "weight": 2,
+      "category": "geographical",
+      "subcategories": ["current_location", "origin", "travel", "work_location"],
+      "relatedTopics": ["culture", "environment", "lifestyle", "opportunities"]
+    },
+    "temporal": {
+      "keywords": ["khi", "lúc", "thời gian", "time", "when", "during", "before", "after", "now", "then", "future", "past", "present", "timeline", "schedule", "deadline", "duration", "period", "phase"],
+      "weight": 2,
+      "category": "chronological",
+      "subcategories": ["timeline", "duration", "sequence", "planning"],
+      "relatedTopics": ["milestones", "progress", "evolution", "history"]
+    },
+    "social": {
+      "keywords": ["bạn", "mọi người", "team", "group", "community", "family", "friends", "colleagues", "people", "social", "relationship", "network", "communication", "collaboration", "interaction", "culture"],
+      "weight": 2,
+      "category": "interpersonal",
+      "subcategories": ["relationships", "teamwork", "community", "networking"],
+      "relatedTopics": ["communication", "leadership", "mentoring", "influence"]
+    },
+    "achievement": {
+      "keywords": ["thành công", "achievement", "success", "award", "recognition", "accomplishment", "milestone", "goal", "target", "result", "outcome", "impact", "contribution", "excellence", "innovation"],
+      "weight": 2,
+      "category": "accomplishment",
+      "subcategories": ["awards", "milestones", "goals_achieved", "recognition"],
+      "relatedTopics": ["impact", "value", "contribution", "legacy"]
+    },
+    "financial": {
+      "keywords": ["lương", "salary", "compensation", "money", "income", "pay", "benefit", "bonus", "equity", "stock", "financial", "budget", "cost", "investment", "roi", "value"],
+      "weight": 2,
+      "category": "economic",
+      "subcategories": ["compensation", "benefits", "investment", "value"],
+      "relatedTopics": ["negotiation", "market_rate", "career_growth"]
+    },
+    "innovation": {
+      "keywords": ["innovation", "đổi mới", "creative", "sáng tạo", "new", "mới", "cutting-edge", "advanced", "modern", "latest", "emerging", "trend", "future", "next-generation"],
+      "weight": 2,
+      "category": "advancement",
+      "subcategories": ["technology", "methodology", "approach", "thinking"],
+      "relatedTopics": ["research", "development", "experimentation", "adoption"]
+    }
+  },
+  "sentimentAnalysis": {
+    "positive": {
+      "keywords": ["tốt", "hay", "thích", "yêu", "good", "great", "love", "like", "excellent", "amazing", "wonderful", "fantastic", "awesome", "brilliant", "outstanding", "impressive", "excited", "passionate", "enjoy", "satisfied", "happy", "pleased"],
+      "weight": 1,
+      "intensity": "high",
+      "emotionType": "enthusiasm"
+    },
+    "negative": {
+      "keywords": ["không", "chưa", "khó", "bad", "difficult", "hard", "problem", "issue", "trouble", "terrible", "awful", "horrible", "disappointing", "frustrating", "challenging", "struggle", "failure", "mistake", "regret"],
+      "weight": 1,
+      "intensity": "high",
+      "emotionType": "concern"
+    },
+    "neutral": {
+      "keywords": ["bình thường", "ok", "được", "normal", "fine", "alright", "acceptable", "standard", "average", "typical", "usual", "common", "regular", "moderate"],
+      "weight": 1,
+      "intensity": "low",
+      "emotionType": "balanced"
+    },
+    "curious": {
+      "keywords": ["tò mò", "curious", "interested", "wonder", "fascinating", "intriguing", "want to know", "tell me more", "explore", "discover", "learn", "understand"],
+      "weight": 1,
+      "intensity": "medium",
+      "emotionType": "inquiry"
+    },
+    "confident": {
+      "keywords": ["chắc chắn", "confident", "sure", "certain", "definitely", "absolutely", "convinced", "positive", "strong", "solid", "firm", "determined"],
+      "weight": 1,
+      "intensity": "high",
+      "emotionType": "assurance"
+    },
+    "uncertain": {
+      "keywords": ["không chắc", "uncertain", "maybe", "perhaps", "possibly", "might", "could be", "not sure", "doubt", "hesitate", "unclear", "ambiguous"],
+      "weight": 1,
+      "intensity": "medium",
+      "emotionType": "hesitation"
+    },
+    "analytical": {
+      "keywords": ["analyze", "phân tích", "evaluate", "đánh giá", "compare", "so sánh", "consider", "xem xét", "examine", "study", "review", "assess"],
+      "weight": 1,
+      "intensity": "medium",
+      "emotionType": "reasoning"
+    },
+    "appreciative": {
+      "keywords": ["cảm ơn", "thank", "appreciate", "grateful", "thankful", "acknowledge", "recognize", "value", "respect", "admire"],
+      "weight": 1,
+      "intensity": "medium",
+      "emotionType": "gratitude"
+    }
+  },
+  "complexityLevels": {
+    "simple": {
+      "indicators": ["short sentences", "basic vocabulary", "single topic", "direct questions", "yes/no format"],
+      "weight": 1,
+      "responseStyle": "concise",
+      "estimatedReadTime": "30 seconds",
+      "detailLevel": "overview"
+    },
+    "moderate": {
+      "indicators": ["compound sentences", "technical terms", "multiple aspects", "context required", "some background needed"],
+      "weight": 2,
+      "responseStyle": "detailed",
+      "estimatedReadTime": "1-2 minutes",
+      "detailLevel": "comprehensive"
+    },
+    "complex": {
+      "indicators": ["complex sentences", "abstract concepts", "multi-layered questions", "domain expertise", "interconnected topics"],
+      "weight": 3,
+      "responseStyle": "comprehensive",
+      "estimatedReadTime": "2-3 minutes",
+      "detailLevel": "in-depth"
+    }
+  },
+  "intentAnalysis": {
+    "information_seeking": {
+      "patterns": ["\\b(tell me|explain|describe|what is)\\b", "\\b(how does|how do|how can)\\b", "\\b(inform|information|details)\\b"],
+      "weight": 3,
+      "responseType": "informative",
+      "userGoal": "knowledge_acquisition",
+      "followUpLikelihood": "high"
+    },
+    "validation_seeking": {
+      "patterns": ["\\b(is it true|is this correct|am I right)\\b", "\\b(confirm|verify|validate)\\b", "\\b(check|double-check)\\b"],
+      "weight": 3,
+      "responseType": "confirmatory",
+      "userGoal": "verification",
+      "followUpLikelihood": "medium"
+    },
+    "advice_seeking": {
+      "patterns": ["\\b(should I|what would you|recommend|suggest)\\b", "\\b(advice|guidance|help)\\b", "\\b(best way|optimal|ideal)\\b"],
+      "weight": 3,
+      "responseType": "advisory",
+      "userGoal": "decision_support",
+      "followUpLikelihood": "high"
+    },
+    "comparison_seeking": {
+      "patterns": ["\\b(which is better|compare|versus|difference)\\b", "\\b(pros and cons|advantages)\\b", "\\b(alternative|option)\\b"],
+      "weight": 3,
+      "responseType": "comparative",
+      "userGoal": "evaluation",
+      "followUpLikelihood": "medium"
+    },
+    "relationship_building": {
+      "patterns": ["\\b(get to know|learn about you|personal)\\b", "\\b(background|story|journey)\\b", "\\b(experience|life|career)\\b"],
+      "weight": 2,
+      "responseType": "personal",
+      "userGoal": "connection",
+      "followUpLikelihood": "high"
+    },
+    "problem_solving": {
+      "patterns": ["\\b(solve|fix|resolve|handle)\\b", "\\b(problem|issue|challenge|difficulty)\\b", "\\b(solution|approach|method)\\b"],
+      "weight": 3,
+      "responseType": "solution_focused",
+      "userGoal": "resolution",
+      "followUpLikelihood": "high"
+    }
+  },
+  "responseStrategies": {
+    "direct": {
+      "characteristics": ["straight to the point", "factual", "no extra context"],
+      "useCases": ["yes/no questions", "simple facts", "quick confirmations"],
+      "tone": "professional"
+    },
+    "storytelling": {
+      "characteristics": ["narrative structure", "personal anecdotes", "engaging examples"],
+      "useCases": ["experience questions", "challenge narratives", "career journey"],
+      "tone": "conversational"
+    },
+    "educational": {
+      "characteristics": ["structured explanation", "step-by-step", "context provided"],
+      "useCases": ["technical questions", "how-to inquiries", "skill demonstrations"],
+      "tone": "informative"
+    },
+    "consultative": {
+      "characteristics": ["thoughtful analysis", "multiple perspectives", "actionable insights"],
+      "useCases": ["advice seeking", "complex decisions", "strategic questions"],
+      "tone": "advisory"
+    }
+  },
+  "domainExpertise": {
+    "frontend_development": {
+      "technologies": ["Angular", "React", "TypeScript", "JavaScript", "HTML", "CSS", "RxJS", "NgRx"],
+      "concepts": ["component architecture", "state management", "responsive design", "performance optimization"],
+      "experienceLevel": "expert",
+      "yearsOfExperience": 10
+    },
+    "software_engineering": {
+      "practices": ["Agile", "Scrum", "TDD", "CI/CD", "Code Review", "SOLID principles"],
+      "tools": ["Git", "Jira", "Jest", "Cypress", "Docker"],
+      "experienceLevel": "senior",
+      "yearsOfExperience": 10
+    },
+    "fintech": {
+      "domains": ["banking", "wealth management", "payment systems", "financial workflows"],
+      "compliance": ["security requirements", "data protection", "regulatory standards"],
+      "experienceLevel": "experienced",
+      "yearsOfExperience": 6
+    },
+    "ai_integration": {
+      "areas": ["AI-powered solutions", "banking AI", "frontend AI integration"],
+      "currentRole": "R&D AI team member",
+      "experienceLevel": "developing",
+      "yearsOfExperience": 1
+    }
+  }
+}

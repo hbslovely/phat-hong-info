@@ -1,0 +1,179 @@
+<nz-modal
+  [(nzVisible)]="isVisible"
+  nzTitle="Phỏng Vấn với Phát"
+  [nzWidth]="680"
+  [nzFooter]="null"
+  (nzOnCancel)="closeInterview()"
+  nzCentered
+  nzClassName="interview-modal">
+  
+  <ng-container *nzModalContent>
+    <!-- Chat Container -->
+    <div class="chat-container">
+      <!-- Messages Container -->
+      <div class="messages-container" #messagesContainer>
+        <div class="messages-list">
+          <!-- Welcome Message -->
+          <div class="message-item assistant-message welcome-message" *ngIf="!currentSession || getVisibleMessages().length === 0">
+            <div class="message-avatar">
+              <img src="assets/images/avatar.jpeg" alt="Phat's Avatar" class="avatar-image">
+            </div>
+            <div class="message-content">
+              <div class="message-bubble">
+                <div class="welcome-text">
+                  <strong>Xin chào! 👋</strong><br>
+                  Tôi là <strong>Phát</strong> - Senior Software Developer với 10+ năm kinh nghiệm.<br><br>
+                  Tôi rất vui được trò chuyện với bạn! Bạn có muốn tôi giới thiệu về bản thân hoặc có câu hỏi nào về kinh nghiệm làm việc của tôi không?
+                </div>
+              </div>
+              <div class="message-time">
+                {{ getCurrentTime() }}
+                <span class="auto-response-indicator">
+                  <span nz-icon nzType="robot" nzTheme="outline"></span>
+                  Trả lời tự động
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Messages -->
+          <div 
+            class="message-item" 
+            [ngClass]="message.role === 'user' ? 'user-message' : 'assistant-message'"
+            *ngFor="let message of getVisibleMessages(); trackBy: trackByMessage">
+            
+            <div class="message-avatar">
+              <span nz-icon 
+                nzType="user" 
+                nzTheme="outline"
+                *ngIf="message.role === 'user'">
+              </span>
+              <img src="assets/images/avatar.jpeg" 
+                   alt="Phat's Avatar" 
+                   class="avatar-image"
+                   *ngIf="message.role === 'assistant'">
+            </div>
+            
+            <div class="message-content">
+              <div class="message-bubble" [innerHTML]="formatMessageContent(message.content)">
+              </div>
+              <div class="message-time">
+                {{ formatTime(message.timestamp) }}
+                <span class="auto-response-indicator" *ngIf="message.role === 'assistant'">
+                  <span nz-icon nzType="robot" nzTheme="outline"></span>
+                  Trả lời tự động
+                </span>
+                <span class="confidence-indicator" *ngIf="message.confidence && message.role === 'assistant'">
+                  • Confidence: {{ message.confidence.toFixed(0) }}%
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Typing Indicator -->
+          <div class="message-item assistant-message typing-indicator" *ngIf="isTyping">
+            <div class="message-avatar">
+              <img src="assets/images/avatar.jpeg" alt="Phat's Avatar" class="avatar-image">
+            </div>
+            <div class="message-content">
+              <div class="message-bubble typing-bubble">
+                <nz-spin nzSize="small">
+                  <span>Đang suy nghĩ...</span>
+                </nz-spin>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Container -->
+      <div class="input-container">
+        <div class="input-wrapper">
+          <div class="message-input-group">
+            <textarea 
+              #messageInput
+              nz-input
+              [(ngModel)]="newMessage"
+              (keydown)="onKeyDown($event)"
+              placeholder="Hỏi tôi về kinh nghiệm, kỹ năng, dự án, hoặc bất cứ điều gì..."
+              [disabled]="isTyping"
+              class="message-input"
+              maxlength="500"
+              rows="1">
+            </textarea>
+            <button 
+              nz-button 
+              nzType="primary" 
+              (click)="sendMessage()"
+              [disabled]="!canSendMessage()"
+              class="send-button"
+              [nzLoading]="isTyping">
+              <span nz-icon nzType="send" nzTheme="outline" *ngIf="!isTyping"></span>
+            </button>
+          </div>
+          
+          <!-- Character Counter -->
+          <div class="character-counter" *ngIf="newMessage.length > 400">
+            {{ newMessage.length }}/500
+          </div>
+        </div>
+        
+        <!-- Session Stats (Development Mode) -->
+        <div class="session-stats" *ngIf="showStats && currentSession">
+          <div class="stats-row">
+            <span class="stat-item">
+              <span nz-icon nzType="message" nzTheme="outline"></span>
+              {{ getSessionStats().totalMessages }} tin nhắn
+            </span>
+            <span class="stat-item">
+              <span nz-icon nzType="dashboard" nzTheme="outline"></span>
+              {{ getSessionStats().averageConfidence.toFixed(0) }}% độ tin cậy
+            </span>
+            <span class="stat-item">
+              <span nz-icon nzType="clock-circle" nzTheme="outline"></span>
+              {{ formatDuration(getSessionStats().duration) }}
+            </span>
+          </div>
+          <div class="topics-row" *ngIf="getSessionStats().topTopics.length > 0">
+            <span class="topics-label">Chủ đề:</span>
+            <nz-tag 
+              *ngFor="let topic of getSessionStats().topTopics" 
+              [nzColor]="getTopicColor(topic)">
+              {{ topic }}
+            </nz-tag>
+          </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button 
+            nz-button 
+            nzSize="small" 
+            nzType="default" 
+            (click)="toggleStats()"
+            *ngIf="isDevelopmentMode()">
+            <span nz-icon [nzType]="showStats ? 'eye-invisible' : 'eye'" nzTheme="outline"></span>
+            {{ showStats ? 'Ẩn' : 'Hiện' }} thống kê
+          </button>
+          <button 
+            nz-button 
+            nzSize="small" 
+            nzType="default" 
+            (click)="exportChat()"
+            *ngIf="currentSession && getVisibleMessages().length > 0">
+            <span nz-icon nzType="download" nzTheme="outline"></span>
+            Xuất chat
+          </button>
+          <button 
+            nz-button 
+            nzSize="small" 
+            nzType="default" 
+            (click)="closeInterview()">
+            <span nz-icon nzType="close" nzTheme="outline"></span>
+            Đóng
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</nz-modal>

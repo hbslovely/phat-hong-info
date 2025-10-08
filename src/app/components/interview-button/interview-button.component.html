@@ -1,0 +1,6 @@
+<button class="interview-button" [class.shake]="isShaking" (click)="openInterview()">
+  <span nz-icon [nzType]="getIconType()" nzTheme="outline"></span>
+  <span class="tooltip">{{ getTooltipText() }}</span>
+</button>
+
+<app-interview-chat></app-interview-chat>
