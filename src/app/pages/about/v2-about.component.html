@@ -1,0 +1,186 @@
+<div class="v2-about">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span nz-icon nzType="rocket" nzTheme="outline"></span>
+            Available for new opportunities
+          </div>
+          
+          <h1 class="hero-title">
+            {{ personalInfo()?.prefix }} {{ personalInfo()?.name }}<br>
+            <span class="gradient-text">{{ personalInfo()?.title }}</span>
+          </h1>
+          
+          <p class="hero-description">
+            {{ personalInfo()?.summary }}
+          </p>
+
+          <div class="hero-actions">
+            <button nz-button nzType="primary" nzSize="large" class="cta-button">
+              <span nz-icon nzType="message" nzTheme="outline"></span>
+              {{ 'CTA.CONTACT_ME' | translate }}
+            </button>
+            <button nz-button nzType="default" nzSize="large" routerLink="/v2/projects">
+              <span nz-icon nzType="eye" nzTheme="outline"></span>
+              {{ 'CTA.VIEW_PROJECTS' | translate }}
+            </button>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-number">{{ totalExperience }}+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">{{ totalProjects }}+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">{{ totalSkills }}+</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-card">
+            <div class="profile-image">
+              <img src="assets/images/avatar.jpeg" alt="Phat Hong" />
+              <div class="status-indicator"></div>
+            </div>
+            <div class="profile-info">
+              <h3>{{ personalInfo()?.prefix }} {{ personalInfo()?.name }}</h3>
+              <p>{{ personalInfo()?.title }}</p>
+              <div class="profile-location">
+                <span nz-icon nzType="environment" nzTheme="outline"></span>
+                {{ personalInfo()?.location?.city }}, {{ personalInfo()?.location?.country }}
+              </div>
+              <div class="profile-contact">
+                <a [href]="'mailto:' + personalInfo()?.contact?.email">
+                  <span nz-icon nzType="mail" nzTheme="outline"></span>
+                  {{ personalInfo()?.contact?.email }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ 'SECTIONS.PROFESSIONAL_SUMMARY' | translate }}</h2>
+        <p>{{ personalInfo()?.summary }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Preview Section -->
+  <section class="skills-preview-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ 'SECTIONS.KEY_SKILLS' | translate }}</h2>
+        <p>Proficient in modern technologies and frameworks for full-stack development.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category" *ngFor="let category of featuredSkillCategories()">
+          <h4>{{ formatCategoryName(category) }}</h4>
+          <div class="skill-tags">
+            <nz-tag 
+              *ngFor="let skill of getSkillsForCategory(category).slice(0, 4)" 
+              class="skill-tag"
+              [nzColor]="getSkillColor(skill)">
+              {{ skill }}
+            </nz-tag>
+            <nz-tag 
+              *ngIf="getSkillsForCategory(category).length > 4"
+              class="more-tag"
+              routerLink="/v2/skills">
+              +{{ getSkillsForCategory(category).length - 4 }} more
+            </nz-tag>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-cta">
+        <button nz-button nzType="default" nzSize="large" routerLink="/v2/skills">
+          {{ 'CTA.VIEW_ALL_SKILLS' | translate }}
+          <span nz-icon nzType="arrow-right" nzTheme="outline"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Preview Section -->
+  <section class="projects-preview-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ 'SECTIONS.FEATURED_PROJECTS' | translate }}</h2>
+        <p>A showcase of my recent work and technical achievements.</p>
+      </div>
+
+      <div nz-row [nzGutter]="[24, 24]">
+        <div nz-col [nzSpan]="24" [nzMd]="12" *ngFor="let project of featuredProjects()">
+          <nz-card class="project-card" [nzBordered]="false">
+            <div class="project-header">
+              <h3>{{ project.name }}</h3>
+              <div class="project-links">
+                <a *ngIf="project.demo" [href]="project.demo" target="_blank" nz-button nzType="text" nzSize="small">
+                  <span nz-icon nzType="link" nzTheme="outline"></span>
+                </a>
+                <a *ngIf="project.github" [href]="project.github" target="_blank" nz-button nzType="text" nzSize="small">
+                  <span nz-icon nzType="github" nzTheme="outline"></span>
+                </a>
+              </div>
+            </div>
+            
+            <p class="project-description">{{ project.description }}</p>
+            
+            <div class="project-tech">
+              <nz-tag *ngFor="let tech of project.technologies.slice(0, 3)" class="tech-tag">
+                {{ tech }}
+              </nz-tag>
+              <nz-tag *ngIf="project.technologies.length > 3" class="more-tech-tag">
+                +{{ project.technologies.length - 3 }}
+              </nz-tag>
+            </div>
+          </nz-card>
+        </div>
+      </div>
+
+      <div class="projects-cta">
+        <button nz-button nzType="default" nzSize="large" routerLink="/v2/projects">
+          {{ 'CTA.VIEW_ALL_PROJECTS' | translate }}
+          <span nz-icon nzType="arrow-right" nzTheme="outline"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>{{ 'CTA.READY_TO_COLLABORATE' | translate }}</h2>
+        <p>{{ 'CTA.LETS_DISCUSS' | translate }}</p>
+        <div class="cta-actions">
+          <button nz-button nzType="primary" nzSize="large" class="cta-button">
+            <span nz-icon nzType="message" nzTheme="outline"></span>
+            {{ 'CTA.CONNECT_WITH_ME' | translate }}
+          </button>
+          <a [href]="personalInfo()?.contact?.linkedin" target="_blank" nz-button nzType="default" nzSize="large">
+            <span nz-icon nzType="linkedin" nzTheme="outline"></span>
+            {{ 'CTA.CONNECT_WITH_ME' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

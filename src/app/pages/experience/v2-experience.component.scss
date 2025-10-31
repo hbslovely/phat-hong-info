@@ -1,0 +1,433 @@
+.v2-experience {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #1e293b;
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Hero Section
+.hero-section {
+  padding: 80px 0;
+  background: #ffffff;
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #1e293b;
+
+    @media (max-width: 768px) {
+      font-size: 2.25rem;
+    }
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin-bottom: 48px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .experience-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .stat {
+      text-align: center;
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #22c55e;
+        margin-bottom: 4px;
+      }
+
+      .stat-label {
+        font-size: 0.875rem;
+        color: #64748b;
+      }
+    }
+  }
+}
+
+// Timeline Section
+.timeline-section {
+  padding: 80px 0;
+  background: #f8fafc;
+
+  .timeline-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .timeline-content {
+    margin-left: 24px;
+
+    @media (max-width: 768px) {
+      margin-left: 12px;
+    }
+  }
+
+  .experience-card {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    padding: 24px;
+    margin-bottom: 16px;
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+
+      .company-info {
+        flex: 1;
+
+        h3 {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #1e293b;
+          margin-bottom: 4px;
+        }
+
+        h4 {
+          font-size: 1rem;
+          font-weight: 500;
+          color: #22c55e;
+          margin-bottom: 8px;
+        }
+
+        .duration {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          color: #64748b;
+          font-size: 0.875rem;
+        }
+      }
+
+      .company-logo {
+        width: 48px;
+        height: 48px;
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .card-content {
+      .description {
+        color: #64748b;
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+
+      .achievements {
+        margin-bottom: 16px;
+
+        h5 {
+          font-size: 0.875rem;
+          font-weight: 600;
+          color: #1e293b;
+          margin-bottom: 8px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        ul {
+          margin: 0;
+          padding-left: 16px;
+
+          li {
+            color: #64748b;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 4px;
+          }
+        }
+      }
+
+      .technologies {
+        h5 {
+          font-size: 0.875rem;
+          font-weight: 600;
+          color: #1e293b;
+          margin-bottom: 8px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .tech-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+
+          .tech-tag {
+            background: #f0fdf4;
+            color: #22c55e;
+            border: 1px solid #bbf7d0;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            padding: 2px 6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Skills Summary Section
+.skills-summary-section {
+  padding: 80px 0;
+  background: #ffffff;
+
+  .skill-category-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    height: 100%;
+
+    .category-icon {
+      width: 48px;
+      height: 48px;
+      background: #22c55e;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+
+      span {
+        font-size: 20px;
+        color: white;
+      }
+    }
+
+    h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 16px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+
+      .skill-tag {
+        background: #22c55e;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        padding: 3px 8px;
+      }
+
+      .more-tag {
+        background: #e2e8f0;
+        color: #64748b;
+        border: none;
+        cursor: pointer;
+        font-size: 0.75rem;
+        padding: 3px 8px;
+
+        &:hover {
+          background: #22c55e;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// CTA Section
+.cta-section {
+  padding: 80px 0;
+  background: #1e293b;
+  color: white;
+
+  .cta-content {
+    text-align: center;
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: #94a3b8;
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cta-button {
+        background: #22c55e;
+        border: none;
+        color: white;
+        font-weight: 500;
+
+        &:hover {
+          background: #16a34a;
+        }
+      }
+
+      button[nz-button][nzType="default"] {
+        background: transparent;
+        border: 1px solid #475569;
+        color: #94a3b8;
+
+        &:hover {
+          background: #334155;
+          border-color: #64748b;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// Dark theme adjustments
+[data-theme="dark"] {
+  .hero-section,
+  .skills-summary-section {
+    background: #0f172a;
+
+    .section-header {
+      h2 {
+        color: white;
+      }
+
+      p {
+        color: #94a3b8;
+      }
+    }
+
+    .hero-title {
+      color: white;
+    }
+
+    .hero-description {
+      color: #94a3b8;
+    }
+
+    .skill-category-card {
+      background: #1e293b;
+      border-color: #334155;
+
+      h3 {
+        color: white;
+      }
+    }
+  }
+
+  .timeline-section {
+    background: #1e293b;
+
+    .section-header {
+      h2 {
+        color: white;
+      }
+
+      p {
+        color: #94a3b8;
+      }
+    }
+
+    .experience-card {
+      background: #0f172a;
+      border-color: #334155;
+
+      .card-header {
+        .company-info {
+          h3 {
+            color: white;
+          }
+
+          .duration {
+            color: #94a3b8;
+          }
+        }
+      }
+
+      .card-content {
+        .description {
+          color: #94a3b8;
+        }
+
+        .achievements {
+          h5 {
+            color: white;
+          }
+
+          ul li {
+            color: #94a3b8;
+          }
+        }
+
+        .technologies h5 {
+          color: white;
+        }
+      }
+    }
+  }
+}

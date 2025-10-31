@@ -211,5 +211,50 @@
       "ANIMATIONS": "Enable animations",
       "ANIMATIONS_DESC": "Show smooth transitions and animations"
     }
+  },
+  "V2": {
+    "HERO": {
+      "BADGE": "Available for new opportunities",
+      "TITLE": "Full-Stack Developer &",
+      "TITLE_HIGHLIGHT": "Technology Enthusiast",
+      "DESCRIPTION": "I build modern web applications with cutting-edge technologies, focusing on performance, scalability, and exceptional user experiences.",
+      "GET_IN_TOUCH": "Get In Touch",
+      "VIEW_WORK": "View My Work",
+      "YEARS_EXPERIENCE": "Years Experience",
+      "PROJECTS_COMPLETED": "Projects Completed",
+      "TECHNOLOGIES": "Technologies"
+    },
+    "FEATURES": {
+      "TITLE": "What I Bring to Your Team",
+      "DESCRIPTION": "Combining technical expertise with creative problem-solving to deliver exceptional results.",
+      "FULLSTACK": {
+        "TITLE": "Full-Stack Development",
+        "DESCRIPTION": "End-to-end web application development using modern frameworks and best practices."
+      },
+      "PERFORMANCE": {
+        "TITLE": "Performance Optimization",
+        "DESCRIPTION": "Building fast, scalable applications with optimal user experience and load times."
+      },
+      "COLLABORATION": {
+        "TITLE": "Collaborative Approach",
+        "DESCRIPTION": "Working effectively with cross-functional teams to deliver high-quality solutions."
+      }
+    },
+    "SKILLS": {
+      "TITLE": "Technical Expertise",
+      "DESCRIPTION": "Proficient in modern technologies and frameworks for full-stack development.",
+      "VIEW_ALL": "View All Skills"
+    },
+    "PROJECTS": {
+      "TITLE": "Featured Projects",
+      "DESCRIPTION": "A showcase of my recent work and technical achievements.",
+      "VIEW_ALL": "View All Projects"
+    },
+    "CTA": {
+      "TITLE": "Ready to Work Together?",
+      "DESCRIPTION": "Let's discuss how I can help bring your next project to life.",
+      "START_CONVERSATION": "Start a Conversation",
+      "DOWNLOAD_RESUME": "Download Resume"
+    }
   }
 }

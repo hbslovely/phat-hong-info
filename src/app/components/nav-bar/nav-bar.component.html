@@ -12,7 +12,7 @@
       <nav [class.open]="isMobileMenuOpen()">
         <ul class="nav-links">
           <li>
-            <a routerLink="/about"
+            <a [routerLink]="getVersionPrefix() + '/about'"
                routerLinkActive="active"
                [routerLinkActiveOptions]="{exact: true}"
                (click)="closeMobileMenu()">
@@ -20,28 +20,28 @@
             </a>
           </li>
           <li>
-            <a routerLink="/experience"
+            <a [routerLink]="getVersionPrefix() + '/experience'"
                routerLinkActive="active"
                (click)="closeMobileMenu()">
               {{ 'NAV.EXPERIENCE' | translate }}
             </a>
           </li>
           <li>
-            <a routerLink="/projects"
+            <a [routerLink]="getVersionPrefix() + '/projects'"
                routerLinkActive="active"
                (click)="closeMobileMenu()">
               {{ 'NAV.PROJECTS' | translate }}
             </a>
           </li>
           <li>
-            <a routerLink="/skills"
+            <a [routerLink]="getVersionPrefix() + '/skills'"
                routerLinkActive="active"
                (click)="closeMobileMenu()">
               {{ 'NAV.SKILLS' | translate }}
             </a>
           </li>
           <li>
-            <a routerLink="/my-pages"
+            <a [routerLink]="getVersionPrefix() + '/my-pages'"
                routerLinkActive="active"
                (click)="closeMobileMenu()">
               {{ 'NAV.MY_PAGES' | translate }}
@@ -50,7 +50,10 @@
         </ul>
 
         <div class="nav-actions">
-          <a routerLink="/settings" 
+          <!-- Version Switcher -->
+<!--          <app-version-switcher></app-version-switcher>-->
+
+          <a [routerLink]="getVersionPrefix() + '/settings'"
              class="settings-link"
              routerLinkActive="active"
              (click)="closeMobileMenu()"

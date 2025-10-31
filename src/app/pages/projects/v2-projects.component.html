@@ -1,0 +1,173 @@
+<div class="v2-projects">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">{{ 'PROJECTS.TITLE' | translate }}</h1>
+        <p class="hero-description">{{ 'PROJECTS.SUBTITLE' | translate }}</p>
+        
+        <div class="project-stats">
+          <div class="stat">
+            <div class="stat-number">{{ totalProjects }}</div>
+            <div class="stat-label">Total Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">{{ totalTechnologies }}</div>
+            <div class="stat-label">Technologies Used</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">{{ activeProjects }}</div>
+            <div class="stat-label">Active Projects</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="filters-section">
+    <div class="container">
+      <div class="filters-container">
+        <div class="search-filter">
+          <nz-input-group nzPrefixIcon="search">
+            <input 
+              type="text" 
+              nz-input 
+              placeholder="Search projects..." 
+              [(ngModel)]="searchTerm"
+              (ngModelChange)="onSearchChange()"
+            />
+          </nz-input-group>
+        </div>
+        
+        <div class="category-filters">
+          <button 
+            nz-button 
+            [nzType]="selectedCategory() === 'all' ? 'primary' : 'default'"
+            (click)="selectCategory('all')"
+            class="filter-btn">
+            All Projects
+          </button>
+          <button 
+            nz-button 
+            [nzType]="selectedCategory() === 'web' ? 'primary' : 'default'"
+            (click)="selectCategory('web')"
+            class="filter-btn">
+            Web Apps
+          </button>
+          <button 
+            nz-button 
+            [nzType]="selectedCategory() === 'mobile' ? 'primary' : 'default'"
+            (click)="selectCategory('mobile')"
+            class="filter-btn">
+            Mobile
+          </button>
+          <button 
+            nz-button 
+            [nzType]="selectedCategory() === 'api' ? 'primary' : 'default'"
+            (click)="selectCategory('api')"
+            class="filter-btn">
+            APIs
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="projects-section">
+    <div class="container">
+      <div nz-row [nzGutter]="[24, 24]">
+        <div nz-col [nzSpan]="24" [nzMd]="12" [nzLg]="8" *ngFor="let project of filteredProjects()">
+          <nz-card class="project-card" [nzBordered]="false">
+            <div class="project-image" *ngIf="project.image">
+              <img [src]="project.image" [alt]="project.name" />
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <a *ngIf="project.demo" [href]="project.demo" target="_blank" nz-button nzType="primary" nzSize="small">
+                    <span nz-icon nzType="eye" nzTheme="outline"></span>
+                    Demo
+                  </a>
+                  <a *ngIf="project.github" [href]="project.github" target="_blank" nz-button nzType="default" nzSize="small">
+                    <span nz-icon nzType="github" nzTheme="outline"></span>
+                    Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-header">
+                <h3>{{ project.name }}</h3>
+                <div class="project-status" *ngIf="project.status">
+                  <nz-tag [nzColor]="getStatusColor(project.status)">
+                    {{ project.status }}
+                  </nz-tag>
+                </div>
+              </div>
+
+              <p class="project-description">{{ project.description }}</p>
+
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item" *ngIf="project.company">
+                    <span nz-icon nzType="bank" nzTheme="outline"></span>
+                    {{ project.company }}
+                  </div>
+                  <div class="meta-item">
+                    <span nz-icon nzType="calendar" nzTheme="outline"></span>
+                    {{ project.duration }}
+                  </div>
+                  <div class="meta-item" *ngIf="project.teamSize">
+                    <span nz-icon nzType="team" nzTheme="outline"></span>
+                    {{ project.teamSize }} members
+                  </div>
+                </div>
+
+                <div class="project-technologies">
+                  <nz-tag *ngFor="let tech of project.technologies.slice(0, 4)" class="tech-tag">
+                    {{ tech }}
+                  </nz-tag>
+                  <nz-tag *ngIf="project.technologies.length > 4" class="more-tag">
+                    +{{ project.technologies.length - 4 }}
+                  </nz-tag>
+                </div>
+              </div>
+            </div>
+          </nz-card>
+        </div>
+      </div>
+
+      <div class="empty-state" *ngIf="filteredProjects().length === 0">
+        <div class="empty-content">
+          <span nz-icon nzType="inbox" nzTheme="outline" class="empty-icon"></span>
+          <h3>No projects found</h3>
+          <p>Try adjusting your search or filter criteria.</p>
+          <button nz-button nzType="primary" (click)="clearFilters()">
+            Clear Filters
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Have a Project in Mind?</h2>
+        <p>Let's collaborate and bring your ideas to life with cutting-edge technology.</p>
+        <div class="cta-actions">
+          <button nz-button nzType="primary" nzSize="large" class="cta-button">
+            <span nz-icon nzType="message" nzTheme="outline"></span>
+            {{ 'CTA.CONTACT_ME' | translate }}
+          </button>
+          <button nz-button nzType="default" nzSize="large" routerLink="/v2/about">
+            <span nz-icon nzType="user" nzTheme="outline"></span>
+            Learn More About Me
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
